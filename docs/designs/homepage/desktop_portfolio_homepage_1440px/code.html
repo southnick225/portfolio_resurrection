@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Sora:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container":"#1b2028","surface":"#0f141c","on-primary-fixed-variant":"#004a77","tertiary":"#4edea3","on-secondary-fixed-variant":"#3c4858","secondary":"#bbc7db","error-container":"#93000a","secondary-fixed":"#d7e3f8","outline-variant":"#3f4851","surface-bright":"#343943","inverse-primary":"#00639c","inverse-surface":"#dee2ee","background":"#0f141c","on-secondary":"#253141","surface-dim":"#0f141c","on-error":"#690005","surface-container-lowest":"#090e16","surface-variant":"#30353e","primary":"#98cbff","on-tertiary-fixed":"#002113","surface-container-high":"#252a33","tertiary-fixed-dim":"#4edea3","on-secondary-container":"#adb9cd","surface-container-low":"#171c24","tertiary-container":"#13ba82","on-surface":"#dee2ee","on-error-container":"#ffdad6","on-secondary-fixed":"#101c2b","surface-container-highest":"#30353e","on-primary-container":"#003c63","on-surface-variant":"#bfc7d3","tertiary-fixed":"#6ffbbe","surface-tint":"#98cbff","primary-fixed-dim":"#98cbff","primary-container":"#38aaff","on-tertiary-fixed-variant":"#005236","error":"#ffb4ab","primary-fixed":"#cfe5ff","inverse-on-surface":"#2c313a","secondary-fixed-dim":"#bbc7db","secondary-container":"#3e4a5a","on-primary-fixed":"#001d33","on-tertiary-container":"#00432c","on-background":"#dee2ee","outline":"#89919d","on-tertiary":"#003824","on-primary":"#003354"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter-mobile":"1rem",gutter:"1.5rem","space-md":"1rem","space-lg":"1.5rem","space-sm":"0.5rem","space-xl":"2rem","space-xs":"0.25rem",margin:"2rem","margin-mobile":"1rem"},fontFamily:{"display-mobile":["Sora"],"title-md":["Sora"],"body-md":["Geist"],"code-inline":["Geist"],"headline-lg-mobile":["Sora"],"label-sm":["Geist"],"body-sm":["Geist"],display:["Sora"],"headline-sm":["Sora"],"headline-lg":["Sora"],"body-lg":["Geist"],"headline-md":["Sora"],"label-md":["Geist"]},fontSize:{"display-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"title-md":["16px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"code-inline":["13px",{lineHeight:"18px",letterSpacing:"0em",fontWeight:"500"}],"headline-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"600"}],"label-sm":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],display:["56px",{lineHeight:"64px",letterSpacing:"-0.03em",fontWeight:"700"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.025em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-md":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"600"}],"label-md":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"500"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><img alt="Dev Portfolio Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WnL5ZfWHKos-DCYAc2-ZeWJ6w-dgVEftAwyMfPga8bQRAbN59ipcsHQcRrH0vXAB8VgSNgF4XhJGfYAR4ltKhMpKh594RCVp_6FwkHh27h_Xeyyy7ZYsNTNn4sNeMeeoNBewW1lW9A7BEVNWai-xAenmnWltMxlvaiLfmNEWjgze_AMXvtx_UGeXYO6aUNY-4S8VHBKZUfDzJGD4oMnOrU22CeDF1BaEBVzQgl66H5iw"/><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface tracking-tight leading-tight">Alex Rivera</span><span class="font-label-sm text-label-sm text-primary tracking-normal">Full-Stack Engineer</span></div></div><nav class="hidden md:flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-title-md"><a aria-current="page" class="px-space-md py-space-sm rounded-lg transition-colors bg-surface-container-high text-primary font-title-md" data-path="projects" href="#">Projects</a><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="skills" href="#">Skills</a><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="about" href="#">About</a><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-sm rounded-lg font-label-md text-label-md bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary transition-all shadow-[0_0_16px_rgba(56,170,255,0.25)]" data-path="resume" href="#">Resume</a><div class="flex items-center pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdsf0QuefJ3pTqCg5nbtX8FqrsKedjHQ9kDWIF_t_UulYm07iC6ruQdSQURns51fNcpG_1H0vY3i_BaFJoONiaLAB81iZIYuTgrvlDQymRv86SDqE42AsBxxqfuFnOWVdLDuAG0iao8w8r5Ib4MxjHdAPYIt8E4wOOUMQb6LAv-22u6SY074npoc-ce8dmyuZHmMEm1msfXTiDBL6UJTIHC30Af1IX54-1nD-4oNOu"/></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full relative">
+<!-- Subtle Ambient Glow Orbs -->
+<div class="absolute top-12 left-1/2 -translate-x-1/2 w-[720px] h-[360px] bg-primary/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+<div class="absolute top-[1400px] right-10 w-[500px] h-[300px] bg-tertiary/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+<!-- HERO SECTION -->
+<section class="w-full max-w-7xl mx-auto px-6 pt-12 pb-20 md:pt-16 md:pb-28">
+<div class="flex flex-col items-start max-w-4xl">
+<!-- Status Badge -->
+<div class="inline-flex items-center gap-space-sm px-3.5 py-1.5 rounded-full bg-surface-container-high text-tertiary shadow-sm mb-8">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm tracking-wide text-on-surface">Available for Senior Full-Stack Roles</span>
+</div>
+<!-- Hero Headline -->
+<h1 class="font-display text-display tracking-tight text-on-surface mb-6">
+        Architecting scalable web systems with <span class="text-primary drop-shadow-[0_0_24px_rgba(56,170,255,0.35)]">JavaScript & Node.js</span>.
+      </h1>
+<!-- Value Proposition -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed mb-10">
+        Full-stack software engineer specializing in high-throughput Node.js microservices, TypeScript architecture, and high-performance web frontends. Delivering resilient distributed backends and refined user experiences.
+      </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-space-md mb-16">
+<a class="inline-flex items-center gap-space-xs px-6 py-3 rounded-lg font-title-md text-title-md bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary transition-all duration-200 shadow-[0_0_24px_rgba(56,170,255,0.35)]" href="#projects">
+<span>View Projects</span>
+<span class="material-symbols-outlined text-title-md">arrow_downward</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-6 py-3 rounded-lg font-title-md text-title-md bg-surface-container text-on-surface hover:bg-surface-container-high hover:text-primary transition-all duration-200 shadow-sm" href="#contact">
+<span>Contact Me</span>
+<span class="material-symbols-outlined text-title-md">mail</span>
+</a>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="w-full grid grid-cols-2 md:grid-cols-4 gap-4 p-6 rounded-xl bg-surface-container shadow-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">7+</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Years</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Production Experience</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">99.99%</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Uptime SLA Track Record</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">150k+</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Monthly Active Users</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">12+</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Distributed Systems Deployed</span>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURED PROJECTS SECTION -->
+<section class="w-full max-w-7xl mx-auto px-6 py-20" id="projects">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-title-md">deployed_code</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Selected Works</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Featured Engineering Projects</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-2xl">
+          Production systems built with Node.js, Express, React, and modern cloud infrastructure.
+        </p>
+</div>
+<div class="text-right hidden md:block">
+<span class="font-code-inline text-code-inline text-on-surface-variant bg-surface-container px-3 py-1.5 rounded">v2.4.0-stable</span>
+</div>
+</div>
+<!-- Projects Grid -->
+<div class="flex flex-col gap-16">
+<!-- Project 1 -->
+<div class="group flex flex-col lg:flex-row items-stretch rounded-xl bg-surface-container overflow-hidden shadow-lg transition-all duration-300 hover:shadow-[0_12px_40px_-10px_rgba(15,151,255,0.2)]">
+<!-- Visual Frame -->
+<div class="w-full lg:w-3/5 bg-surface-container-lowest p-6 md:p-8 flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent opacity-60 pointer-events-none"></div>
+<div class="w-full rounded-lg overflow-hidden shadow-2xl relative">
+<img alt="Spectra - Distributed Telemetry Engine dashboard UI" class="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-[1.02]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFb8arM3uUAegofau-UD2wz1h8QvwW6JzYT1vbMMKVQgBSECq5u3Ke1_zuwRwZzyDwmmL_KKpNb2ivZQqu_Dgs2vh0UanhwrnxZpzwnJNKKjc5q3ZnCIwxk-cagfYt_EUJiNn775svp5ei2Fy4nxykoybii6pSwesjrldFCsYHRvZwbETK6_7M2Oj8PK478VPHYewdg2e-YPPmwA_odvRnhPscj3w35VQtGTCwPnhF"/>
+<div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-sm font-label-sm text-label-sm text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> 25k req/sec
+            </div>
+</div>
+</div>
+<!-- Project Info -->
+<div class="w-full lg:w-2/5 p-8 lg:p-10 flex flex-col justify-between bg-surface-container">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm text-primary uppercase font-medium">Distributed Systems</span>
+<span class="font-code-inline text-code-inline text-on-surface-variant">2024 Release</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Spectra - Distributed Telemetry Engine</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+              High-throughput telemetry collector processing 25,000 events/second with sub-second aggregate streaming. Features non-blocking I/O pipeline, Redis pub/sub queue backplanes, and optimized PostgreSQL time-series schema.
+            </p>
+<!-- Metrics Highlight Callout -->
+<div class="grid grid-cols-2 gap-3 p-3.5 mb-6 rounded-lg bg-surface-container-high">
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Pipeline Latency</span>
+<span class="font-title-md text-title-md text-primary">< 8.4 ms</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Throughput</span>
+<span class="font-title-md text-title-md text-tertiary">2.1B / mo</span>
+</div>
+</div>
+<!-- Tech Badges -->
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm">Node.js</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm">Express</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm">TypeScript</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm">Redis</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm">PostgreSQL</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm">Docker</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-space-sm pt-4">
+<a class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-title-md text-title-md hover:bg-primary transition-colors" href="#">
+<span>Live Demo</span>
+<span class="material-symbols-outlined text-title-md">open_in_new</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-surface-container-high text-on-surface font-title-md text-title-md hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-title-md">code</span>
+<span>GitHub Source</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group flex flex-col lg:flex-row items-stretch rounded-xl bg-surface-container overflow-hidden shadow-lg transition-all duration-300 hover:shadow-[0_12px_40px_-10px_rgba(15,151,255,0.2)]">
+<!-- Visual Frame -->
+<div class="w-full lg:w-3/5 bg-surface-container-lowest p-6 md:p-8 flex items-center justify-center relative overflow-hidden order-1 lg:order-2">
+<div class="absolute inset-0 bg-gradient-to-tl from-primary/10 via-transparent to-transparent opacity-60 pointer-events-none"></div>
+<div class="w-full rounded-lg overflow-hidden shadow-2xl relative">
+<img alt="AetherGuard - AI Code Review & Gateway application interface" class="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-[1.02]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpQpXGlWT8zHN3zd9bJlEzfP0-lWVC7MUfpW7eZc0dEAhcpTX9AWB-3qbRx7p0xxpFi7QJjVA1Qn0P4U-_q20I5cTQYzeVSbnRcAsy9J7t1ZuiCWeA5EqoFepT4oxPcozn5yMI93hfPBRECCKL-rgKTUzSl7zLduo8bWJZc6At5ArEMUCCtSEbOYazHxvYtJRy6W3kKIOSl6EbR9-RaR7nKQxc5KQ0sFkOW5xQU6ke"/>
+<div class="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-sm font-label-sm text-label-sm text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> 14ms Gateway
+            </div>
+</div>
+</div>
+<!-- Project Info -->
+<div class="w-full lg:w-2/5 p-8 lg:p-10 flex flex-col justify-between bg-surface-container order-2 lg:order-1">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm text-primary uppercase font-medium">Developer Tools & AI</span>
+<span class="font-code-inline text-code-inline text-on-surface-variant">Production</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">AetherGuard - AI Code Review & Gateway</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+              Automated pull request security audit analyzer and API proxy gateway with sub-15ms edge routing latency. Integrates contextual LLM AST analysis with real-time WebSocket diff synchronization.
+            </p>
+<!-- Metrics Highlight Callout -->
+<div class="grid grid-cols-2 gap-3 p-3.5 mb-6 rounded-lg bg-surface-container-high">
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Review Turnaround</span>
+<span class="font-title-md text-title-md text-primary">< 1.2 sec</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">PR Security Catch</span>
+<span class="font-title-md text-title-md text-tertiary">98.4% Acc</span>
+</div>
+</div>
+<!-- Tech Badges -->
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm">Node.js</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm">React</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm">Tailwind CSS</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm">WebSockets</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm">Jest</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm">AWS</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-space-sm pt-4">
+<a class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-primary-container text-on-primary-container font-title-md text-title-md hover:bg-primary transition-colors" href="#">
+<span>Live Demo</span>
+<span class="material-symbols-outlined text-title-md">open_in_new</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-surface-container-high text-on-surface font-title-md text-title-md hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-title-md">code</span>
+<span>GitHub Source</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TECHNICAL EXPERTISE SECTION -->
+<section class="w-full max-w-7xl mx-auto px-6 py-20" id="skills">
+<div class="flex flex-col mb-12">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-title-md">memory</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Core Competencies</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Technical Expertise</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-2xl">
+        Architected around modern JavaScript runtime standards, deterministic typing, and horizontal cloud scale.
+      </p>
+</div>
+<!-- 4 Modular Skill Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- 1. Frontend -->
+<div class="p-6 rounded-xl bg-surface-container flex flex-col justify-between shadow-md hover:bg-surface-container-high transition-colors">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-headline-sm">desktop_windows</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-2">Frontend</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Component-driven interfaces prioritizing sub-second FCP, modular state, and pixel precision.</p>
+</div>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> React / Next.js
+          </li>
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> TypeScript
+          </li>
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Tailwind CSS
+          </li>
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Web Components
+          </li>
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Performance Optimization
+          </li>
+</ul>
+</div>
+<!-- 2. Backend & Runtime -->
+<div class="p-6 rounded-xl bg-surface-container flex flex-col justify-between shadow-md hover:bg-surface-container-high transition-colors">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-headline-sm">dns</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-2">Backend & Runtime</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Asynchronous microservices, message queues, and high-throughput event engines.</p>
+</div>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Node.js / Express
+          </li>
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Fastify Framework
+          </li>
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> REST & GraphQL APIs
+          </li>
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> WebSockets & Streams
+          </li>
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Microservices Arch
+          </li>
+</ul>
+</div>
+<!-- 3. Databases & Caching -->
+<div class="p-6 rounded-xl bg-surface-container flex flex-col justify-between shadow-md hover:bg-surface-container-high transition-colors">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-headline-sm">database</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-2">Databases & Caching</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Normalized data stores, in-memory caches, and deterministic transaction isolation.</p>
+</div>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> PostgreSQL (ACID)
+          </li>
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Redis Caching & Queues
+          </li>
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> MongoDB / Document Store
+          </li>
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Prisma / TypeORM
+          </li>
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Query Optimization
+          </li>
+</ul>
+</div>
+<!-- 4. DevOps & Tooling -->
+<div class="p-6 rounded-xl bg-surface-container flex flex-col justify-between shadow-md hover:bg-surface-container-high transition-colors">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-headline-sm">cloud_sync</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface mb-2">DevOps & Tooling</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Automated pipelines, immutable container orchestration, and telemetry visibility.</p>
+</div>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Docker Containers
+          </li>
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> AWS (ECS, S3, CloudFront)
+          </li>
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Git / GitHub Actions CI/CD
+          </li>
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Jest / Playwright
+          </li>
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Linux & NGINX
+          </li>
+</ul>
+</div>
+</div>
+</section>
+<!-- ARCHITECTURE & PHILOSOPHY (ABOUT) SECTION -->
+<section class="w-full max-w-7xl mx-auto px-6 py-20" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Story Context -->
+<div class="lg:col-span-6 flex flex-col">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-title-md">account_tree</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Philosophy & Background</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">
+          Engineering with focus on reliability, performance, and craft.
+        </h2>
+<div class="space-y-4 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>
+            Over the past seven years, I have engineered full-stack JavaScript environments across enterprise systems and fast-scaling products. My core focus centers on the Node.js runtime—harnessing its event loop mechanics, non-blocking asynchronous nature, and raw processing throughput to power reliable microservices.
+          </p>
+<p>
+            Whether implementing server-rendered Node.js and Express backends or designing responsive frontend component trees, I treat code maintainability and deterministic testing as primary operational requirements rather than afterthoughts.
+          </p>
+</div>
+<!-- Architectural Principles -->
+<div class="mt-8 space-y-4">
+<div class="p-4 rounded-xl bg-surface-container flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-tertiary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-title-md">shield</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Resilient by Design</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Graceful degradation, strict circuit-breaker thresholds, and fault-tolerant APIs ensure zero catastrophic single-point failures.
+              </p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-title-md">bolt</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Performance-First</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Lean serialization payloads, indexed database queries, and sub-100ms response targets for all core user pathways.
+              </p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-title-md">check_circle</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Maintainable Codebases</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Strict TypeScript boundaries, modular clean architecture, and comprehensive end-to-end integration coverage.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Terminal / Architectural Telemetry Visualizer -->
+<div class="lg:col-span-6 rounded-xl bg-surface-container p-6 shadow-xl relative overflow-hidden">
+<!-- Terminal Header -->
+<div class="flex items-center justify-between pb-4 mb-4 border-b border-surface-container-highest">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error/70"></span>
+<span class="w-3 h-3 rounded-full bg-yellow-500/70"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary/70"></span>
+<span class="ml-2 font-code-inline text-code-inline text-on-surface-variant">runtime-node-v20.sys</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span> ONLINE
+          </span>
+</div>
+<!-- Terminal Body -->
+<div class="space-y-3 font-code-inline text-code-inline">
+<div class="text-on-surface-variant">
+<span class="text-primary">$</span> node --experimental-specifier-resolution=node server.ts
+          </div>
+<div class="text-tertiary">
+            [00:00:01] INFO (cluster): Worker pid:4108 initialized. Listening on :8080
+          </div>
+<div class="text-on-surface-variant">
+            [00:00:02] INFO (db): PostgreSQL connection pool established [max: 50, idle: 10]
+          </div>
+<div class="text-on-surface-variant">
+            [00:00:02] INFO (cache): Redis pub/sub connected at sentinel:6379
+          </div>
+<div class="text-primary">
+            [00:00:03] BENCH: Microservice handshake completed in 1.42ms
+          </div>
+</div>
+<!-- SVG System Pipeline Visualization -->
+<div class="mt-8 pt-6 border-t border-surface-container-highest">
+<div class="text-xs uppercase tracking-wider text-on-surface-variant font-label-sm mb-4">Pipeline Flow Architecture</div>
+<svg class="w-full h-auto text-on-surface" fill="none" stroke="currentColor" viewbox="0 0 460 120">
+<!-- Node Client -->
+<rect fill="#1b2028" height="50" rx="6" stroke="#38aaff" stroke-width="1.5" width="80" x="10" y="35"></rect>
+<text fill="#dee2ee" font-family="Geist" font-size="11" text-anchor="middle" x="50" y="60">Client / Edge</text>
+<text fill="#98cbff" font-family="Geist" font-size="9" text-anchor="middle" x="50" y="74">HTTP/3</text>
+<!-- Line 1 -->
+<path d="M90 60 L140 60" stroke="#3f4851" stroke-dasharray="4 3" stroke-width="2"></path>
+<circle cx="115" cy="60" fill="#38aaff" r="3"></circle>
+<!-- Node Gateway -->
+<rect fill="#252a33" height="60" rx="6" stroke="#4edea3" stroke-width="1.5" width="90" x="140" y="30"></rect>
+<text fill="#dee2ee" font-family="Geist" font-size="11" text-anchor="middle" x="185" y="58">Node.js API</text>
+<text fill="#4edea3" font-family="Geist" font-size="9" text-anchor="middle" x="185" y="72">Express/Fastify</text>
+<!-- Line 2 Split -->
+<path d="M230 60 L280 35" stroke="#3f4851" stroke-width="2"></path>
+<path d="M230 60 L280 85" stroke="#3f4851" stroke-width="2"></path>
+<!-- Node Redis -->
+<rect fill="#1b2028" height="40" rx="6" stroke="#3f4851" stroke-width="1.5" width="80" x="280" y="15"></rect>
+<text fill="#dee2ee" font-family="Geist" font-size="10" text-anchor="middle" x="320" y="35">Redis Cache</text>
+<text fill="#adb9cd" font-family="Geist" font-size="8" text-anchor="middle" x="320" y="47">< 1ms memory</text>
+<!-- Node Postgres -->
+<rect fill="#1b2028" height="40" rx="6" stroke="#3f4851" stroke-width="1.5" width="80" x="280" y="65"></rect>
+<text fill="#dee2ee" font-family="Geist" font-size="10" text-anchor="middle" x="320" y="85">PostgreSQL</text>
+<text fill="#adb9cd" font-family="Geist" font-size="8" text-anchor="middle" x="320" y="97">ACID primary</text>
+<!-- Line 3 to Workers -->
+<path d="M360 35 L400 35" stroke="#3f4851" stroke-width="1.5"></path>
+<rect fill="#1b2028" height="40" rx="6" stroke="#38aaff" stroke-width="1" width="50" x="400" y="15"></rect>
+<text fill="#98cbff" font-family="Geist" font-size="9" text-anchor="middle" x="425" y="38">Queue</text>
+</svg>
+</div>
+</div>
+</div>
+</section>
+<!-- CONTACT & ENGAGEMENT CTA SECTION -->
+<section class="w-full max-w-7xl mx-auto px-6 pt-12 pb-28" id="contact">
+<div class="w-full rounded-2xl bg-surface-container p-8 md:p-14 shadow-2xl relative overflow-hidden">
+<!-- Ambient Glow Behind CTA -->
+<div class="absolute -right-20 -bottom-20 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm mb-6">
+<span class="material-symbols-outlined text-title-md">send</span>
+<span>Initiate Communication</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">
+          Let's build something remarkable together.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-10">
+          Currently open to senior engineering positions, technical consulting, and high-impact distributed systems projects. Let's talk system architecture or team roadmaps.
+        </p>
+<!-- Interaction Suite -->
+<div class="flex flex-wrap items-center gap-4">
+<!-- Copy Email Chip -->
+<button class="inline-flex items-center gap-3 px-5 py-3.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface transition-all duration-200 shadow-sm group" id="copy-email-btn" onclick="copyEmailToClipboard()">
+<span class="material-symbols-outlined text-primary text-title-md">mail</span>
+<span class="font-code-inline text-code-inline text-on-surface" id="email-address-text">alex.rivera.dev@example.com</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm group-hover:text-primary transition-colors" id="copy-badge">
+              Copy
+            </span>
+</button>
+<!-- Schedule Call -->
+<a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-primary-container text-on-primary-container font-title-md text-title-md hover:bg-primary hover:text-on-primary transition-all duration-200 shadow-[0_0_20px_rgba(56,170,255,0.3)]" href="mailto:alex.rivera.dev@example.com?subject=Senior%20Engineering%20Inquiry">
+<span>Schedule a 15-min Call</span>
+<span class="material-symbols-outlined text-title-md">calendar_today</span>
+</a>
+</div>
+<!-- Quick Status Notice -->
+<div class="mt-8 flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Response latency typically under 12 hours (UTC-5 / Eastern Time)</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  function copyEmailToClipboard() {
+    const email = "alex.rivera.dev@example.com";
+    navigator.clipboard.writeText(email).then(() => {
+      const badge = document.getElementById("copy-badge");
+      if (badge) {
+        const originalText = badge.innerText;
+        badge.innerText = "Copied!";
+        badge.classList.add("text-tertiary");
+        setTimeout(() => {
+          badge.innerText = originalText;
+          badge.classList.remove("text-tertiary");
+        }, 2000);
+      }
+    }).catch(err => {
+      console.error('Failed to copy text: ', err);
+    });
+  }
+</script></main><footer class="w-full bg-surface-container-lowest py-space-xl"><div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-gutter"><div class="flex flex-col items-center md:items-start gap-space-xs"><span class="font-title-md text-title-md text-on-surface">Alex Rivera</span><p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Alex Rivera. Engineered with high-performance standards.</p></div><div class="flex items-center gap-space-md"><a aria-label="Source Code" class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-title-md">terminal</span><span>GitHub</span></a><a aria-label="Professional Network" class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-title-md">hub</span><span>LinkedIn</span></a><a aria-label="Social Channel" class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-title-md">share</span><span>Twitter</span></a></div></div></footer></body></html>

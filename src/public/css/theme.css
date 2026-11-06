@@ -1,0 +1,43 @@
+
+:root {
+  /* Brand */
+  --color-primary: #0F97FF;
+  --color-primary-hover: #38AAFF;
+
+  /* Backgrounds */
+  --color-background: #0B1018;
+  --color-surface: #141C28;
+  --color-surface-elevated: #1D2938;
+
+  /* Text */
+  --color-text-primary: #F5F9FF;
+  --color-text-secondary: #A3B3C6;
+
+  /* Borders */
+  --color-border: #2B3A4C;
+
+  /* Semantic states */
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+  /* Typography */
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Spacing */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-6: 3rem;
+  --space-8: 4rem;
+
+  /* Shape */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+
+  /* Layout */
+  --container-max-width: 75rem;
+}
