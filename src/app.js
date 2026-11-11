@@ -15,11 +15,8 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(import.meta.dirname, 'public')));
 
 //application routes
-app.get('/', (req,res,next) => {
-   res.status(200).json({
-    status: 'success',
-    message: 'backend index route touced!'
-   }); 
+app.get('/', (req, res) => {
+    res.render('pages/homepage');
 });
 //404 handler
 app.use((req, res) => {

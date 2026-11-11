@@ -1,0 +1,33 @@
+<header class="site-header">
+    <div class="header-inner">
+        <a class="header-brand" href="/" aria-label="Nick Taylor homepage">
+            <span class="brand-logo" aria-hidden="true">NCT</span>
+            <span class="brand-copy">
+                <span class="brand-name">Nicholas C. Taylor</span>
+                <span class="brand-role">Full-Stack TypeScript Engineer</span>
+                <span class="brand-page">Full-Stack TypeScript Engineer</span>
+            </span>
+        </a>
+        <nav class="desktop-navigation" aria-label="Primary navigation">
+            <% for (const label of ['Projects', 'Skills', 'About', 'Contact']) { %>
+                <a class="navigation-link<%= label === 'Projects' ? ' navigation-link-featured' : '' %>" role="link" aria-disabled="true" title="Coming soon"><%= label %></a>
+            <% } %>
+        </nav>
+        <div class="header-actions">
+            <a class="resume-link" role="link" aria-disabled="true" title="Resume">Resume</a>
+            <button class="menu-toggle" type="button" aria-label="Navigation menu" aria-expanded="false" aria-controls="mobile-navigation">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path class="menu-line menu-line-top" d="M4 6h16"/>
+                    <path class="menu-line menu-line-middle" d="M4 12h16"/>
+                    <path class="menu-line menu-line-bottom" d="M4 18h16"/>
+                </svg>
+            </button>
+            <img class="profile-avatar" src="/images/profile_black_white_avatar_photo.webp" alt="Nicholas C. Taylor" width="32" height="32">
+        </div>
+    </div>
+    <nav id="mobile-navigation" class="mobile-navigation" aria-label="Mobile navigation" hidden>
+        <% for (const label of ['Projects', 'Skills', 'About', 'Contact', 'Resume']) { %>
+            <a class="navigation-link" role="link" aria-disabled="true" title="mob-menu-nav-links"><%= label %></a>
+        <% } %>
+    </nav>
+</header>

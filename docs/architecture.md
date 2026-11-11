@@ -2,7 +2,7 @@
 
 ## Overview
 
-Portfolio Resurrection is an early-stage Node.js/Express portfolio intended to use server-side EJS rendering. Currently, the application serves JSON responses and static CSS; no handler calls `res.render()`. It has no Angular application, database, authentication, external integrations, or separate frontend build pipeline.
+Portfolio Resurrection is an early-stage Node.js/Express portfolio using server-side EJS rendering. The root route renders a header-only homepage; the application also serves static assets and JSON error responses. It has no Angular application, database, authentication, external integrations, or separate frontend build pipeline.
 
 ## Verified technologies
 
@@ -10,9 +10,9 @@ Portfolio Resurrection is an early-stage Node.js/Express portfolio intended to u
 | --- | --- |
 | Node.js | Runtime using ES modules and `import.meta.dirname`; no runtime version is pinned. |
 | Express | Manifest `^5.3.0`; lockfile `5.3.0`. HTTP routing, middleware, and static delivery. |
-| EJS | Manifest `^7.0.2`; lockfile `7.0.2`. Selected view engine, currently unused for responses. |
+| EJS | Manifest `^7.0.2`; lockfile `7.0.2`. Renders the homepage and shared header partial. |
 | npm | Lockfile-based dependency installation and start, development, and test scripts. |
-| HTML/CSS | Unused 404 template and CSS custom properties. |
+| HTML/CSS | Responsive header, CSS custom properties, and unused 404 template. |
 
 Express and EJS are the only direct dependencies. Tailwind CDN references belong to design mockups, not an installed application styling framework.
 
@@ -23,7 +23,11 @@ server.js                         HTTP listener and server error event handling
 src/
   app.js                          Express initialization, inline route, middleware
   views/404.ejs                   Unused HTML error template
+  views/pages/homepage.ejs        Homepage document and header include
+  views/partials/header.ejs       Shared responsive header
   public/css/theme.css            Static theme variables
+  public/css/header.css           Header layout and responsive styling
+  public/js/header.js             Mobile dropdown behavior
 docs/designs/
   luminescent_precision/DESIGN.md Design specification
   desktop_portfolio_homepage_1440px/  HTML and PNG design references
@@ -47,7 +51,7 @@ The app selects `ejs` as its view engine, then registers middleware in this orde
 5. Catch-all JSON 404 handler.
 6. Four-argument error middleware returning JSON 500.
 
-**Rendering gap:** The intended template directory is assigned using `app.set('view', ...)`, not the `views` directory setting. This does not configure Express's template search directory. No current route exercises rendering.
+The `views` setting resolves `src/views` relative to the app module. The root handler calls `res.render('pages/homepage')`, which includes `../partials/header`.
 
 ## Actual request lifecycle
 
@@ -58,7 +62,7 @@ flowchart TD
     C -->|File served| D[Static response]
     C -->|Falls through| E{GET / matches?}
     E -->|Yes| F[Inline handler]
-    F --> G[200 JSON response]
+    F --> G[EJS homepage and header → 200 HTML response]
     E -->|No| H[Catch-all handler]
     H --> I[404 JSON response]
     B -->|Error| J[Global error middleware]
@@ -67,15 +71,21 @@ flowchart TD
     J --> K[500 JSON response]
 ```
 
-The intended server-rendered flow is request → middleware → route handler → EJS rendering → HTML response. The EJS and HTML response stages are not implemented in the current route flow. See [HTTP interface](api.md) for response details.
+The root request flow is request → middleware → route handler → EJS rendering → HTML response. See [HTTP interface](api.md) for response details.
 
 ## Routes, templates, and styling
 
-Routing uses `app.get()` directly; there are no separate routers, controllers, or services. The root handler returns JSON without consuming parameters or parsed bodies.
+Routing uses `app.get()` directly; there are no separate routers, controllers, or services. The root handler renders the homepage without consuming parameters or parsed bodies.
 
 `src/views/404.ejs` contains static HTML displaying “Page Not Found.” It has no dynamic EJS expressions, layouts, or partials, and the 404 handler does not render it. No template data or application locals are supplied.
 
-Static files are mounted at the URL root: `src/public/css/theme.css` is available at `/css/theme.css`. The file defines color, typography, spacing, shape, and layout variables; it does not implement a portfolio layout or load the named fonts. Design artifacts under `docs/designs` are outside the static root and are not served by this middleware.
+Static files are mounted at the URL root: `src/public/css/theme.css` is available at `/css/theme.css`. The theme defines reusable design variables. `/css/header.css` adds reference-specific header colors, Sora/Geist typography, and responsive layouts. The homepage loads these fonts from Google Fonts with sans-serif fallbacks. Design artifacts under `docs/designs` are outside the static root and are not served by this middleware.
+
+### Responsive header behavior
+
+Desktop and tablet (768px and above) share the desktop reference styling and an 80px fixed header. Below 768px, a 64px header displays the mobile reference layout with safe-area support. An initials logo and `/images/profile_black_white_avatar_photo.png` serve as the header branding and avatar; the photo uses a circular 32px crop. The rest of the homepage is an empty dark background.
+
+Navigation and Resume placeholders use `aria-disabled="true"` without `href` or keyboard stops; they do not navigate. Projects retains the reference highlight without claiming to be the current page. The mobile button controls a hidden dropdown through `aria-controls` and `aria-expanded`. A deferred script toggles it and closes it on Escape, outside click, or breakpoint changes; Escape returns focus to the button. No client framework is used.
 
 ## Middleware, errors, and security
 
@@ -101,8 +111,8 @@ Render is identified as the intended hosting target in project documentation. No
 
 - Separating the app from its listener permits importing the app without starting the production listener.
 - Inline handlers keep the current small application simple; controller and service layers have not been introduced.
-- Static asset paths are module-relative, while the intended view directory configuration remains incomplete.
+- Static asset and view directory paths are module-relative.
 - Generic JSON errors limit internal details in responses, but the fixed 500 status loses distinctions between client parsing errors and server errors.
-- Planned work includes EJS portfolio pages and integration of responsive design references. These are not currently delivered features.
+- The header implements the responsive references; page sections, resume, and navigation destinations remain future work.
 
 `npm test` invokes Node's built-in test runner; the current repository contains no discovered tests or suites. No lint or build script is defined.

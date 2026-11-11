@@ -2,36 +2,28 @@
 
 ## Current interface
 
-The application exposes one explicit JSON route and static assets. **No server-rendered page routes or form submission endpoints are implemented.** EJS is configured as the view engine, but no route renders a template. The root JSON response is a backend placeholder rather than a versioned resource API.
+The application exposes a server-rendered homepage and static assets. There is no resource API or form submission endpoint. Errors remain JSON responses.
 
 Local base URL: `http://localhost:3000` (adjust for `PORT`). No deployed base URL has been verified.
 
 | Method | Path | Handler | Response |
 | --- | --- | --- | --- |
-| GET | `/` | Explicit inline application route | 200 JSON |
+| GET | `/` | Explicit inline application route | 200 HTML |
 | GET / HEAD | `/css/theme.css` | Static middleware | CSS, or headers only for HEAD |
+| GET / HEAD | `/css/header.css`, `/js/header.js` | Static middleware | CSS or JavaScript, or headers only for HEAD |
 | Any unmatched request | Any unmatched path | Catch-all middleware | 404 JSON |
 
 Express also handles HEAD requests for the GET root route, returning response headers without a body. No authentication or authorization middleware is configured. JSON and URL-encoded body parsers run before static delivery and route handling; no implemented application route consumes the parsed body.
 
-## JSON endpoint: `GET /`
+## Homepage: `GET /`
 
-Returns a fixed backend status response. No path parameters, query parameters, request body, or credentials are required. Query values are not used by the handler.
+Returns **200 OK — `text/html`** with the EJS homepage document and shared responsive header. No path parameters, query parameters, request body, or credentials are required. Query values are ignored.
 
 ```sh
 curl -i http://localhost:3000/
 ```
 
-**200 OK — `application/json`**
-
-```json
-{
-  "status": "success",
-  "message": "backend index route touced!"
-}
-```
-
-The message above preserves the source's current spelling. There is no documented resource model, pagination, API version prefix, or persistence layer.
+The page displays Nick Taylor branding with an initials logo and local profile photo, desktop/tablet navigation, and a mobile dropdown below 768px. The remaining page is a dark background. Section and Resume links are marked unavailable and have no destinations. This replaces the previous JSON backend placeholder.
 
 ## Static asset: `GET /css/theme.css`
 
@@ -44,7 +36,7 @@ curl -I http://localhost:3000/css/theme.css
 
 A normal successful GET returns **200 OK** with a CSS content type. HEAD returns headers without the file body. Default Express static middleware may also return conditional or range responses such as 304 or 206; no custom caching or range policy is configured.
 
-Static middleware is mounted at `/`, mapping paths relative to `src/public`. The theme file is the only current static file. Missing assets fall through to the JSON 404 handler. EJS templates and design documentation are outside the public directory.
+Static middleware is mounted at `/`, mapping paths relative to `src/public`. The homepage also loads `/css/header.css` (responsive header styles) and `/js/header.js` (mobile dropdown behavior); these require no inputs or credentials and return 200 with CSS or JavaScript content types. Fonts load externally from Google Fonts. Missing assets fall through to the JSON 404 handler. EJS templates and design documentation are outside the public directory.
 
 ## Unmatched requests
 
@@ -81,8 +73,8 @@ The handler always sets status 500, including for body-parser errors such as mal
 
 ## Verification and planned interfaces
 
-Source of truth: [`src/app.js`](../src/app.js), [`server.js`](../server.js), and [`src/public/css/theme.css`](../src/public/css/theme.css). See [architecture](architecture.md) for middleware order and rendering gaps.
+Source of truth: [`src/app.js`](../src/app.js), [`server.js`](../server.js), and [`src/public/css/theme.css`](../src/public/css/theme.css). See [architecture](architecture.md) for middleware order and rendering behavior.
 
 `npm test` runs `node --test`; currently zero tests and suites are discovered. The curl examples provide manual checks and do not imply automated coverage.
 
-Server-rendered portfolio pages are planned, but their paths and response contracts have not been implemented. No additional API or form endpoint is specified here. TODO: Add verified page routes and deployment base URL when available.
+Additional portfolio content and navigation destinations are planned, but no further page routes are implemented. No additional API or form endpoint is specified here. TODO: Add verified page routes and deployment base URL when available.
