@@ -9,3 +9,6 @@ node_modules/
 
 # macOS system files
 .DS_Store
+
+# Playwright MCP generated browser artifacts
+.playwright-mcp/

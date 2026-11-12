@@ -2,7 +2,7 @@
 
 A developer portfolio intended to showcase software engineering experience, technical skills, and full-stack projects. Built around an Express backend with EJS as the server-rendered presentation layer.
 
-**Status:** Early development. The homepage renders a responsive header with Nick Taylor branding. Page sections and navigation destinations are not implemented yet.
+**Status:** Early development. The homepage renders a responsive header and hero with Nick Taylor branding. Remaining page sections and navigation destinations are not implemented yet.
 
 ## Tech stack
 
@@ -19,9 +19,10 @@ Design mockups use Tailwind CSS through a CDN. Tailwind is not an installed appl
 
 ## Implemented functionality
 
-- `GET /` returns HTTP 200 with an EJS-rendered header-only homepage.
+- `GET /` returns HTTP 200 with an EJS-rendered homepage with a responsive hero.
 - Desktop and tablet share an 80px header; mobile uses a 64px header below 768px with an accessible dropdown.
 - An initials logo and a local black-and-white profile photo appear in the header. Future navigation links are marked unavailable.
+- Hero with availability badge, headline, responsive action placeholders, and engineering metrics adapted from the design references.
 - JSON and URL-encoded request body parsing.
 - Static assets served from `src/public`, including theme/header CSS and `/js/header.js`.
 - Unmatched requests return a JSON 404 response; centralized error middleware returns a generic JSON 500 response.
@@ -37,7 +38,7 @@ Design mockups use Tailwind CSS through a CDN. Tailwind is not an installed appl
 │   ├── views/pages/homepage.ejs # Homepage document
 │   ├── views/partials/header.ejs # Shared responsive header
 │   ├── views/404.ejs          # Unused error template
-│   └── public/               # Theme/header CSS and mobile-menu JavaScript
+│   └── public/               # Theme/header/hero CSS and mobile-menu JavaScript
 ├── docs/designs/              # Design guide and desktop/tablet/mobile HTML + PNG references
 ├── package.json
 ├── package-lock.json
@@ -68,7 +69,7 @@ Then start development mode:
 npm run dev
 ```
 
-Open `http://localhost:3000` to see the header-only homepage. Use your configured port if different.
+Open `http://localhost:3000` to see the homepage. Use your configured port if different.
 
 ## Environment configuration
 

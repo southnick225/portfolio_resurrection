@@ -2,7 +2,7 @@
 
 ## Overview
 
-Portfolio Resurrection is an early-stage Node.js/Express portfolio using server-side EJS rendering. The root route renders a header-only homepage; the application also serves static assets and JSON error responses. It has no Angular application, database, authentication, external integrations, or separate frontend build pipeline.
+Portfolio Resurrection is an early-stage Node.js/Express portfolio using server-side EJS rendering. The root route renders a homepage with a responsive header and hero; the application also serves static assets and JSON error responses. It has no Angular application, database, authentication, external integrations, or separate frontend build pipeline.
 
 ## Verified technologies
 
@@ -23,10 +23,11 @@ server.js                         HTTP listener and server error event handling
 src/
   app.js                          Express initialization, inline route, middleware
   views/404.ejs                   Unused HTML error template
-  views/pages/homepage.ejs        Homepage document and header include
+  views/pages/homepage.ejs        Homepage document, hero, and header include
   views/partials/header.ejs       Shared responsive header
   public/css/theme.css            Static theme variables
   public/css/header.css           Header layout and responsive styling
+  public/css/homepage.css         Responsive hero layout and typography
   public/js/header.js             Mobile dropdown behavior
 docs/designs/
   luminescent_precision/DESIGN.md Design specification
@@ -83,7 +84,7 @@ Static files are mounted at the URL root: `src/public/css/theme.css` is availabl
 
 ### Responsive header behavior
 
-Desktop and tablet (768px and above) share the desktop reference styling and an 80px fixed header. Below 768px, a 64px header displays the mobile reference layout with safe-area support. An initials logo and `/images/profile_black_white_avatar_photo.png` serve as the header branding and avatar; the photo uses a circular 32px crop. The rest of the homepage is an empty dark background.
+Desktop and tablet (768px and above) share the desktop reference styling and an 80px fixed header. Below 768px, a 64px header displays the mobile reference layout with safe-area support. An initials logo and `/images/profile_black_white_avatar_photo.png` serve as the header branding and avatar; the photo uses a circular 32px crop. The hero follows the desktop, tablet, and mobile references in `docs/designs/homepage`. It uses a shared metrics strip on desktop, four individual cards on tablet, and a two-column metrics grid with stacked actions on mobile. Responsive copy variants use CSS display rules. Decorative inline SVG icons need no additional dependencies. Hero Projects and Contact actions use the same unavailable-link convention until their destinations exist. The reference copy and metric values remain design content pending personalization.
 
 Navigation and Resume placeholders use `aria-disabled="true"` without `href` or keyboard stops; they do not navigate. Projects retains the reference highlight without claiming to be the current page. The mobile button controls a hidden dropdown through `aria-controls` and `aria-expanded`. A deferred script toggles it and closes it on Escape, outside click, or breakpoint changes; Escape returns focus to the button. No client framework is used.
 
@@ -113,6 +114,6 @@ Render is identified as the intended hosting target in project documentation. No
 - Inline handlers keep the current small application simple; controller and service layers have not been introduced.
 - Static asset and view directory paths are module-relative.
 - Generic JSON errors limit internal details in responses, but the fixed 500 status loses distinctions between client parsing errors and server errors.
-- The header implements the responsive references; page sections, resume, and navigation destinations remain future work.
+- The header implements the responsive references; the hero is implemented; remaining page sections, resume, and navigation destinations remain future work.
 
 `npm test` invokes Node's built-in test runner; the current repository contains no discovered tests or suites. No lint or build script is defined.
