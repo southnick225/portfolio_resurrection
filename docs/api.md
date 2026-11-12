@@ -10,20 +10,20 @@ Local base URL: `http://localhost:3000` (adjust for `PORT`). No deployed base UR
 | --- | --- | --- | --- |
 | GET | `/` | Explicit inline application route | 200 HTML |
 | GET / HEAD | `/css/theme.css` | Static middleware | CSS, or headers only for HEAD |
-| GET / HEAD | `/css/header.css`, `/css/homepage.css`, `/js/header.js` | Static middleware | CSS or JavaScript, or headers only for HEAD |
+| GET / HEAD | `/css/header.css`, `/css/homepage.css`, `/css/footer.css`, `/js/header.js` | Static middleware | CSS or JavaScript, or headers only for HEAD |
 | Any unmatched request | Any unmatched path | Catch-all middleware | 404 JSON |
 
 Express also handles HEAD requests for the GET root route, returning response headers without a body. No authentication or authorization middleware is configured. JSON and URL-encoded body parsers run before static delivery and route handling; no implemented application route consumes the parsed body.
 
 ## Homepage: `GET /`
 
-Returns **200 OK — `text/html`** with the EJS homepage document, shared responsive header, and hero. No path parameters, query parameters, request body, or credentials are required. Query values are ignored.
+Returns **200 OK — `text/html`** with the EJS homepage document, shared responsive header, hero, Technical Expertise, and Featured Engineering Projects sections, and a responsive footer. No path parameters, query parameters, request body, or credentials are required. Query values are ignored.
 
 ```sh
 curl -i http://localhost:3000/
 ```
 
-The page displays Nick Taylor branding with an initials logo and local profile photo, desktop/tablet navigation, and a mobile dropdown below 768px. The hero displays availability, a headline, supporting text, two unavailable action links, and four engineering metrics with desktop, tablet, and mobile layouts. Section and Resume links are marked unavailable and have no destinations. This replaces the previous JSON backend placeholder.
+The page displays Nick Taylor branding with an initials logo and local profile photo, desktop/tablet navigation, and a mobile dropdown below 768px. The hero displays availability, a headline, supporting text, two unavailable action links, and four engineering metrics with desktop, tablet, and mobile layouts. Section and Resume links are marked unavailable and have no destinations. Two featured projects render from `data/projects.json` below Technical Expertise, with responsive cards and unavailable demo/source actions until their URLs are configured. This replaces the previous JSON backend placeholder.
 
 ## Static asset: `GET /css/theme.css`
 

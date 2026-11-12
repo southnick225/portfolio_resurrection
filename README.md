@@ -2,7 +2,7 @@
 
 A developer portfolio intended to showcase software engineering experience, technical skills, and full-stack projects. Built around an Express backend with EJS as the server-rendered presentation layer.
 
-**Status:** Early development. The homepage renders a responsive header and hero with Nick Taylor branding. Remaining page sections and navigation destinations are not implemented yet.
+**Status:** Early development. The homepage renders a responsive header, hero, Technical Expertise, and Featured Engineering Projects sections with Nick Taylor branding. Remaining page sections and navigation destinations are not implemented yet.
 
 ## Tech stack
 
@@ -23,6 +23,9 @@ Design mockups use Tailwind CSS through a CDN. Tailwind is not an installed appl
 - Desktop and tablet share an 80px header; mobile uses a 64px header below 768px with an accessible dropdown.
 - An initials logo and a local black-and-white profile photo appear in the header. Future navigation links are marked unavailable.
 - Hero with availability badge, headline, responsive action placeholders, and engineering metrics adapted from the design references.
+- Technical Expertise follows the homepage designs: four desktop skill lists, a 2×2 tablet grid with tags, and compact stacked mobile cards.
+- Featured Engineering Projects render from `data/projects.json`, with alternating desktop cards and stacked tablet/mobile layouts. Reference images use external URLs; demo/source URLs are unavailable placeholders until configured.
+- Responsive footer with branding/social placeholders on desktop and tablet, plus a fixed mobile navigation bar linking to Projects and Stack.
 - JSON and URL-encoded request body parsing.
 - Static assets served from `src/public`, including theme/header CSS and `/js/header.js`.
 - Unmatched requests return a JSON 404 response; centralized error middleware returns a generic JSON 500 response.

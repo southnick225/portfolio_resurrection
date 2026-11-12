@@ -1,5 +1,6 @@
 import express from 'express';
 import path from 'node:path';
+import projects from '../data/featuredProjects.json' with { type: 'json' };
 
 const app = express();
 
@@ -16,7 +17,7 @@ app.use(express.static(path.join(import.meta.dirname, 'public')));
 
 //application routes
 app.get('/', (req, res) => {
-    res.render('pages/homepage');
+    res.render('pages/homepage', { projects });
 });
 //404 handler
 app.use((req, res) => {

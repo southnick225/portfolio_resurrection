@@ -1,0 +1,146 @@
+[
+  {
+    "id": "spectra",
+    "category": "Distributed Systems",
+    "release": "2024 Release",
+    "imageAlt": "Spectra distributed telemetry dashboard",
+    "demoUrl": null,
+    "sourceUrl": null,
+    "desktop": {
+      "title": "Spectra - Distributed Telemetry Engine",
+      "description": "High-throughput telemetry collector processing 25,000 events/second with sub-second aggregate streaming. Features non-blocking I/O pipeline, Redis pub/sub queue backplanes, and optimized PostgreSQL time-series schema.",
+      "technologies": [
+        "Node.js",
+        "Express",
+        "TypeScript",
+        "Redis",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "metrics": [
+        {
+          "label": "Pipeline Latency",
+          "value": "< 8.4 ms"
+        },
+        {
+          "label": "Throughput",
+          "value": "2.1B / mo"
+        }
+      ],
+      "badge": "25k req/sec",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCFb8arM3uUAegofau-UD2wz1h8QvwW6JzYT1vbMMKVQgBSECq5u3Ke1_zuwRwZzyDwmmL_KKpNb2ivZQqu_Dgs2vh0UanhwrnxZpzwnJNKKjc5q3ZnCIwxk-cagfYt_EUJiNn775svp5ei2Fy4nxykoybii6pSwesjrldFCsYHRvZwbETK6_7M2Oj8PK478VPHYewdg2e-YPPmwA_odvRnhPscj3w35VQtGTCwPnhF"
+    },
+    "tablet": {
+      "title": "Spectra — Distributed Telemetry Engine",
+      "description": "High-throughput distributed telemetry and metrics ingestion pipeline. Consumes distributed log streams, dispatches deterministic worker tasks, and hydrates an optimized time-series datastore under peak traffic.",
+      "technologies": [
+        "Node.js",
+        "Express",
+        "Redis",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "metrics": [
+        {
+          "label": "Throughput",
+          "value": "2.1B / mo"
+        },
+        {
+          "label": "P99 Latency",
+          "value": "< 8.4ms"
+        },
+        {
+          "label": "Worker Nodes",
+          "value": "32 Pods"
+        }
+      ],
+      "badge": "Production Scale (45k rps)",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBwU-efeakFKDEjK_Kje7JyOwdNGEuNStsXCSZwudheyxXXtdoQmxaWHfLz2RvCPbbNMcJ-817pT4qMYY5o8E1lpGWI-o9YaIeM1Kffw4FcQcHbBYPuhMu7-tE5VgraW_my0uCk-nViZubTwLDtwyoOggTwxvwYJ7sQ6FWsEsCMO40m28iPiz7Mw5zVxyCIjx3cg1OTHEOYZXhIEUgxDgvmXwKTudvrlflLgvHPvP7J"
+    },
+    "mobile": {
+      "title": "Spectra Telemetry Engine",
+      "description": "High-throughput observability pipeline aggregating 45,000 rps microservice metrics with sub-10ms Redis timeseries lookups and dynamic health alerts.",
+      "technologies": [
+        "Node.js",
+        "Express",
+        "Redis",
+        "PostgreSQL"
+      ],
+      "metrics": [],
+      "badge": "Production Scale",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCFb8arM3uUAegofau-UD2wz1h8QvwW6JzYT1vbMMKVQgBSECq5u3Ke1_zuwRwZzyDwmmL_KKpNb2ivZQqu_Dgs2vh0UanhwrnxZpzwnJNKKjc5q3ZnCIwxk-cagfYt_EUJiNn775svp5ei2Fy4nxykoybii6pSwesjrldFCsYHRvZwbETK6_7M2Oj8PK478VPHYewdg2e-YPPmwA_odvRnhPscj3w35VQtGTCwPnhF"
+    }
+  },
+  {
+    "id": "aetherguard",
+    "category": "Developer Tools & AI",
+    "release": "Production",
+    "imageAlt": "AetherGuard AI code review and gateway interface",
+    "demoUrl": null,
+    "sourceUrl": null,
+    "desktop": {
+      "title": "AetherGuard - AI Code Review & Gateway",
+      "description": "Automated pull request security audit analyzer and API proxy gateway with sub-15ms edge routing latency. Integrates contextual LLM AST analysis with real-time WebSocket diff synchronization.",
+      "technologies": [
+        "Node.js",
+        "React",
+        "Tailwind CSS",
+        "WebSockets",
+        "Jest",
+        "AWS"
+      ],
+      "metrics": [
+        {
+          "label": "Review Turnaround",
+          "value": "< 1.2 sec"
+        },
+        {
+          "label": "PR Security Catch",
+          "value": "98.4% Acc"
+        }
+      ],
+      "badge": "14ms Gateway",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDpQpXGlWT8zHN3zd9bJlEzfP0-lWVC7MUfpW7eZc0dEAhcpTX9AWB-3qbRx7p0xxpFi7QJjVA1Qn0P4U-_q20I5cTQYzeVSbnRcAsy9J7t1ZuiCWeA5EqoFepT4oxPcozn5yMI93hfPBRECCKL-rgKTUzSl7zLduo8bWJZc6At5ArEMUCCtSEbOYazHxvYtJRy6W3kKIOSl6EbR9-RaR7nKQxc5KQ0sFkOW5xQU6ke"
+    },
+    "tablet": {
+      "title": "AetherGuard — AI Code Review & Gateway",
+      "description": "Automated AST code critique platform analyzing security regressions and JavaScript architectural anti-patterns before GitHub pull requests hit staging branches.",
+      "technologies": [
+        "Node.js",
+        "React",
+        "Tailwind CSS",
+        "WebSockets",
+        "AWS"
+      ],
+      "metrics": [
+        {
+          "label": "AST Traversal",
+          "value": "140k AST/s"
+        },
+        {
+          "label": "Accuracy Rate",
+          "value": "98.4%"
+        },
+        {
+          "label": "PR Latency",
+          "value": "1.2s avg"
+        }
+      ],
+      "badge": "Semantic Static Analysis",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDk7FJj0MXOxPGnYKsw0JUbBO9nlXQ4Ez-aPRCFVbNGpI8m1wXn5bC4p_aTXBPdaxLmAWKIQjW11T802I08lzkQIQV1z277voD3F_k9bHbKMz1L_WnbZYsytg0HSzzX33CBitcycAuofiw-GvKfaWF0B1TpLo1f8I2ZUbpyuvPWd8sdEZTSCW7Pv079PhI62RRgT7aOr8_s94O42JrQeCvdweQV5uYlCoP0wqzeMI0m"
+    },
+    "mobile": {
+      "title": "AetherGuard Code Review",
+      "description": "Automated linting and microservice security analyzer providing instant code diff critiques, automated AST parsing, and live collaborative review streams.",
+      "technologies": [
+        "Node.js",
+        "React",
+        "WebSockets",
+        "AWS"
+      ],
+      "metrics": [],
+      "badge": "AI Automated",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDpQpXGlWT8zHN3zd9bJlEzfP0-lWVC7MUfpW7eZc0dEAhcpTX9AWB-3qbRx7p0xxpFi7QJjVA1Qn0P4U-_q20I5cTQYzeVSbnRcAsy9J7t1ZuiCWeA5EqoFepT4oxPcozn5yMI93hfPBRECCKL-rgKTUzSl7zLduo8bWJZc6At5ArEMUCCtSEbOYazHxvYtJRy6W3kKIOSl6EbR9-RaR7nKQxc5KQ0sFkOW5xQU6ke"
+    }
+  }
+]
