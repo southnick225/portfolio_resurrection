@@ -1,0 +1,538 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Skills &amp; Technical Expertise | Alex Rivera — Full-Stack Engineer</title>
+<!-- Google Fonts: Space Grotesk & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration Script -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0B1018',
+              surface: '#141C28',
+              surfaceElevated: '#1D2938',
+              border: '#2B3A4C',
+              accent: '#0F97FF',
+              accentGlow: '#38AAFF',
+              textPrimary: '#F5F9FF',
+              textSecondary: '#A3B3C6'
+            }
+          },
+          fontFamily: {
+            heading: ['Space Grotesk', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+<!-- Typography Styles -->
+<style data-purpose="typography">
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0B1018;
+      color: #F5F9FF;
+    }
+    h1, h2, h3, h4, h5, h6, .font-heading {
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: -0.025em;
+    }
+  </style>
+<!-- Custom Effects & Utilities -->
+<style data-purpose="custom-utilities">
+    .glow-cyan {
+      box-shadow: 0 0 25px -4px rgba(15, 151, 255, 0.25);
+    }
+    .grid-bg-subtle {
+      background-size: 32px 32px;
+      background-image: linear-gradient(to right, rgba(43, 58, 76, 0.2) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(43, 58, 76, 0.2) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-[#0B1018] text-[#F5F9FF] antialiased selection:bg-[#0F97FF]/30 selection:text-[#F5F9FF]">
+<!-- BEGIN: SiteNavigation -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#0B1018]/90 backdrop-blur-md border-b border-[#2B3A4C]/60 h-20 transition-all">
+<div class="max-w-7xl mx-auto px-6 lg:px-8 h-full flex items-center justify-between">
+<!-- Brand & Title Badge -->
+<a class="flex items-center gap-3.5 group" href="/">
+<div class="w-10 h-10 rounded-lg bg-gradient-to-br from-[#0F97FF] to-[#0B1018] p-[1px] shadow-sm">
+<div class="w-full h-full bg-[#141C28] rounded-[7px] flex items-center justify-center border border-[#2B3A4C]">
+<span class="font-heading font-bold text-sm tracking-wider text-[#0F97FF]">AR</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-[#F5F9FF] tracking-tight group-hover:text-[#0F97FF] transition-colors">Alex Rivera</span>
+<span class="text-xs text-[#A3B3C6] font-medium">Full-Stack Engineer</span>
+</div>
+</a>
+<!-- Center Nav Links -->
+<nav class="hidden md:flex items-center gap-1.5 bg-[#141C28]/80 p-1.5 rounded-full border border-[#2B3A4C]/70">
+<a class="text-xs font-medium text-[#A3B3C6] hover:text-[#F5F9FF] px-4 py-1.5 rounded-full transition-colors" href="#projects">Projects</a>
+<a class="text-xs font-medium bg-[#0F97FF]/15 text-[#0F97FF] border border-[#0F97FF]/30 px-4 py-1.5 rounded-full shadow-inner" href="#skills">Skills</a>
+<a class="text-xs font-medium text-[#A3B3C6] hover:text-[#F5F9FF] px-4 py-1.5 rounded-full transition-colors" href="#about">About</a>
+<a class="text-xs font-medium text-[#A3B3C6] hover:text-[#F5F9FF] px-4 py-1.5 rounded-full transition-colors" href="#contact">Contact</a>
+</nav>
+<!-- Right Action Items -->
+<div class="flex items-center gap-4">
+<a class="hidden sm:inline-flex items-center justify-center text-xs font-semibold px-4 py-2 rounded-lg bg-[#0F97FF] text-white hover:bg-[#38AAFF] transition-all duration-200 shadow-sm shadow-[#0F97FF]/20" href="#contact">
+          Resume
+        </a>
+<div class="w-9 h-9 rounded-full ring-2 ring-[#0F97FF]/30 overflow-hidden bg-[#1D2938] flex items-center justify-center text-xs font-bold text-[#A3B3C6]">
+<span class="text-[#0F97FF]">AR</span>
+</div>
+</div>
+</div>
+</header>
+<!-- END: SiteNavigation -->
+<main class="pt-28 pb-20">
+<!-- BEGIN: HeroSection -->
+<section class="relative pt-12 pb-16 overflow-hidden grid-bg-subtle border-b border-[#2B3A4C]/40">
+<div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+<!-- Eyebrow Pill -->
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#141C28] border border-[#2B3A4C] mb-6">
+<span class="w-2 h-2 rounded-full bg-[#0F97FF] animate-pulse"></span>
+<span class="text-xs font-semibold tracking-wider uppercase text-[#0F97FF]">Technical Expertise</span>
+</div>
+<!-- Hero Title & Subtitle -->
+<div class="max-w-3xl">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F5F9FF] mb-6 leading-[1.12]">
+            Technologies &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0F97FF] to-[#38AAFF]">Capabilities</span>
+</h1>
+<p class="text-lg text-[#A3B3C6] leading-relaxed max-w-2xl font-normal">
+            Building modern, scalable web applications with a focus on clean architecture, performance, and maintainable code.
+          </p>
+</div>
+<!-- 4 Compact Key Hero Badges -->
+<div class="mt-10 flex flex-wrap gap-3">
+<div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-lg bg-[#141C28] border border-[#2B3A4C] hover:border-[#0F97FF]/40 transition-colors">
+<svg class="w-4 h-4 text-[#0F97FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-xs font-semibold text-[#F5F9FF]">Full-Stack Development</span>
+</div>
+<div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-lg bg-[#141C28] border border-[#2B3A4C] hover:border-[#0F97FF]/40 transition-colors">
+<svg class="w-4 h-4 text-[#0F97FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-xs font-semibold text-[#F5F9FF]">TypeScript</span>
+</div>
+<div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-lg bg-[#141C28] border border-[#2B3A4C] hover:border-[#0F97FF]/40 transition-colors">
+<svg class="w-4 h-4 text-[#0F97FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-xs font-semibold text-[#F5F9FF]">Angular</span>
+</div>
+<div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-lg bg-[#141C28] border border-[#2B3A4C] hover:border-[#0F97FF]/40 transition-colors">
+<svg class="w-4 h-4 text-[#0F97FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-xs font-semibold text-[#F5F9FF]">Node.js</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: CoreTechnologyStack -->
+
+<!-- END: CoreTechnologyStack -->
+<!-- BEGIN: EngineeringCapabilities -->
+<section class="py-20 border-b border-[#2B3A4C]/40 bg-[#0B1018]">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<!-- Section Header -->
+<div class="mb-12">
+<p class="text-xs font-mono font-medium text-[#0F97FF] tracking-wider uppercase mb-2">// ENGINEERING PRACTICES</p>
+<h2 class="text-3xl font-bold text-[#F5F9FF] tracking-tight">Engineering Capabilities</h2>
+<p class="text-sm text-[#A3B3C6] mt-2 max-w-2xl">
+            Beyond frameworks and tools, my focus is on building software that is maintainable, reliable, and thoughtfully engineered.
+          </p>
+</div>
+<!-- 2x2 Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Capability 1 -->
+<div class="p-6 rounded-xl bg-[#141C28] border border-[#2B3A4C] hover:border-[#0F97FF]/40 transition-colors">
+<div class="bg-[#0F97FF]/10 text-[#0F97FF] p-3 rounded-lg w-fit mb-4">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-lg font-bold text-[#F5F9FF] mb-2 font-heading">Application Architecture</h3>
+<p class="text-sm text-[#A3B3C6] leading-relaxed">
+              Designing modular applications with reusable components, service layers, routing, and clear separation of concerns.
+            </p>
+</div>
+<!-- Capability 2 -->
+<div class="p-6 rounded-xl bg-[#141C28] border border-[#2B3A4C] hover:border-[#0F97FF]/40 transition-colors">
+<div class="bg-[#0F97FF]/10 text-[#0F97FF] p-3 rounded-lg w-fit mb-4">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-lg font-bold text-[#F5F9FF] mb-2 font-heading">API Development &amp; Integration</h3>
+<p class="text-sm text-[#A3B3C6] leading-relaxed">
+              Building RESTful APIs, implementing middleware, handling validation and errors, and integrating frontend and backend services.
+            </p>
+</div>
+<!-- Capability 3 -->
+<div class="p-6 rounded-xl bg-[#141C28] border border-[#2B3A4C] hover:border-[#0F97FF]/40 transition-colors">
+<div class="bg-[#0F97FF]/10 text-[#0F97FF] p-3 rounded-lg w-fit mb-4">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-lg font-bold text-[#F5F9FF] mb-2 font-heading">Authentication &amp; Security</h3>
+<p class="text-sm text-[#A3B3C6] leading-relaxed">
+              Implementing authentication, authorization, password hashing, protected routes, and secure application configuration.
+            </p>
+</div>
+<!-- Capability 4 -->
+<div class="p-6 rounded-xl bg-[#141C28] border border-[#2B3A4C] hover:border-[#0F97FF]/40 transition-colors">
+<div class="bg-[#0F97FF]/10 text-[#0F97FF] p-3 rounded-lg w-fit mb-4">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-lg font-bold text-[#F5F9FF] mb-2 font-heading">Performance &amp; Reliability</h3>
+<p class="text-sm text-[#A3B3C6] leading-relaxed">
+              Troubleshooting application issues, improving maintainability, investigating failures, and applying reliability-focused engineering practices.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: EngineeringCapabilities -->
+<!-- BEGIN: ModernDevelopmentWorkflow -->
+<section class="py-20 border-b border-[#2B3A4C]/40 bg-[#0B1018]/50">
+<div class="max-w-7xl mx-auto px-6 lg:px-8"><div class="mb-14">
+<p class="text-xs font-mono font-semibold text-[#0F97FF] tracking-wider uppercase mb-2">// METHODOLOGY</p>
+<h2 class="text-3xl font-bold text-[#F5F9FF] tracking-tight">Modern Development Workflow</h2>
+<p class="text-sm text-[#A3B3C6] mt-2 max-w-2xl">
+Combining established engineering practices with AI-assisted tools to improve development efficiency and software quality.
+</p>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+<!-- Stage 01 -->
+<div class="bg-[#141C28] border border-[#2B3A4C] hover:border-[#0F97FF]/40 p-4 rounded-xl flex flex-col justify-between gap-3 transition-colors relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-[#0F97FF]/15 border border-[#0F97FF]/30 text-[#0F97FF] font-mono text-xs font-bold">01</span>
+<span class="font-sans text-[11px] font-medium text-[#A3B3C6] uppercase tracking-wider">Blueprint</span>
+</div>
+<div>
+<h4 class="font-heading font-semibold text-base text-white mb-1">Plan</h4>
+<p class="font-sans text-xs text-[#A3B3C6] leading-relaxed">Requirements, architecture, technical decisions &amp; schema design.</p>
+</div>
+<div class="h-1 w-full bg-[#1D2938] rounded-full overflow-hidden">
+<div class="h-full w-full bg-[#0F97FF]"></div>
+</div>
+</div>
+
+<!-- Stage 02 -->
+<div class="bg-[#141C28] border border-[#2B3A4C] hover:border-[#0F97FF]/40 p-4 rounded-xl flex flex-col justify-between gap-3 transition-colors relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-[#0F97FF]/15 border border-[#0F97FF]/30 text-[#0F97FF] font-mono text-xs font-bold">02</span>
+<span class="font-sans text-[11px] font-medium text-[#A3B3C6] uppercase tracking-wider">Execute</span>
+</div>
+<div>
+<h4 class="font-heading font-semibold text-base text-white mb-1">Build</h4>
+<p class="font-sans text-xs text-[#A3B3C6] leading-relaxed">Implementation, service integration, modular UI development.</p>
+</div>
+<div class="h-1 w-full bg-[#1D2938] rounded-full overflow-hidden">
+<div class="h-full w-full bg-[#0F97FF]"></div>
+</div>
+</div>
+
+<!-- Stage 03 -->
+<div class="bg-[#141C28] border border-[#2B3A4C] hover:border-[#0F97FF]/40 p-4 rounded-xl flex flex-col justify-between gap-3 transition-colors relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-[#0F97FF]/15 border border-[#0F97FF]/30 text-[#0F97FF] font-mono text-xs font-bold">03</span>
+<span class="font-sans text-[11px] font-medium text-[#A3B3C6] uppercase tracking-wider">Validate</span>
+</div>
+<div>
+<h4 class="font-heading font-semibold text-base text-white mb-1">Test</h4>
+<p class="font-sans text-xs text-[#A3B3C6] leading-relaxed">Endpoint validation, edge-case debugging, quality assurance.</p>
+</div>
+<div class="h-1 w-full bg-[#1D2938] rounded-full overflow-hidden">
+<div class="h-full w-full bg-[#0F97FF]"></div>
+</div>
+</div>
+
+<!-- Stage 04 -->
+<div class="bg-[#141C28] border border-[#2B3A4C] hover:border-[#0F97FF]/40 p-4 rounded-xl flex flex-col justify-between gap-3 transition-colors relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-[#0F97FF]/15 border border-[#0F97FF]/30 text-[#0F97FF] font-mono text-xs font-bold">04</span>
+<span class="font-sans text-[11px] font-medium text-[#A3B3C6] uppercase tracking-wider">Refine</span>
+</div>
+<div>
+<h4 class="font-heading font-semibold text-base text-white mb-1">Review</h4>
+<p class="font-sans text-xs text-[#A3B3C6] leading-relaxed">Code quality audits, maintainability review, refactoring.</p>
+</div>
+<div class="h-1 w-full bg-[#1D2938] rounded-full overflow-hidden">
+<div class="h-full w-full bg-[#0F97FF]"></div>
+</div>
+</div>
+
+<!-- Stage 05 -->
+<div class="bg-[#141C28] border border-[#2B3A4C] hover:border-[#0F97FF]/40 p-4 rounded-xl flex flex-col justify-between gap-3 transition-colors relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold">05</span>
+<span class="font-sans text-[11px] font-medium text-[#A3B3C6] uppercase tracking-wider">Ship</span>
+</div>
+<div>
+<h4 class="font-heading font-semibold text-base text-white mb-1">Deploy</h4>
+<p class="font-sans text-xs text-[#A3B3C6] leading-relaxed">Version control pipeline, cloud delivery, production iteration.</p>
+</div>
+<div class="h-1 w-full bg-[#1D2938] rounded-full overflow-hidden">
+<div class="h-full w-full bg-emerald-400"></div>
+</div>
+</div>
+</div>
+
+<!-- AI-Assisted Workflow Acceleration Callout Card -->
+<div class="mt-8 flex items-start gap-3.5 p-4 bg-[#141C28]/80 border border-[#2B3A4C] rounded-xl shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-[#1D2938] border border-[#2B3A4C] flex items-center justify-center shrink-0 text-[#0F97FF]">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+</div>
+<p class="font-sans text-xs text-[#A3B3C6] leading-relaxed pt-0.5">
+<strong class="text-white font-medium">AI-Assisted Workflow Acceleration:</strong> AI-assisted tools accelerate implementation, exploration, and code review while engineering judgment remains central to architecture, testing, and delivery.
+</p>
+</div></div>
+</section>
+<!-- END: ModernDevelopmentWorkflow -->
+<!-- BEGIN: ExperienceBeyondCode -->
+<section class="py-20 border-b border-[#2B3A4C]/40 bg-[#0B1018]">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<!-- Section Header -->
+<div class="mb-12">
+<p class="text-xs font-mono font-medium text-[#0F97FF] tracking-wider uppercase mb-2">// MULTIDISCIPLINARY BACKGROUND</p>
+<h2 class="text-3xl font-bold text-[#F5F9FF] tracking-tight">Experience Beyond the Code</h2>
+<p class="text-sm text-[#A3B3C6] mt-2 max-w-2xl">
+            A multidisciplinary technical background spanning software development, systems reliability, data operations, and technical collaboration.
+          </p>
+</div>
+<!-- 4 Competency Cards (2x2 Grid) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Competency 1 -->
+<div class="bg-[#141C28] border border-[#2B3A4C] rounded-xl p-6 hover:border-[#0F97FF]/40 transition-colors">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-2.5 h-2.5 rounded-full bg-[#0F97FF]"></div>
+<h3 class="text-base font-bold text-[#F5F9FF]">Site Reliability &amp; Technical Support</h3>
+</div>
+<p class="text-xs text-[#A3B3C6] leading-relaxed mb-4">
+              Experienced in live troubleshooting, incident management, triage, and operating critical production infrastructure under strict availability constraints.
+            </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="text-[11px] px-2 py-0.5 rounded bg-[#1D2938] text-[#A3B3C6] border border-[#2B3A4C]">Troubleshooting</span>
+<span class="text-[11px] px-2 py-0.5 rounded bg-[#1D2938] text-[#A3B3C6] border border-[#2B3A4C]">Incident Investigation</span>
+<span class="text-[11px] px-2 py-0.5 rounded bg-[#1D2938] text-[#A3B3C6] border border-[#2B3A4C]">Operational Awareness</span>
+<span class="text-[11px] px-2 py-0.5 rounded bg-[#1D2938] text-[#A3B3C6] border border-[#2B3A4C]">Systems Support</span>
+</div>
+</div>
+<!-- Competency 2 -->
+<div class="bg-[#141C28] border border-[#2B3A4C] rounded-xl p-6 hover:border-[#0F97FF]/40 transition-colors">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-2.5 h-2.5 rounded-full bg-[#0F97FF]"></div>
+<h3 class="text-base font-bold text-[#F5F9FF]">Data Operations &amp; Systems</h3>
+</div>
+<p class="text-xs text-[#A3B3C6] leading-relaxed mb-4">
+              Managing complex ETL pipelines, database migrations, scheduled backups, and ensuring enterprise-grade data consistency.
+            </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="text-[11px] px-2 py-0.5 rounded bg-[#1D2938] text-[#A3B3C6] border border-[#2B3A4C]">Data Refresh Workflows</span>
+<span class="text-[11px] px-2 py-0.5 rounded bg-[#1D2938] text-[#A3B3C6] border border-[#2B3A4C]">System Dependencies</span>
+<span class="text-[11px] px-2 py-0.5 rounded bg-[#1D2938] text-[#A3B3C6] border border-[#2B3A4C]">Data Integrity</span>
+<span class="text-[11px] px-2 py-0.5 rounded bg-[#1D2938] text-[#A3B3C6] border border-[#2B3A4C]">Operational Processes</span>
+</div>
+</div>
+<!-- Competency 3 -->
+<div class="bg-[#141C28] border border-[#2B3A4C] rounded-xl p-6 hover:border-[#0F97FF]/40 transition-colors">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-2.5 h-2.5 rounded-full bg-[#0F97FF]"></div>
+<h3 class="text-base font-bold text-[#F5F9FF]">Technical Training &amp; Collaboration</h3>
+</div>
+<p class="text-xs text-[#A3B3C6] leading-relaxed mb-4">
+              Bridging engineering requirements with business stakeholders through lucid technical documentation, onboarding manuals, and knowledge sharing.
+            </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="text-[11px] px-2 py-0.5 rounded bg-[#1D2938] text-[#A3B3C6] border border-[#2B3A4C]">Technical Documentation</span>
+<span class="text-[11px] px-2 py-0.5 rounded bg-[#1D2938] text-[#A3B3C6] border border-[#2B3A4C]">Knowledge Transfer</span>
+<span class="text-[11px] px-2 py-0.5 rounded bg-[#1D2938] text-[#A3B3C6] border border-[#2B3A4C]">User Support</span>
+<span class="text-[11px] px-2 py-0.5 rounded bg-[#1D2938] text-[#A3B3C6] border border-[#2B3A4C]">Cross-Functional Communication</span>
+</div>
+</div>
+<!-- Competency 4 -->
+<div class="bg-[#141C28] border border-[#2B3A4C] rounded-xl p-6 hover:border-[#0F97FF]/40 transition-colors">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-2.5 h-2.5 rounded-full bg-[#0F97FF]"></div>
+<h3 class="text-base font-bold text-[#F5F9FF]">Full-Stack Software Development</h3>
+</div>
+<p class="text-xs text-[#A3B3C6] leading-relaxed mb-4">
+              End-to-end design and maintenance of modern web products with pragmatic stack selection, strict linting, and automated test coverage.
+            </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="text-[11px] px-2 py-0.5 rounded bg-[#1D2938] text-[#A3B3C6] border border-[#2B3A4C]">Frontend Development</span>
+<span class="text-[11px] px-2 py-0.5 rounded bg-[#1D2938] text-[#A3B3C6] border border-[#2B3A4C]">Backend Integration</span>
+<span class="text-[11px] px-2 py-0.5 rounded bg-[#1D2938] text-[#A3B3C6] border border-[#2B3A4C]">Feature Implementation</span>
+<span class="text-[11px] px-2 py-0.5 rounded bg-[#1D2938] text-[#A3B3C6] border border-[#2B3A4C]">Application Maintenance</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ExperienceBeyondCode -->
+<!-- BEGIN: SkillsInAction -->
+<section class="py-20 border-b border-[#2B3A4C]/40" id="projects">
+<div class="max-w-7xl mx-auto px-6 lg:px-8">
+<!-- Section Header -->
+<div class="mb-12">
+<p class="text-xs font-mono font-medium text-[#0F97FF] tracking-wider uppercase mb-2">// APPLIED ENGINEERING</p>
+<h2 class="text-3xl font-bold text-[#F5F9FF] tracking-tight">Skills in Action</h2>
+<p class="text-sm text-[#A3B3C6] mt-2 max-w-2xl">
+            Selected applications demonstrating how I apply technologies and engineering practices to real-world projects.
+          </p>
+</div>
+<!-- 2 Side-by-Side Project Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Project 01: Developer Portfolio -->
+<div class="bg-[#141C28] border border-[#2B3A4C] rounded-2xl p-7 flex flex-col justify-between hover:border-[#0F97FF]/50 transition-all duration-300">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-mono text-[#0F97FF] uppercase tracking-wider">Project 01</span>
+<span class="text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-full flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Live Production
+                </span>
+</div>
+<h3 class="text-2xl font-bold text-[#F5F9FF] font-heading mb-3">Developer Portfolio Application</h3>
+<p class="text-sm text-[#A3B3C6] leading-relaxed mb-5">
+                A server-rendered portfolio application showcasing modular routing, reusable templates, responsive interfaces, and application deployment.
+              </p>
+<!-- Tech Chips -->
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="text-xs px-2.5 py-1 rounded bg-[#1D2938] text-[#F5F9FF] border border-[#2B3A4C]">Node.js</span>
+<span class="text-xs px-2.5 py-1 rounded bg-[#1D2938] text-[#F5F9FF] border border-[#2B3A4C]">Express.js</span>
+<span class="text-xs px-2.5 py-1 rounded bg-[#1D2938] text-[#F5F9FF] border border-[#2B3A4C]">EJS</span>
+<span class="text-xs px-2.5 py-1 rounded bg-[#1D2938] text-[#F5F9FF] border border-[#2B3A4C]">HTML5/CSS3</span>
+<span class="text-xs px-2.5 py-1 rounded bg-[#1D2938] text-[#F5F9FF] border border-[#2B3A4C]">JavaScript</span>
+</div>
+<!-- Stylized Code / Terminal Chrome Mockup -->
+<div class="w-full bg-[#0B1018] rounded-xl border border-[#2B3A4C] p-4 font-mono text-xs text-[#A3B3C6] mb-6 overflow-hidden">
+<div class="flex items-center gap-1.5 pb-3 border-b border-[#2B3A4C]/60 mb-3">
+<span class="w-2.5 h-2.5 rounded-full bg-red-500/70 inline-block"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-yellow-500/70 inline-block"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-green-500/70 inline-block"></span>
+<span class="ml-2 text-[11px] text-[#A3B3C6]/60">server.js — express-router</span>
+</div>
+<div class="space-y-1 text-[11px]">
+<p class="text-[#A3B3C6]"><span class="text-[#0F97FF]">const</span> express = <span class="text-emerald-400">require</span>('express');</p>
+<p class="text-[#A3B3C6]"><span class="text-[#0F97FF]">const</span> app = express();</p>
+<p class="text-[#A3B3C6]/80">// Render dynamic technical portfolio view</p>
+<p class="text-[#A3B3C6]">app.<span class="text-[#0F97FF]">get</span>('/skills', (req, res) =&gt; {</p>
+<p class="pl-4 text-[#A3B3C6]">res.<span class="text-emerald-400">render</span>('pages/skills', { title: 'Technical Expertise' });</p>
+<p class="text-[#A3B3C6]">});</p>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 text-sm font-semibold text-[#0F97FF] hover:text-[#38AAFF] transition-colors group" href="#">
+              View Project
+              <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+<!-- Project 02: Full-Stack Business Application -->
+<div class="bg-[#141C28] border border-[#2B3A4C] rounded-2xl p-7 flex flex-col justify-between hover:border-[#0F97FF]/50 transition-all duration-300">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-mono text-[#0F97FF] uppercase tracking-wider">Project 02</span>
+<span class="text-xs font-medium text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> Planned / In Development
+                </span>
+</div>
+<h3 class="text-2xl font-bold text-[#F5F9FF] font-heading mb-3">Full-Stack Business Application</h3>
+<p class="text-sm text-[#A3B3C6] leading-relaxed mb-5">
+                A planned full-stack business application designed to demonstrate application architecture, authentication, data management, and practical business workflows.
+              </p>
+<!-- Tech Chips -->
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="text-xs px-2.5 py-1 rounded bg-[#1D2938] text-[#F5F9FF] border border-[#2B3A4C]">Angular</span>
+<span class="text-xs px-2.5 py-1 rounded bg-[#1D2938] text-[#F5F9FF] border border-[#2B3A4C]">TypeScript</span>
+<span class="text-xs px-2.5 py-1 rounded bg-[#1D2938] text-[#F5F9FF] border border-[#2B3A4C]">Node.js</span>
+<span class="text-xs px-2.5 py-1 rounded bg-[#1D2938] text-[#F5F9FF] border border-[#2B3A4C]">Express</span>
+<span class="text-xs px-2.5 py-1 rounded bg-[#1D2938] text-[#F5F9FF] border border-[#2B3A4C]">MongoDB</span>
+</div>
+<!-- Wireframe / Architecture Blueprint Mockup -->
+<div class="w-full bg-[#0B1018] rounded-xl border border-[#2B3A4C] p-4 font-mono text-xs text-[#A3B3C6] mb-6 overflow-hidden">
+<div class="flex items-center justify-between pb-3 border-b border-[#2B3A4C]/60 mb-3">
+<span class="text-[11px] text-[#A3B3C6]/60">System Flow Architecture</span>
+<span class="text-[10px] text-[#0F97FF] bg-[#0F97FF]/10 px-2 py-0.5 rounded">v0.9.1 Spec</span>
+</div>
+<div class="flex items-center justify-between text-center py-2 text-[10px] gap-1">
+<div class="px-2.5 py-2 rounded bg-[#1D2938] border border-[#2B3A4C] text-[#F5F9FF] flex-1">
+                    Angular UI
+                  </div>
+<span class="text-[#0F97FF]">➔</span>
+<div class="px-2.5 py-2 rounded bg-[#1D2938] border border-[#2B3A4C] text-[#F5F9FF] flex-1">
+                    REST API (Node)
+                  </div>
+<span class="text-[#0F97FF]">➔</span>
+<div class="px-2.5 py-2 rounded bg-[#1D2938] border border-[#2B3A4C] text-[#F5F9FF] flex-1">
+                    MongoDB Model
+                  </div>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 text-sm font-semibold text-[#0F97FF] hover:text-[#38AAFF] transition-colors group" href="#">
+              Architecture Specs
+              <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: SkillsInAction -->
+<!-- BEGIN: CallToAction -->
+
+<!-- END: CallToAction -->
+</main>
+<!-- BEGIN: MainFooter -->
+<footer class="border-t border-[#2B3A4C]/60 bg-[#0B1018] py-8">
+<div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+<!-- Copyright & Identity -->
+<div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-xs text-[#A3B3C6]">
+<span class="font-semibold text-[#F5F9FF]">Alex Rivera</span>
+<span class="hidden sm:inline text-[#2B3A4C]">•</span>
+<span class="">© 2025 Alex Rivera. Engineered with high-performance standards.</span>
+</div>
+<!-- Social & Technical Links -->
+<div class="flex items-center gap-6 text-xs text-[#A3B3C6]">
+<a class="hover:text-[#F5F9FF] transition-colors flex items-center gap-1.5" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg>
+<span class="">GitHub</span>
+</a>
+<a class="hover:text-[#F5F9FF] transition-colors flex items-center gap-1.5" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"></path></svg>
+<span class="">LinkedIn</span>
+</a>
+<a class="hover:text-[#F5F9FF] transition-colors flex items-center gap-1.5" href="https://twitter.com" rel="noopener noreferrer" target="_blank">
+<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+<span class="">Twitter</span>
+</a>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+
+
+
+
+</body></html>

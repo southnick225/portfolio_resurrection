@@ -1,0 +1,586 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+<meta content="mobile_tab" name="shell-type">
+<title>Alex Rivera — Skills &amp; Technical Expertise</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: "#0B1018",
+              surface: "#141C28",
+              elevated: "#1D2938",
+              border: "#2B3A4C",
+              primary: "#0F97FF",
+              accent: "#38AAFF",
+              text: "#F5F9FF",
+              muted: "#A3B3C6",
+              darker: "#090E16"
+            }
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            display: ["Space Grotesk", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #0B1018;
+      }
+      body {
+        overscroll-behavior-y: none;
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 16px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+    }
+    /* Subtle architectural grid pattern matching Desktop/Tablet */
+    .bg-grid-architectural {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(43, 58, 76, 0.18) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(43, 58, 76, 0.18) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-[#0B1018] text-[#F5F9FF] font-sans antialiased min-h-screen flex flex-col relative selection:bg-[#0F97FF]/20 selection:text-[#38AAFF]">
+<!-- Top App Header -->
+<header class="fixed top-0 w-full z-50 pt-safe bg-[#0B1018]/90 backdrop-blur-xl border-b border-[#2B3A4C]/70">
+<div class="h-16 px-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<!-- AR Monogram badge -->
+<div class="w-9 h-9 rounded-lg bg-[#1D2938] border border-[#2B3A4C] flex items-center justify-center text-[#0F97FF] font-display font-bold text-sm tracking-wider shadow-inner">
+          AR
+        </div>
+<div class="flex flex-col">
+<span class="font-display font-bold text-[15px] text-[#F5F9FF] leading-tight">Alex Rivera</span>
+<span class="font-sans text-[11px] text-[#A3B3C6] font-medium leading-none">Full-Stack Engineer</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<a aria-label="Quick Contact" class="w-10 h-10 rounded-lg bg-[#141C28] border border-[#2B3A4C] flex items-center justify-center text-[#A3B3C6] hover:text-[#0F97FF] hover:border-[#0F97FF]/50 transition-colors" href="#contact">
+<span class="material-symbols-outlined text-[19px]">mail</span>
+</a>
+<button aria-label="Navigation Menu" class="w-10 h-10 rounded-lg bg-[#141C28] border border-[#2B3A4C] flex items-center justify-center text-[#F5F9FF] hover:text-[#0F97FF] hover:border-[#0F97FF]/50 transition-colors">
+<span class="material-symbols-outlined text-[20px]">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Container with architectural grid -->
+<main class="flex-1 w-full pt-16 pb-28 bg-grid-architectural">
+<div class="flex flex-col w-full max-w-[420px] mx-auto">
+<!-- 1. HERO SECTION -->
+<section class="flex flex-col px-4 pt-6 pb-8 border-b border-[#2B3A4C]/50">
+<!-- Eyebrow -->
+<div class="flex items-center gap-2 mb-2.5">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0F97FF] opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-[#0F97FF]"></span>
+</span>
+<span class="font-mono text-[11px] text-[#0F97FF] font-semibold tracking-wider">
+            // TECHNICAL EXPERTISE
+          </span>
+</div>
+<!-- Headline -->
+<h1 class="font-display text-[30px] leading-[36px] font-bold text-[#F5F9FF] tracking-tight mb-3">
+          Technologies &amp; <span class="text-[#0F97FF]">Capabilities</span>
+</h1>
+<!-- Subtitle -->
+<p class="font-sans text-[14px] leading-relaxed text-[#A3B3C6] mb-6">
+          Building modern, scalable web applications with a focus on clean architecture, performance, and maintainable code.
+        </p>
+<!-- Technology Pills (Consistent with Tablet/Desktop) -->
+<div class="flex flex-wrap gap-2">
+<div class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#141C28] border border-[#2B3A4C] text-[#F5F9FF] text-[12px] font-medium shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-[#0F97FF]">layers</span>
+<span class="">Full-Stack Development</span>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#141C28] border border-[#2B3A4C] text-[#F5F9FF] text-[12px] font-medium shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-[#0F97FF]">code</span>
+<span class="">TypeScript</span>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#141C28] border border-[#2B3A4C] text-[#F5F9FF] text-[12px] font-medium shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-[#0F97FF]">view_quilt</span>
+<span class="">Angular</span>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#141C28] border border-[#2B3A4C] text-[#F5F9FF] text-[12px] font-medium shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-[#10B981]">dns</span>
+<span class="">Node.js</span>
+</div>
+</div>
+</section>
+<!-- 2. ENGINEERING CAPABILITIES SECTION -->
+<section class="flex flex-col px-4 py-8 border-b border-[#2B3A4C]/50 bg-[#0B1018]/60">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="font-mono text-[11px] text-[#0F97FF] font-semibold tracking-wider">
+            // ENGINEERING PRACTICES
+          </span>
+</div>
+<h2 class="font-display text-[22px] font-bold text-[#F5F9FF] tracking-tight mb-2">
+          Engineering Capabilities
+        </h2>
+<p class="font-sans text-[13px] leading-relaxed text-[#A3B3C6] mb-5">
+          Beyond frameworks and tools, my focus is on building software that is maintainable, reliable, and thoughtfully engineered.
+        </p>
+<!-- 4 Single-Column Stacked Cards -->
+<div class="flex flex-col gap-3.5">
+<!-- Card 1: Architecture -->
+<div class="p-4 rounded-xl bg-[#141C28] border border-[#2B3A4C] shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 bg-[#1D2938] border border-[#2B3A4C] rounded-xl text-[#0F97FF] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">account_tree</span>
+</div>
+
+</div>
+<h3 class="font-display text-[16px] font-bold text-[#F5F9FF] mb-1.5">
+              Application Architecture
+            </h3>
+<p class="font-sans text-[13px] leading-relaxed text-[#A3B3C6] mb-3">
+              Designing modular applications with reusable components, service layers, routing, and clear separation of concerns.
+            </p>
+
+</div>
+<!-- Card 2: API Integration -->
+<div class="p-4 rounded-xl bg-[#141C28] border border-[#2B3A4C] shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 bg-[#1D2938] border border-[#2B3A4C] rounded-xl text-[#0F97FF] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">api</span>
+</div>
+
+</div>
+<h3 class="font-display text-[16px] font-bold text-[#F5F9FF] mb-1.5">
+              API Development &amp; Integration
+            </h3>
+<p class="font-sans text-[13px] leading-relaxed text-[#A3B3C6] mb-3">
+              Building RESTful APIs, implementing middleware, handling validation and errors, and integrating frontend and backend services.
+            </p>
+
+</div>
+<!-- Card 3: Security -->
+<div class="p-4 rounded-xl bg-[#141C28] border border-[#2B3A4C] shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 bg-[#1D2938] border border-[#2B3A4C] rounded-xl text-[#0F97FF] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+
+</div>
+<h3 class="font-display text-[16px] font-bold text-[#F5F9FF] mb-1.5">
+              Authentication &amp; Security
+            </h3>
+<p class="font-sans text-[13px] leading-relaxed text-[#A3B3C6] mb-3">
+              Implementing authentication, authorization, password hashing, protected routes, and secure application configuration.
+            </p>
+
+</div>
+<!-- Card 4: Performance -->
+<div class="p-4 rounded-xl bg-[#141C28] border border-[#2B3A4C] shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 bg-[#1D2938] border border-[#2B3A4C] rounded-xl text-[#0F97FF] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+
+</div>
+<h3 class="font-display text-[16px] font-bold text-[#F5F9FF] mb-1.5">
+              Performance &amp; Reliability
+            </h3>
+<p class="font-sans text-[13px] leading-relaxed text-[#A3B3C6] mb-3">
+              Troubleshooting application issues, improving maintainability, investigating failures, and applying reliability-focused engineering practices.
+            </p>
+
+</div>
+</div>
+</section>
+<!-- 3. MODERN DEVELOPMENT WORKFLOW -->
+<section class="flex flex-col px-4 py-8 border-b border-[#2B3A4C]/50">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="font-mono text-[11px] text-[#0F97FF] font-semibold tracking-wider">
+            // METHODOLOGY
+          </span>
+</div>
+<h2 class="font-display text-[22px] font-bold text-[#F5F9FF] tracking-tight mb-2">
+          Modern Development Workflow
+        </h2>
+<p class="font-sans text-[13px] leading-relaxed text-[#A3B3C6] mb-6">
+          Combining established engineering practices with AI-assisted tools to improve development efficiency and software quality.
+        </p>
+<!-- Stacked Stage Cards matching Desktop/Tablet visual treatment -->
+<div class="flex flex-col gap-3">
+<!-- Stage 01 -->
+<div class="relative overflow-hidden rounded-xl bg-[#141C28] border border-[#2B3A4C] p-4 flex flex-col shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono text-[11px] font-bold text-[#0F97FF] bg-[#1D2938] px-2 py-0.5 rounded border border-[#2B3A4C]/80">01</span>
+<span class="font-mono text-[10px] uppercase font-semibold text-[#A3B3C6] tracking-wider bg-[#1D2938]/60 px-2 py-0.5 rounded">BLUEPRINT</span>
+</div>
+<h3 class="font-display text-[16px] font-bold text-[#F5F9FF] mb-1">Plan</h3>
+<p class="font-sans text-[12px] leading-relaxed text-[#A3B3C6] pb-2">
+              Requirements, architecture, technical decisions &amp; schema design.
+            </p>
+<!-- Progress accent bar -->
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-[#0F97FF]"></div>
+</div>
+<!-- Stage 02 -->
+<div class="relative overflow-hidden rounded-xl bg-[#141C28] border border-[#2B3A4C] p-4 flex flex-col shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono text-[11px] font-bold text-[#0F97FF] bg-[#1D2938] px-2 py-0.5 rounded border border-[#2B3A4C]/80">02</span>
+<span class="font-mono text-[10px] uppercase font-semibold text-[#A3B3C6] tracking-wider bg-[#1D2938]/60 px-2 py-0.5 rounded">EXECUTE</span>
+</div>
+<h3 class="font-display text-[16px] font-bold text-[#F5F9FF] mb-1">Build</h3>
+<p class="font-sans text-[12px] leading-relaxed text-[#A3B3C6] pb-2">
+              Implementation, service integration, modular UI development.
+            </p>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-[#0F97FF]"></div>
+</div>
+<!-- Stage 03 -->
+<div class="relative overflow-hidden rounded-xl bg-[#141C28] border border-[#2B3A4C] p-4 flex flex-col shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono text-[11px] font-bold text-[#0F97FF] bg-[#1D2938] px-2 py-0.5 rounded border border-[#2B3A4C]/80">03</span>
+<span class="font-mono text-[10px] uppercase font-semibold text-[#A3B3C6] tracking-wider bg-[#1D2938]/60 px-2 py-0.5 rounded">VALIDATE</span>
+</div>
+<h3 class="font-display text-[16px] font-bold text-[#F5F9FF] mb-1">Test</h3>
+<p class="font-sans text-[12px] leading-relaxed text-[#A3B3C6] pb-2">
+              Endpoint validation, edge-case debugging, quality assurance.
+            </p>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-[#0F97FF]"></div>
+</div>
+<!-- Stage 04 -->
+<div class="relative overflow-hidden rounded-xl bg-[#141C28] border border-[#2B3A4C] p-4 flex flex-col shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono text-[11px] font-bold text-[#0F97FF] bg-[#1D2938] px-2 py-0.5 rounded border border-[#2B3A4C]/80">04</span>
+<span class="font-mono text-[10px] uppercase font-semibold text-[#A3B3C6] tracking-wider bg-[#1D2938]/60 px-2 py-0.5 rounded">REFINE</span>
+</div>
+<h3 class="font-display text-[16px] font-bold text-[#F5F9FF] mb-1">Review</h3>
+<p class="font-sans text-[12px] leading-relaxed text-[#A3B3C6] pb-2">
+              Code quality audits, maintainability review, refactoring.
+            </p>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-[#0F97FF]"></div>
+</div>
+<!-- Stage 05 (Deploy) -->
+<div class="relative overflow-hidden rounded-xl bg-[#141C28] border border-[#2B3A4C] p-4 flex flex-col shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono text-[11px] font-bold text-[#10B981] bg-[#1D2938] px-2 py-0.5 rounded border border-[#2B3A4C]/80">05</span>
+<span class="font-mono text-[10px] uppercase font-semibold text-[#10B981] tracking-wider bg-[#1D2938]/60 px-2 py-0.5 rounded">SHIP</span>
+</div>
+<h3 class="font-display text-[16px] font-bold text-[#F5F9FF] mb-1">Deploy</h3>
+<p class="font-sans text-[12px] leading-relaxed text-[#A3B3C6] pb-2">
+              Version control pipeline, cloud delivery, production iteration.
+            </p>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-[#10B981]"></div>
+</div>
+</div>
+<!-- AI Acceleration Callout Card -->
+<div class="mt-4 flex items-start gap-3.5 p-4 rounded-xl bg-[#141C28] border border-[#2B3A4C] shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-[#1D2938] border border-[#2B3A4C] flex items-center justify-center text-[#0F97FF] shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+</div>
+<p class="font-sans text-[12px] leading-relaxed text-[#A3B3C6]">
+<strong class="text-[#F5F9FF] font-semibold">AI-Assisted Workflow Acceleration:</strong> AI-assisted tools accelerate implementation, exploration, and code review while engineering judgment remains central to architecture, testing, and delivery.
+          </p>
+</div>
+</section>
+<!-- 4. EXPERIENCE BEYOND THE CODE -->
+<section class="flex flex-col px-4 py-8 border-b border-[#2B3A4C]/50 bg-[#0B1018]/60">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="font-mono text-[11px] text-[#0F97FF] font-semibold tracking-wider">
+            // MULTIDISCIPLINARY BACKGROUND
+          </span>
+</div>
+<h2 class="font-display text-[22px] font-bold text-[#F5F9FF] tracking-tight mb-2">
+          Experience Beyond the Code
+        </h2>
+<p class="font-sans text-[13px] leading-relaxed text-[#A3B3C6] mb-5">
+          A multidisciplinary technical background spanning software development, systems reliability, data operations, and technical collaboration.
+        </p>
+<!-- 4 Single-Column Cards with Eyebrows matching Desktop/Tablet -->
+<div class="flex flex-col gap-3.5">
+<!-- Card 1 -->
+<div class="flex flex-col p-4 rounded-xl bg-[#141C28] border border-[#2B3A4C] shadow-sm">
+<span class="font-mono text-[10px] text-[#0F97FF] font-semibold uppercase tracking-wider mb-1">
+              // OPERATIONAL STABILITY
+            </span>
+<div class="flex items-center gap-2.5 mb-2">
+<span class="material-symbols-outlined text-[19px] text-[#0F97FF]">monitoring</span>
+<h3 class="font-display text-[15px] font-bold text-[#F5F9FF]">
+                Site Reliability &amp; Technical Support
+              </h3>
+</div>
+<p class="font-sans text-[13px] text-[#A3B3C6] mb-3 leading-relaxed">
+              Experienced in live troubleshooting, incident management, triage, and operating critical production infrastructure under strict availability constraints.
+            </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-[#1D2938] text-[#F5F9FF] font-mono text-[11px] border border-[#2B3A4C]/60">Troubleshooting</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] text-[#F5F9FF] font-mono text-[11px] border border-[#2B3A4C]/60">Incident Investigation</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] text-[#F5F9FF] font-mono text-[11px] border border-[#2B3A4C]/60">Operational Awareness</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] text-[#F5F9FF] font-mono text-[11px] border border-[#2B3A4C]/60">Systems Support</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col p-4 rounded-xl bg-[#141C28] border border-[#2B3A4C] shadow-sm">
+<span class="font-mono text-[10px] text-[#0F97FF] font-semibold uppercase tracking-wider mb-1">
+              // DATA ENGINEERING
+            </span>
+<div class="flex items-center gap-2.5 mb-2">
+<span class="material-symbols-outlined text-[19px] text-[#0F97FF]">database</span>
+<h3 class="font-display text-[15px] font-bold text-[#F5F9FF]">
+                Data Operations &amp; Systems
+              </h3>
+</div>
+<p class="font-sans text-[13px] text-[#A3B3C6] mb-3 leading-relaxed">
+              Managing complex ETL pipelines, database migrations, scheduled backups, and ensuring enterprise-grade data consistency.
+            </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-[#1D2938] text-[#F5F9FF] font-mono text-[11px] border border-[#2B3A4C]/60">Data Refresh Workflows</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] text-[#F5F9FF] font-mono text-[11px] border border-[#2B3A4C]/60">System Dependencies</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] text-[#F5F9FF] font-mono text-[11px] border border-[#2B3A4C]/60">Data Integrity</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] text-[#F5F9FF] font-mono text-[11px] border border-[#2B3A4C]/60">Operational Processes</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col p-4 rounded-xl bg-[#141C28] border border-[#2B3A4C] shadow-sm">
+<span class="font-mono text-[10px] text-[#0F97FF] font-semibold uppercase tracking-wider mb-1">
+              // LEADERSHIP &amp; DOCS
+            </span>
+<div class="flex items-center gap-2.5 mb-2">
+<span class="material-symbols-outlined text-[19px] text-[#0F97FF]">groups</span>
+<h3 class="font-display text-[15px] font-bold text-[#F5F9FF]">
+                Technical Training &amp; Collaboration
+              </h3>
+</div>
+<p class="font-sans text-[13px] text-[#A3B3C6] mb-3 leading-relaxed">
+              Bridging engineering requirements with business stakeholders through lucid technical documentation, onboarding manuals, and knowledge sharing.
+            </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-[#1D2938] text-[#F5F9FF] font-mono text-[11px] border border-[#2B3A4C]/60">Technical Documentation</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] text-[#F5F9FF] font-mono text-[11px] border border-[#2B3A4C]/60">Knowledge Transfer</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] text-[#F5F9FF] font-mono text-[11px] border border-[#2B3A4C]/60">User Support</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] text-[#F5F9FF] font-mono text-[11px] border border-[#2B3A4C]/60">Cross-Functional Communication</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="flex flex-col p-4 rounded-xl bg-[#141C28] border border-[#2B3A4C] shadow-sm">
+<span class="font-mono text-[10px] text-[#0F97FF] font-semibold uppercase tracking-wider mb-1">
+              // APPLICATION DELIVERY
+            </span>
+<div class="flex items-center gap-2.5 mb-2">
+<span class="material-symbols-outlined text-[19px] text-[#0F97FF]">developer_board</span>
+<h3 class="font-display text-[15px] font-bold text-[#F5F9FF]">
+                Full-Stack Software Development
+              </h3>
+</div>
+<p class="font-sans text-[13px] text-[#A3B3C6] mb-3 leading-relaxed">
+              End-to-end design and maintenance of modern web products with pragmatic stack selection, strict linting, and automated test coverage.
+            </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-[#1D2938] text-[#F5F9FF] font-mono text-[11px] border border-[#2B3A4C]/60">Frontend Development</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] text-[#F5F9FF] font-mono text-[11px] border border-[#2B3A4C]/60">Backend Integration</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] text-[#F5F9FF] font-mono text-[11px] border border-[#2B3A4C]/60">Feature Implementation</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] text-[#F5F9FF] font-mono text-[11px] border border-[#2B3A4C]/60">Application Maintenance</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. SKILLS IN ACTION — FEATURED PROJECTS -->
+<section class="flex flex-col px-4 py-8">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="font-mono text-[11px] text-[#0F97FF] font-semibold tracking-wider">
+            // APPLIED ENGINEERING
+          </span>
+</div>
+<h2 class="font-display text-[22px] font-bold text-[#F5F9FF] tracking-tight mb-2">
+          Skills in Action
+        </h2>
+<p class="font-sans text-[13px] leading-relaxed text-[#A3B3C6] mb-6">
+          Selected applications demonstrating how I apply technologies and engineering practices to real-world projects.
+        </p>
+<div class="flex flex-col gap-6">
+<!-- Project 01 Card -->
+<div class="flex flex-col rounded-xl bg-[#141C28] border border-[#2B3A4C] overflow-hidden shadow-sm">
+<div class="p-4 flex flex-col">
+<!-- Top Row -->
+<div class="flex items-center justify-between mb-3">
+<span class="font-mono text-[11px] text-[#0F97FF] font-bold tracking-wider">PROJECT_01</span>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#1D2938] border border-[#2B3A4C]">
+<span class="w-2 h-2 rounded-full bg-[#10B981] animate-pulse"></span>
+<span class="font-mono text-[10px] text-[#10B981] font-semibold">Live Production</span>
+</div>
+</div>
+<h3 class="font-display text-[18px] font-bold text-[#F5F9FF] mb-2 leading-snug">
+                Developer Portfolio Application
+              </h3>
+<p class="font-sans text-[13px] text-[#A3B3C6] mb-4 leading-relaxed">
+                A server-rendered portfolio application showcasing modular routing, reusable templates, responsive interfaces, and application deployment.
+              </p>
+<!-- Tech Badges -->
+<div class="flex flex-wrap gap-1.5 mb-4">
+<span class="px-2 py-0.5 rounded bg-[#1D2938] border border-[#2B3A4C]/60 text-[#F5F9FF] font-mono text-[11px]">Node.js</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] border border-[#2B3A4C]/60 text-[#F5F9FF] font-mono text-[11px]">Express.js</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] border border-[#2B3A4C]/60 text-[#F5F9FF] font-mono text-[11px]">EJS</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] border border-[#2B3A4C]/60 text-[#F5F9FF] font-mono text-[11px]">HTML5/CSS3</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] border border-[#2B3A4C]/60 text-[#F5F9FF] font-mono text-[11px]">JavaScript</span>
+</div>
+<!-- Terminal Preview -->
+<div class="rounded-lg bg-[#090E16] border border-[#2B3A4C] p-3 mb-4 font-mono text-[12px]">
+<div class="flex items-center justify-between pb-2 mb-2 border-b border-[#2B3A4C]/60 text-[11px] text-[#A3B3C6]">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]/80"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/80"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#10B981]/80"></span>
+<span class="ml-1 text-[10px] text-[#A3B3C6]">server.js — express-router</span>
+</div>
+</div>
+<pre class="leading-relaxed overflow-x-auto text-[11px] text-[#F5F9FF]"><code><span class="text-[#A3B3C6]">// Express Route Configuration</span>
+app.<span class="text-[#0F97FF]">get</span>(<span class="text-[#10B981]">'/skills'</span>, (req, res) =&gt; {
+  res.<span class="text-[#0F97FF]">render</span>(<span class="text-[#10B981]">'pages/skills'</span>, {
+    title: <span class="text-[#10B981]">'Technical Expertise'</span>
+  });
+});</code></pre>
+<div class="mt-2.5 pt-2 border-t border-[#2B3A4C]/50 flex items-center justify-between text-[10px]">
+<span class="text-[#10B981] flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span> 200 OK
+                  </span>
+<span class="text-[#A3B3C6]">node v20.11.0</span>
+</div>
+</div>
+<!-- CTA -->
+<a class="h-11 w-full rounded-lg bg-[#1D2938] border border-[#2B3A4C] text-[#F5F9FF] flex items-center justify-center gap-2 font-display text-[13px] font-semibold hover:border-[#0F97FF] hover:text-[#0F97FF] active:scale-[0.98] transition-all" href="#">
+<span class="">View Project</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 02 Card -->
+<div class="flex flex-col rounded-xl bg-[#141C28] border border-[#2B3A4C] overflow-hidden shadow-sm">
+<div class="p-4 flex flex-col">
+<!-- Top Row -->
+<div class="flex items-center justify-between mb-3">
+<span class="font-mono text-[11px] text-[#0F97FF] font-bold tracking-wider">PROJECT_02</span>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#1D2938] border border-[#2B3A4C]">
+<span class="w-2 h-2 rounded-full bg-[#F59E0B]"></span>
+<span class="font-mono text-[10px] text-[#F59E0B] font-semibold">Planned / In Development</span>
+</div>
+</div>
+<h3 class="font-display text-[18px] font-bold text-[#F5F9FF] mb-2 leading-snug">
+                Full-Stack Business Application
+              </h3>
+<p class="font-sans text-[13px] text-[#A3B3C6] mb-4 leading-relaxed">
+                A planned full-stack business application designed to demonstrate application architecture, authentication, data management, and practical business workflows.
+              </p>
+<!-- Tech Badges -->
+<div class="flex flex-wrap gap-1.5 mb-4">
+<span class="px-2 py-0.5 rounded bg-[#1D2938] border border-[#2B3A4C]/60 text-[#F5F9FF] font-mono text-[11px]">Angular</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] border border-[#2B3A4C]/60 text-[#F5F9FF] font-mono text-[11px]">TypeScript</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] border border-[#2B3A4C]/60 text-[#F5F9FF] font-mono text-[11px]">Node.js</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] border border-[#2B3A4C]/60 text-[#F5F9FF] font-mono text-[11px]">Express</span>
+<span class="px-2 py-0.5 rounded bg-[#1D2938] border border-[#2B3A4C]/60 text-[#F5F9FF] font-mono text-[11px]">MongoDB</span>
+</div>
+<!-- Topology Preview Block -->
+<div class="rounded-lg bg-[#090E16] border border-[#2B3A4C] p-3 mb-4">
+<div class="flex items-center justify-between text-[10px] font-mono text-[#A3B3C6] pb-2 border-b border-[#2B3A4C]/60 mb-2.5">
+<span class="text-[#0F97FF] uppercase font-bold">// TOPOLOGY MODEL</span>
+<span class="">v0.9.1 Spec</span>
+</div>
+<div class="flex items-center justify-between gap-1 py-1">
+<div class="flex flex-col items-center flex-1 p-1.5 bg-[#141C28] rounded border border-[#2B3A4C]/60">
+<span class="font-display text-[11px] font-bold text-[#0F97FF]">Angular UI Layer</span>
+<span class="font-mono text-[9px] text-[#A3B3C6]">Client App</span>
+</div>
+<span class="material-symbols-outlined text-[14px] text-[#A3B3C6]">arrow_forward</span>
+<div class="flex flex-col items-center flex-1 p-1.5 bg-[#141C28] rounded border border-[#2B3A4C]/60">
+<span class="font-display text-[11px] font-bold text-[#38AAFF]">REST API</span>
+<span class="font-mono text-[9px] text-[#A3B3C6]">Node/Express</span>
+</div>
+<span class="material-symbols-outlined text-[14px] text-[#A3B3C6]">arrow_forward</span>
+<div class="flex flex-col items-center flex-1 p-1.5 bg-[#141C28] rounded border border-[#2B3A4C]/60">
+<span class="font-display text-[11px] font-bold text-[#10B981]">MongoDB</span>
+<span class="font-mono text-[9px] text-[#A3B3C6]">Document DB</span>
+</div>
+</div>
+<div class="mt-2.5 pt-2 border-t border-[#2B3A4C]/50 flex items-center justify-between font-mono text-[10px] text-[#A3B3C6]">
+<span class="">Security: <span class="text-[#0F97FF]">JWT Bearer</span></span>
+<span class="">Target: <span class="text-[#F5F9FF]">Multi-tenant</span></span>
+</div>
+</div>
+<!-- CTA -->
+<a class="h-11 w-full rounded-lg bg-[#1D2938] border border-[#2B3A4C] text-[#F5F9FF] flex items-center justify-center gap-2 font-display text-[13px] font-semibold hover:border-[#0F97FF] hover:text-[#0F97FF] active:scale-[0.98] transition-all" href="#">
+<span class="">Architecture Specs</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. MOBILE FOOTER -->
+<footer class="w-full pt-6 pb-6 px-4 bg-[#0B1018] border-t border-[#2B3A4C]/60 flex flex-col items-center text-center gap-4">
+<div class="flex items-center gap-4">
+<a aria-label="GitHub Profile" class="w-11 h-11 rounded-lg bg-[#141C28] border border-[#2B3A4C] flex items-center justify-center text-[#A3B3C6] hover:text-[#0F97FF] hover:border-[#0F97FF]/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</a>
+<a aria-label="LinkedIn Profile" class="w-11 h-11 rounded-lg bg-[#141C28] border border-[#2B3A4C] flex items-center justify-center text-[#A3B3C6] hover:text-[#0F97FF] hover:border-[#0F97FF]/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</a>
+<a aria-label="X / Twitter" class="w-11 h-11 rounded-lg bg-[#141C28] border border-[#2B3A4C] flex items-center justify-center text-[#A3B3C6] hover:text-[#0F97FF] hover:border-[#0F97FF]/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+</div>
+<p class="font-sans text-[11px] text-[#A3B3C6] tracking-wide">
+          © 2024 Alex Rivera. Engineered with architectural rigor.
+        </p>
+</footer>
+</div>
+</main>
+<!-- Sticky Bottom Tab Navigation (Consistent 5-Tab Mobile Shell) -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 pb-safe bg-[#0B1018]/95 backdrop-blur-xl border-t border-[#2B3A4C]/80 shadow-[0_-8px_20px_rgba(0,0,0,0.5)]">
+<div class="flex items-center justify-around h-16 max-w-[420px] mx-auto px-2">
+<!-- 1. Overview -->
+<a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-[#A3B3C6] hover:text-[#F5F9FF] transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">dashboard</span>
+<span class="font-sans text-[11px] font-medium mt-0.5">Overview</span>
+</a>
+<!-- 2. Projects -->
+<a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-[#A3B3C6] hover:text-[#F5F9FF] transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">code_blocks</span>
+<span class="font-sans text-[11px] font-medium mt-0.5">Projects</span>
+</a>
+<!-- 3. Skills (ACTIVE) -->
+<a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 text-[#0F97FF] relative" href="#">
+<div class="px-3.5 py-0.5 rounded-full bg-[#0F97FF]/15 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px] text-[#0F97FF]">terminal</span>
+</div>
+<span class="font-display text-[11px] font-bold text-[#0F97FF] mt-0.5">Skills</span>
+</a>
+<!-- 4. Resume -->
+<a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-[#A3B3C6] hover:text-[#F5F9FF] transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">description</span>
+<span class="font-sans text-[11px] font-medium mt-0.5">Resume</span>
+</a>
+<!-- 5. Contact -->
+<a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-[#A3B3C6] hover:text-[#F5F9FF] transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">alternate_email</span>
+<span class="font-sans text-[11px] font-medium mt-0.5">Contact</span>
+</a>
+</div>
+</nav>
+
+
+</body></html>
