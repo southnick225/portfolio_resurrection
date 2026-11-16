@@ -1,8 +1,11 @@
 import express from 'express';
 import path from 'node:path';
 import projects from '../data/featuredProjects.json' with { type: 'json' };
+import { navigationLinks } from './navigation.js';
 
 const app = express();
+app.locals.navigationLinks = navigationLinks;
+app.locals.activeNav = null;
 
 //configure ejs
 app.set('view engine', 'ejs');
@@ -17,7 +20,10 @@ app.use(express.static(path.join(import.meta.dirname, 'public')));
 
 //application routes
 app.get('/', (req, res) => {
-    res.render('pages/homepage', { projects });
+    res.render('pages/homepage', { projects, activeNav: 'projects' });
+});
+app.get('/skills', (req, res) => {
+    res.render('pages/skillsPage', { activeNav: 'skills' });
 });
 //404 handler
 app.use((req, res) => {

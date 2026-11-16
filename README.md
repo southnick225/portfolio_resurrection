@@ -19,6 +19,9 @@ Design mockups use Tailwind CSS through a CDN. Tailwind is not an installed appl
 
 ## Implemented functionality
 
+- `GET /skills` renders the responsive Technologies & Capabilities hero with a 32px architectural grid background. Other skills-page sections are not implemented.
+- `data/skillsProjects.json` stores the two Skills in Action design records for later rendering; statuses are reference copy, not verified deployment state.
+
 - `GET /` returns HTTP 200 with an EJS-rendered homepage with a responsive hero.
 - Desktop and tablet share an 80px header; mobile uses a 64px header below 768px with an accessible dropdown.
 - An initials logo and a local black-and-white profile photo appear in the header. Future navigation links are marked unavailable.

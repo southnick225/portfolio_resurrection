@@ -1,0 +1,8 @@
+<a class="<%= linkClass %>"
+    <% if (item.href) { %>
+        href="<%= item.href %>"
+        <% if (item.id === activeNav) { %>aria-current="page"<% } %>
+    <% } else { %>
+        role="link" aria-disabled="true" title="<%= item.label %> coming soon"
+    <% } %>
+><%= item.label %></a>

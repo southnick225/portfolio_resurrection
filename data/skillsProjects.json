@@ -1,0 +1,36 @@
+[
+  {
+    "id": "developer-portfolio",
+    "title": "Developer Portfolio Application",
+    "description": "A server-rendered portfolio application showcasing modular routing, reusable templates, responsive interfaces, and application deployment.",
+    "status": "Live Production",
+    "technologies": [
+      "Node.js",
+      "Express.js",
+      "EJS",
+      "HTML5/CSS3",
+      "JavaScript"
+    ],
+    "action": {
+      "label": "View Project",
+      "url": null
+    }
+  },
+  {
+    "id": "full-stack-business",
+    "title": "Full-Stack Business Application",
+    "description": "A planned full-stack business application designed to demonstrate application architecture, authentication, data management, and practical business workflows.",
+    "status": "Planned / In Development",
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "action": {
+      "label": "Architecture Specs",
+      "url": null
+    }
+  }
+]

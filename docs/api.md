@@ -78,3 +78,7 @@ Source of truth: [`src/app.js`](../src/app.js), [`server.js`](../server.js), and
 `npm test` runs `node --test`; currently zero tests and suites are discovered. The curl examples provide manual checks and do not imply automated coverage.
 
 Additional portfolio content and navigation destinations are planned, but no further page routes are implemented. No additional API or form endpoint is specified here. TODO: Add verified page routes and deployment base URL when available.
+
+## Skills page: `GET /skills`
+
+Returns **200 OK — `text/html`** using `pages/skillsPage`. No inputs or authentication are required; query parameters are ignored. The page contains the shared responsive header and only the Technologies & Capabilities section. `GET /css/skillsPage.css` serves its responsive styles and grid background (200 CSS). Express also supports HEAD for these GET routes. Skills in Action data is not exposed by an endpoint or rendered on this page.

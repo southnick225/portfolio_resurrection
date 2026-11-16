@@ -55,7 +55,7 @@ The app selects `ejs` as its view engine, then registers middleware in this orde
 5. Catch-all JSON 404 handler.
 6. Four-argument error middleware returning JSON 500.
 
-The `views` setting resolves `src/views` relative to the app module. The root handler calls `res.render('pages/homepage', { projects })`, which includes `../partials/header`.
+The `views` setting resolves `src/views` relative to the app module. The root handler calls `res.render('pages/homepage', { projects, activeNav: 'projects' })`, which includes `../partials/header`.
 
 ## Actual request lifecycle
 
@@ -76,6 +76,12 @@ flowchart TD
 ```
 
 The root request flow is request → middleware → route handler → EJS rendering → HTML response. See [HTTP interface](api.md) for response details.
+
+## Skills page
+
+`GET /skills` renders `src/views/pages/skillsPage.ejs`, reusing the header with Skills highlighted and linked in desktop/mobile navigation. `/css/skillsPage.css` implements only Technologies & Capabilities: an expertise badge, responsive heading, description, and four technology pills. A CSS grid of 32px squares appears at desktop, tablet, and mobile widths. No other skills-page section or footer is rendered.
+
+`data/skillsProjects.json` stores the Developer Portfolio Application and Full-Stack Business Application design records, including descriptions, technology arrays, reference statuses, and action labels with null URLs. These records are not imported or displayed yet. The Live Production label is design copy, not verification of deployment.
 
 ## Routes, templates, and styling
 
@@ -103,7 +109,7 @@ The homepage includes `src/views/partials/footer.ejs` after `main` and loads `/c
 
 Desktop and tablet (768px and above) share the desktop reference styling and an 80px fixed header. Below 768px, a 64px header displays the mobile reference layout with safe-area support. An initials logo and `/images/profile_black_white_avatar_photo.png` serve as the header branding and avatar; the photo uses a circular 32px crop. The hero follows the desktop, tablet, and mobile references in `docs/designs/homepage`. It uses a shared metrics strip on desktop, four individual cards on tablet, and a two-column metrics grid with stacked actions on mobile. Responsive copy variants use CSS display rules. Decorative inline SVG icons need no additional dependencies. Hero Projects and Contact actions use the same unavailable-link convention until their destinations exist. The reference copy and metric values remain design content pending personalization.
 
-Navigation and Resume placeholders use `aria-disabled="true"` without `href` or keyboard stops; they do not navigate. Projects retains the reference highlight without claiming to be the current page. The mobile button controls a hidden dropdown through `aria-controls` and `aria-expanded`. A deferred script toggles it and closes it on Escape, outside click, or breakpoint changes; Escape returns focus to the button. No client framework is used.
+Header Projects links navigate to `/` and Skills links navigate to `/skills` on desktop and mobile. Remaining navigation and Resume placeholders use `aria-disabled="true"` without `href` or keyboard stops; they do not navigate. Navigation items are defined once in `src/navigation.js` and exposed through application locals. Both menus and the desktop Resume action use the shared `navigation-link.ejs` partial. Routes explicitly supply `activeNav` (`projects` or `skills`); the default is null, so pages without a selection highlight nothing. Available links matching this identifier receive `aria-current="page"`, which drives active styling on desktop and mobile. The mobile button controls a hidden dropdown through `aria-controls` and `aria-expanded`. A deferred script toggles it and closes it on Escape, outside click, or breakpoint changes; Escape returns focus to the button. No client framework is used.
 
 ## Middleware, errors, and security
 

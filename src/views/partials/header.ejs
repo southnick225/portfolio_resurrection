@@ -9,12 +9,12 @@
             </span>
         </a>
         <nav class="desktop-navigation" aria-label="Primary navigation">
-            <% for (const label of ['Projects', 'Skills', 'About', 'Contact']) { %>
-                <a class="navigation-link<%= label === 'Projects' ? ' navigation-link-featured' : '' %>" role="link" aria-disabled="true" title="Coming soon"><%= label %></a>
+            <% for (const item of navigationLinks.filter(item => item.id !== 'resume')) { %>
+                <%- include('navigation-link', { item, linkClass: 'navigation-link' }) %>
             <% } %>
         </nav>
         <div class="header-actions">
-            <a class="resume-link" role="link" aria-disabled="true" title="Resume">Resume</a>
+            <%- include('navigation-link', { item: navigationLinks.find(item => item.id === 'resume'), linkClass: 'resume-link' }) %>
             <button class="menu-toggle" type="button" aria-label="Navigation menu" aria-expanded="false" aria-controls="mobile-navigation">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                     <path class="menu-line menu-line-top" d="M4 6h16"/>
@@ -26,8 +26,8 @@
         </div>
     </div>
     <nav id="mobile-navigation" class="mobile-navigation" aria-label="Mobile navigation" hidden>
-        <% for (const label of ['Projects', 'Skills', 'About', 'Contact', 'Resume']) { %>
-            <a class="navigation-link" role="link" aria-disabled="true" title="mob-menu-nav-links"><%= label %></a>
+        <% for (const item of navigationLinks) { %>
+            <%- include('navigation-link', { item, linkClass: 'navigation-link' }) %>
         <% } %>
     </nav>
 </header>
