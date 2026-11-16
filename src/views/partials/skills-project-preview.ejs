@@ -1,0 +1,25 @@
+<% if (project.id === 'developer-portfolio') { %>
+    <div class="skills-project-preview skills-code-preview" aria-label="Portfolio route code preview">
+        <div class="skills-preview-header">
+            <span class="skills-terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span>app.js — express-router</span>
+        </div>
+        <pre tabindex="0" aria-label="Example Express route"><code><span class="skills-code-comment">// Server-rendered portfolio view</span>
+app.<span class="skills-code-keyword">get</span>(<span class="skills-code-string">'/skills'</span>, (req, res) =&gt; {
+  res.<span class="skills-code-keyword">render</span>(<span class="skills-code-string">'pages/skillsPage'</span>, {
+    activeNav: <span class="skills-code-string">'skills'</span>,
+    skillsProjects
+  });
+});</code></pre>
+    </div>
+<% } else if (project.id === 'full-stack-business') { %>
+    <div class="skills-project-preview skills-topology-preview" aria-label="Planned business application architecture">
+        <div class="skills-preview-header"><span>Topology Model</span><span class="skills-spec-label">Architecture Spec</span></div>
+        <ol class="skills-topology" role="list" aria-label="Planned application layers">
+            <li><strong>Angular UI Layer</strong><span>Client App</span></li>
+            <li><strong>REST API</strong><span>Node/Express</span></li>
+            <li><strong>MongoDB</strong><span>Document DB</span></li>
+        </ol>
+        <div class="skills-preview-footer"><span>Security: JWT Bearer</span><span>Target: Multi-tenant</span></div>
+    </div>
+<% } %>

@@ -11,10 +11,18 @@
       "HTML5/CSS3",
       "JavaScript"
     ],
-    "action": {
-      "label": "View Project",
-      "url": null
-    }
+    "actions": [
+      {
+        "type": "demo",
+        "label": "Live Demo",
+        "url": null
+      },
+      {
+        "type": "source",
+        "label": "GitHub Source",
+        "url": null
+      }
+    ]
   },
   {
     "id": "full-stack-business",
@@ -28,9 +36,17 @@
       "Express",
       "MongoDB"
     ],
-    "action": {
-      "label": "Architecture Specs",
-      "url": null
-    }
+    "actions": [
+      {
+        "type": "demo",
+        "label": "Live Demo",
+        "url": null
+      },
+      {
+        "type": "source",
+        "label": "GitHub Source",
+        "url": null
+      }
+    ]
   }
 ]
