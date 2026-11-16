@@ -1,9 +1,11 @@
 import express from 'express';
 import path from 'node:path';
 import projects from '../data/featuredProjects.json' with { type: 'json' };
-import { navigationLinks } from './navigation.js';
+import { navigationLinks } from '../data/navigation.js';
 
 const app = express();
+
+//allows every ejs template to acces these properties without explicitly passing through the res.render()
 app.locals.navigationLinks = navigationLinks;
 app.locals.activeNav = null;
 
