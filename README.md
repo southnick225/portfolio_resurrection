@@ -20,6 +20,7 @@ Design mockups use Tailwind CSS through a CDN. Tailwind is not an installed appl
 ## Implemented functionality
 
 - `GET /skills` renders the Technologies & Capabilities hero with a subtle blue-to-cyan glow and four Engineering Capabilities cards. Capability cards use two columns on desktop/tablet and stack on mobile. Modern Development Workflow presents five stages and an AI-assisted workflow callout. Experience Beyond the Code adds four background cards with skill tags. Skills in Action renders two project cards with technology tags, code/architecture previews, and Live Demo/GitHub Source buttons that remain unavailable until their URLs are configured.
+- `GET /about` renders the responsive professional-background hero with introductory copy and a terminal-style profile card. Desktop styling is shared across screen sizes; My Journey adds a five-milestone career timeline; How I Approach Engineering adds a philosophy panel and three core principles; Beyond the Code adds three personal-interest cards; What I’m Building Today presents current goals and project/résumé actions. The About page includes the shared responsive footer.
 - `data/skillsProjects.json` supplies the two rendered Skills in Action project records; statuses are reference copy, not verified deployment state.
 
 - `GET /` returns HTTP 200 with an EJS-rendered homepage with a responsive hero.
@@ -28,7 +29,7 @@ Design mockups use Tailwind CSS through a CDN. Tailwind is not an installed appl
 - Hero with availability badge, headline, responsive action placeholders, and engineering metrics adapted from the design references.
 - Technical Expertise follows the homepage designs: four desktop skill lists, a 2×2 tablet grid with tags, and compact stacked mobile cards.
 - Featured Engineering Projects render from `data/projects.json`, with alternating desktop cards and stacked tablet/mobile layouts. Reference images use external URLs; demo/source URLs are unavailable placeholders until configured.
-- Shared responsive footer on the homepage and Skills page with branding/social placeholders on desktop and tablet, plus fixed mobile navigation with the current page highlighted.
+- Shared responsive footer on the homepage, Skills page, and About page with branding/social placeholders on desktop and tablet, plus fixed mobile navigation with the current page highlighted.
 - JSON and URL-encoded request body parsing.
 - Static assets served from `src/public`, including theme/header CSS and `/js/header.js`.
 - Unmatched requests return a JSON 404 response; centralized error middleware returns a generic JSON 500 response.

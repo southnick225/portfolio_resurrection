@@ -1,0 +1,215 @@
+.about-page {
+  --about-primary: #98cbff;
+  --about-accent: #38aaff;
+  --about-success: #4edea3;
+  --about-text: #dee2ee;
+  --about-muted: #bfc7d3;
+  background: var(--color-background);
+  color: var(--about-text);
+}
+.about-hero { max-width: 1200px; margin-inline: auto; padding: 32px 32px 64px; }
+.about-eyebrow { margin: 0 0 24px; color: var(--about-primary); font-size: 13px; line-height: 18px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; }
+.about-hero-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 32px; align-items: start; }
+.about-introduction { min-width: 0; }
+.about-role { margin: 0 0 20px; color: var(--about-primary); font: 500 20px/28px "Sora", sans-serif; letter-spacing: -0.015em; }
+.about-narrative { display: flex; flex-direction: column; gap: 16px; color: var(--about-muted); font-size: 18px; line-height: 28px; letter-spacing: -0.005em; }
+.about-narrative p { margin: 0; }
+.about-profile { position: relative; isolation: isolate; min-width: 0; overflow: hidden; border: 1px solid rgb(255 255 255 / 7%); border-radius: 12px; background: rgb(23 28 36 / 75%); backdrop-filter: blur(16px); box-shadow: 0 10px 30px -10px rgb(0 0 0 / 50%), inset 0 1px 0 rgb(255 255 255 / 5%); }
+.about-profile::before { content: ""; position: absolute; z-index: -1; top: -64px; right: -64px; width: 192px; height: 192px; border-radius: 50%; background: rgb(152 203 255 / 10%); filter: blur(64px); pointer-events: none; }
+.about-terminal-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; padding: 16px 24px 8px; background: rgb(9 14 22 / 50%); font-size: 12px; line-height: 16px; }
+.about-terminal-title { display: inline-flex; align-items: center; gap: 12px; color: var(--about-muted); }
+.about-terminal-dots { display: inline-flex; gap: 8px; }
+.about-terminal-dots i { width: 12px; height: 12px; border-radius: 50%; background: rgb(255 180 171 / 70%); }
+.about-terminal-dots i:nth-child(2) { background: rgb(78 222 163 / 70%); }
+.about-terminal-dots i:nth-child(3) { background: rgb(152 203 255 / 70%); }
+.about-online { display: inline-flex; align-items: center; gap: 4px; color: var(--about-success); font-weight: 500; text-transform: uppercase; }
+.about-online::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.about-profile-body { display: flex; flex-direction: column; gap: 16px; padding: 20px 24px 24px; }
+.about-identity { display: flex; align-items: center; gap: 16px; }
+.about-profile-icon { position: relative; display: grid; place-items: center; flex-shrink: 0; width: 64px; height: 64px; border-radius: 12px; background: #30353e; color: var(--about-primary); box-shadow: inset 0 2px 4px rgb(0 0 0 / 5%); }
+.about-profile-check { position: absolute; bottom: -4px; right: -4px; display: grid; place-items: center; width: 16px; height: 16px; border-radius: 50%; background: var(--about-success); color: #003824; font-size: 10px; font-weight: 700; }
+.about-identity-copy { min-width: 0; }
+.about-identity h2 { margin: 0; font: 700 16px/24px "Sora", sans-serif; letter-spacing: -0.01em; }
+.about-identity p { margin: 0; color: var(--about-muted); font-size: 13px; line-height: 20px; }
+.about-identity .about-profile-specialty { color: var(--about-primary); font-size: 12px; line-height: 16px; }
+.about-metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; margin: 4px 0 0; }
+.about-metrics > div { min-width: 0; padding: 8px; border-radius: 8px; background: #1b2028; }
+.about-metrics dt { color: var(--about-muted); font-size: 12px; line-height: 18px; letter-spacing: 0.05em; text-transform: uppercase; }
+.about-metrics dd { margin: 0; font: 700 20px/28px "Sora", sans-serif; letter-spacing: -0.015em; }
+.about-metrics .about-metric-primary { color: var(--about-primary); }
+.about-metrics .about-metric-success { color: var(--about-success); }
+.about-metrics .about-metric-detail { color: var(--about-muted); font: 400 12px/20px "Geist", sans-serif; letter-spacing: 0; }
+.about-stack-profile { padding: 8px; border-radius: 8px; background: #090e16; font-size: 12px; line-height: 18px; }
+.about-stack-heading { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 8px; margin-bottom: 4px; color: #89919d; }
+.about-stack-profile p { margin: 0; overflow-wrap: anywhere; }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .about-hero { max-width: 840px; }
+  .about-hero-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 767px) {
+  .about-hero { padding: 24px 16px 48px; }
+  .about-eyebrow { margin-bottom: 24px; font-size: 12px; }
+  .about-hero-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .about-role { font-size: 14px; line-height: 20px; letter-spacing: 0.01em; }
+  .about-narrative { gap: 14px; font-size: 15px; line-height: 24px; }
+  .about-terminal-header { padding: 12px 16px; font-size: 11px; }
+  .about-terminal-dots { gap: 6px; }
+  .about-terminal-dots i { width: 10px; height: 10px; }
+  .about-profile-body { padding: 16px; }
+  .about-identity { gap: 12px; }
+  .about-profile-icon { width: 44px; height: 44px; }
+  .about-profile-icon svg { width: 24px; height: 24px; }
+  .about-metrics { gap: 8px; }
+  .about-metrics dt { font-size: 10px; }
+  .about-metrics dd { font-size: 16px; line-height: 24px; }
+  .about-metrics .about-metric-detail { font-size: 11px; line-height: 18px; }
+}
+
+.about-journey, .about-philosophy, .about-interests, .about-current-focus { max-width: 1200px; margin-inline: auto; padding: 64px 32px; }
+.journey-heading { margin-bottom: 24px; }
+.journey-heading .about-eyebrow { margin-bottom: 4px; }
+.journey-heading h2 { margin: 0 0 4px; font: 600 40px/48px "Sora", sans-serif; letter-spacing: -0.025em; }
+.journey-heading > p:last-child { max-width: 768px; margin: 0; color: var(--about-muted); font-size: 18px; line-height: 28px; }
+.journey-timeline { position: relative; display: flex; flex-direction: column; gap: 24px; margin: 0; padding: 0; list-style: none; }
+.journey-timeline::before { content: ""; position: absolute; top: 20px; bottom: 24px; left: 5px; width: 2px; background: #30353e; }
+.journey-milestone { position: relative; min-width: 0; padding-left: 32px; }
+.journey-milestone::before { content: ""; position: absolute; top: 20px; left: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--about-primary); box-shadow: 0 0 10px rgb(56 170 255 / 70%); }
+.journey-card { padding: 24px; border: 1px solid rgb(255 255 255 / 6%); border-radius: 12px; background: rgb(23 28 36 / 65%); backdrop-filter: blur(12px); box-shadow: 0 4px 20px rgb(0 0 0 / 25%); }
+.journey-card-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 4px; }
+.journey-title { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; min-width: 0; }
+.journey-title h3 { margin: 0; font: 600 20px/28px "Sora", sans-serif; letter-spacing: -0.015em; }
+.journey-detail { color: var(--about-muted); font: 500 16px/24px "Sora", sans-serif; letter-spacing: -0.01em; }
+.journey-detail::before { content: "•"; margin-right: 8px; color: rgb(191 199 211 / 50%); }
+.journey-education { color: var(--about-primary); }
+.journey-badge { flex-shrink: 0; max-width: 100%; padding: 4px 8px; border-radius: 4px; background: #252a33; color: var(--about-muted); font-size: 12px; line-height: 16px; text-transform: uppercase; }
+.journey-card > p { margin: 0; color: var(--about-muted); font-size: 15px; line-height: 24px; }
+.journey-current::before { background: var(--about-accent); box-shadow: 0 0 14px rgb(56 170 255 / 90%); }
+.journey-current .journey-card { position: relative; isolation: isolate; overflow: hidden; border-color: rgb(56 170 255 / 25%); background: rgb(27 32 40 / 85%); backdrop-filter: blur(16px); box-shadow: 0 0 25px rgb(56 170 255 / 12%), inset 0 1px 0 rgb(255 255 255 / 8%); }
+.journey-current .journey-card::before { content: ""; position: absolute; z-index: -1; top: 0; right: 0; width: 128px; height: 128px; border-radius: 50%; background: rgb(152 203 255 / 10%); filter: blur(24px); pointer-events: none; }
+.journey-current h3 { font-weight: 700; }
+.journey-current .journey-badge { padding: 2px 10px; border-radius: 999px; background: var(--about-accent); color: #003c63; font-weight: 600; letter-spacing: 0.02em; }
+@media (hover: hover) {
+  .journey-milestone:hover::before { transform: scale(1.25); }
+  .journey-milestone:hover .journey-card { background: #1b2028; }
+  .journey-current:hover .journey-card { background: #252a33; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .journey-milestone::before { transition: transform 180ms ease; }
+  .journey-card { transition: background-color 200ms ease; }
+  .journey-current::before { animation: journey-pulse 2s ease-in-out infinite; }
+}
+@keyframes journey-pulse { 50% { opacity: 0.6; } }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .about-journey, .about-philosophy, .about-interests, .about-current-focus { max-width: 840px; padding-block: 32px 64px; }
+  .journey-heading h2 { font-size: 28px; line-height: 36px; }
+  .journey-heading > p:last-child { font-size: 15px; line-height: 24px; }
+  .journey-card { padding: 20px; }
+  .journey-title h3 { font-size: 18px; line-height: 26px; }
+}
+@media (max-width: 767px) {
+  .about-journey, .about-philosophy, .about-interests, .about-current-focus { padding: 24px 16px 48px; }
+  .journey-heading h2 { font-size: 28px; line-height: 36px; }
+  .journey-heading > p:last-child { font-size: 15px; line-height: 24px; }
+  .journey-timeline { gap: 16px; }
+  .journey-milestone { padding-left: 24px; }
+  .journey-card { padding: 16px; }
+  .journey-title { flex-direction: column; gap: 4px; }
+  .journey-title h3 { font-size: 16px; line-height: 24px; }
+  .journey-detail { font-size: 14px; line-height: 20px; }
+  .journey-detail::before { content: none; }
+  .journey-badge { padding-block: 2px; font-size: 11px; }
+  .journey-card > p { font-size: 13px; line-height: 20px; }
+}
+
+.philosophy-panel { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 320px; align-items: start; gap: 32px; padding: 32px; overflow: hidden; border: 1px solid rgb(255 255 255 / 8%); border-radius: 12px; background: linear-gradient(135deg, rgb(23 28 36 / 80%), rgb(9 14 22 / 90%)); backdrop-filter: blur(16px); box-shadow: 0 12px 36px -10px rgb(0 0 0 / 60%); }
+.philosophy-panel::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 6px; background: var(--about-primary); }
+.philosophy-narrative { display: flex; flex-direction: column; gap: 16px; min-width: 0; color: var(--about-muted); font-size: 18px; line-height: 28px; }
+.philosophy-narrative p { margin: 0; }
+.philosophy-narrative .philosophy-lead { color: var(--about-text); font: 500 20px/1.625 "Sora", sans-serif; letter-spacing: -0.015em; }
+.philosophy-principles { min-width: 0; padding: 16px; border: 1px solid rgb(255 255 255 / 6%); border-radius: 8px; background: rgb(30 37 47 / 60%); backdrop-filter: blur(10px); }
+.philosophy-principles h3 { margin: 0 0 8px; color: var(--about-primary); font-size: 12px; line-height: 18px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+.philosophy-principles ul { display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.philosophy-principles li { display: flex; align-items: flex-start; gap: 8px; }
+.philosophy-principles svg { flex-shrink: 0; margin-top: 2px; color: var(--about-success); }
+.philosophy-principles li > div { min-width: 0; }
+.philosophy-principles h4 { margin: 0; color: var(--about-text); font: 600 16px/24px "Sora", sans-serif; letter-spacing: -0.01em; }
+.philosophy-principles p { margin: 0; color: var(--about-muted); font-size: 13px; line-height: 20px; }
+@media (max-width: 1023px) {
+  .philosophy-panel { grid-template-columns: minmax(0, 1fr); }
+  .philosophy-narrative { font-size: 15px; line-height: 24px; }
+  .philosophy-narrative .philosophy-lead { font-size: 18px; }
+}
+@media (max-width: 767px) {
+  .philosophy-panel { gap: 24px; padding: 24px 20px; }
+  .philosophy-narrative .philosophy-lead { font-size: 16px; }
+  .philosophy-principles h4 { font-size: 14px; line-height: 22px; }
+  .philosophy-principles ul { gap: 14px; }
+}
+
+.interests-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.interest-card { display: flex; flex-direction: column; gap: 16px; min-width: 0; padding: 24px; border: 1px solid rgb(255 255 255 / 6%); border-radius: 12px; background: rgb(23 28 36 / 65%); backdrop-filter: blur(12px); box-shadow: 0 4px 20px rgb(0 0 0 / 25%); }
+.interest-icon { display: grid; place-items: center; flex-shrink: 0; width: 48px; height: 48px; border: 1px solid rgb(152 203 255 / 20%); border-radius: 8px; background: rgb(152 203 255 / 10%); color: var(--about-primary); box-shadow: 0 1px 2px rgb(0 0 0 / 5%); }
+.interest-card h3 { margin: 0 0 6px; font: 600 16px/24px "Sora", sans-serif; letter-spacing: -0.01em; }
+.interest-card p { margin: 0; color: var(--about-muted); font-size: 13px; line-height: 1.625; }
+@media (hover: hover) {
+  .interest-card:hover { background: #1b2028; }
+  .interest-card:hover .interest-icon { transform: scale(1.1); }
+  .interest-card:hover h3 { color: var(--about-primary); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .interest-card { transition: background-color 200ms ease; }
+  .interest-icon { transition: transform 200ms ease; }
+  .interest-card h3 { transition: color 200ms ease; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .interest-card { padding: 20px; }
+}
+@media (max-width: 767px) {
+  .interests-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .interest-card { flex-direction: row; align-items: flex-start; gap: 14px; padding: 16px; }
+  .interest-card > div { min-width: 0; }
+  .interest-icon { width: 40px; height: 40px; margin-top: 2px; }
+  .interest-icon svg { width: 20px; height: 20px; }
+}
+
+.current-focus-panel { position: relative; isolation: isolate; display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 32px; overflow: hidden; border: 1px solid rgb(255 255 255 / 8%); border-radius: 12px; background: linear-gradient(135deg, rgb(23 28 36 / 85%), rgb(15 20 28 / 95%)); backdrop-filter: blur(16px); box-shadow: 0 16px 40px -12px rgb(0 0 0 / 70%); }
+.current-focus-panel::before { content: ""; position: absolute; z-index: -1; right: 0; bottom: 0; width: 384px; height: 384px; border-radius: 50%; background: rgb(152 203 255 / 5%); filter: blur(64px); pointer-events: none; }
+.current-focus-copy { min-width: 0; max-width: 672px; }
+.current-focus-copy .about-eyebrow { margin-bottom: 8px; }
+.current-focus-copy h2 { margin: 0 0 8px; font: 600 40px/48px "Sora", sans-serif; letter-spacing: -0.025em; }
+.current-focus-narrative { display: flex; flex-direction: column; gap: 4px; color: var(--about-muted); font-size: 15px; line-height: 24px; }
+.current-focus-narrative p { margin: 0; }
+.current-focus-socials { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 12px; }
+.current-focus-socials a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: var(--about-muted); font-size: 14px; line-height: 20px; font-weight: 500; text-decoration: none; }
+.current-focus-socials > span { color: #30353e; }
+.current-focus-actions { display: flex; flex-direction: column; flex-shrink: 0; gap: 8px; }
+.current-focus-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 8px 32px; border-radius: 8px; font: 600 16px/24px "Sora", sans-serif; text-align: center; text-decoration: none; }
+.current-focus-button svg { flex-shrink: 0; }
+.current-focus-primary { background: var(--about-primary); color: #003354; font-weight: 700; box-shadow: 0 0 20px rgb(56 170 255 / 30%); }
+.current-focus-secondary { background: #1b2028; color: var(--about-text); box-shadow: 0 4px 6px rgb(0 0 0 / 10%); }
+.current-focus-button[aria-disabled="true"] { cursor: default; }
+.current-focus-socials a { cursor: pointer; }
+.current-focus-panel a:focus-visible { outline: 2px solid var(--about-accent); outline-offset: 4px; }
+@media (hover: hover) {
+  .current-focus-panel:hover { cursor: pointer; }
+  .current-focus-primary:hover { background: var(--about-accent); color: #003c63; box-shadow: 0 0 25px rgb(56 170 255 / 50%); }
+  .current-focus-secondary:hover { background: #252a33; color: var(--about-primary); cursor: pointer; }
+  .current-focus-socials a:hover { color: var(--about-primary); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .current-focus-button { transition: background-color 200ms ease, color 200ms ease, box-shadow 200ms ease; }
+  .current-focus-socials a { transition: color 200ms ease; }
+}
+@media (max-width: 1023px) {
+  .current-focus-panel { flex-direction: column; align-items: stretch; gap: 24px; }
+  .current-focus-copy { max-width: none; }
+  .current-focus-copy h2 { font-size: 28px; line-height: 36px; }
+  .current-focus-actions { flex-direction: row; flex-wrap: wrap; }
+  .current-focus-button { flex: 1 1 220px; }
+}
+@media (max-width: 767px) {
+  .current-focus-panel { padding: 24px 20px; }
+  .current-focus-actions { flex-direction: column; }
+  .current-focus-button { flex: 0 1 auto; min-height: 48px; padding-inline: 16px; font-size: 14px; }
+  .current-focus-socials { gap: 12px; }
+}

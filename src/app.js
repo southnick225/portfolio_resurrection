@@ -28,6 +28,9 @@ app.get('/', (req, res) => {
 app.get('/skills', (req, res) => {
     res.render('pages/skillsPage', { activeNav: 'skills', skillsProjects });
 });
+app.get('/about', (req, res) => {
+    res.render('pages/aboutPage', { activeNav: 'about' });
+});
 //404 handler
 app.use((req, res) => {
     res.status(404).json({

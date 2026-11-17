@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Alex Rivera | Full-Stack Engineer</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary-container": "#00432c",
+          "on-error-container": "#ffdad6",
+          "surface-container-high": "#252a33",
+          "tertiary-fixed": "#6ffbbe",
+          "on-tertiary-fixed": "#002113",
+          "on-secondary": "#253141",
+          "tertiary": "#4edea3",
+          "on-primary-container": "#003c63",
+          "error": "#ffb4ab",
+          "on-primary-fixed-variant": "#004a77",
+          "inverse-primary": "#00639c",
+          "tertiary-container": "#13ba82",
+          "on-primary-fixed": "#001d33",
+          "outline": "#89919d",
+          "on-surface": "#dee2ee",
+          "on-surface-variant": "#bfc7d3",
+          "on-secondary-container": "#adb9cd",
+          "on-background": "#dee2ee",
+          "secondary": "#bbc7db",
+          "surface-container-highest": "#30353e",
+          "secondary-container": "#3e4a5a",
+          "primary-fixed-dim": "#98cbff",
+          "on-tertiary-fixed-variant": "#005236",
+          "surface-variant": "#30353e",
+          "surface": "#0f141c",
+          "on-secondary-fixed-variant": "#3c4858",
+          "on-primary": "#003354",
+          "primary": "#98cbff",
+          "primary-fixed": "#cfe5ff",
+          "secondary-fixed": "#d7e3f8",
+          "on-secondary-fixed": "#101c2b",
+          "inverse-surface": "#dee2ee",
+          "primary-container": "#38aaff",
+          "background": "#0f141c",
+          "surface-dim": "#0f141c",
+          "outline-variant": "#3f4851",
+          "surface-container-lowest": "#090e16",
+          "inverse-on-surface": "#2c313a",
+          "tertiary-fixed-dim": "#4edea3",
+          "error-container": "#93000a",
+          "surface-tint": "#98cbff",
+          "on-error": "#690005",
+          "on-tertiary": "#003824",
+          "secondary-fixed-dim": "#bbc7db",
+          "surface-container-low": "#171c24",
+          "surface-bright": "#343943",
+          "surface-container": "#1b2028"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "space-md": "1rem",
+          "space-xs": "0.25rem",
+          "margin": "2rem",
+          "space-xl": "2rem",
+          "margin-mobile": "1rem",
+          "gutter-mobile": "1rem",
+          "gutter": "1.5rem",
+          "space-lg": "1.5rem"
+        },
+        "fontFamily": {
+          "headline-lg": [
+            "Sora"
+          ],
+          "body-md": [
+            "Geist"
+          ],
+          "label-sm": [
+            "Geist"
+          ],
+          "headline-sm": [
+            "Sora"
+          ],
+          "label-md": [
+            "Geist"
+          ],
+          "body-sm": [
+            "Geist"
+          ],
+          "headline-lg-mobile": [
+            "Sora"
+          ],
+          "headline-md": [
+            "Sora"
+          ],
+          "body-lg": [
+            "Geist"
+          ],
+          "display": [
+            "Sora"
+          ],
+          "title-md": [
+            "Sora"
+          ],
+          "code-inline": [
+            "Geist"
+          ],
+          "display-mobile": [
+            "Sora"
+          ]
+        },
+        "fontSize": {
+          "headline-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "display": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "700"
+            }
+          ],
+          "title-md": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "code-inline": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0em",
+              "fontWeight": "500"
+            }
+          ],
+          "display-mobile": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container" style="background-color: rgb(7, 10, 15); background-image: radial-gradient(circle at 50% 0%, rgba(56, 170, 255, 0.06) 0%, transparent 50%), radial-gradient(circle at 85% 25%, rgba(78, 222, 163, 0.03) 0%, transparent 45%), radial-gradient(circle at 15% 65%, rgba(56, 170, 255, 0.03) 0%, transparent 40%); min-height: 100vh;"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]" style="background: rgba(7, 10, 15, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255, 255, 255, 0.04);"><div class="h-20 max-w-[1200px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-space-md"><a class="flex items-center gap-space-sm group" data-path="about" href="#"><div class="h-9 w-9 rounded-lg bg-surface-container-high flex items-center justify-center font-headline-sm text-headline-sm text-primary shadow-[0_0_12px_rgba(56,170,255,0.15)] group-hover:bg-surface-container-highest transition-colors">AR</div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors tracking-tight">Alex Rivera</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Full-Stack Engineer</span></div></a><nav class="hidden md:flex items-center gap-space-xs p-1 rounded-xl bg-surface-container-low" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_16px_rgba(56,170,255,0.25)]"><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all rounded-lg" data-path="projects" href="#">Projects</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all rounded-lg" data-path="skills" href="#">Skills</a><a aria-current="page" class="px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_16px_rgba(56,170,255,0.25)]" data-path="about" href="#">About</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all rounded-lg" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm"><a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-primary transition-all font-label-md text-label-md shadow-[0_0_12px_rgba(0,0,0,0.2)]" href="#"><span class="material-symbols-outlined text-[18px] text-primary">description</span><span class="hidden sm:inline">Resume</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 min-h-[calc(100vh-140px)]"><div class="flex flex-col w-full">
+<div class="max-w-[1200px] w-full mx-auto px-margin-mobile md:px-margin py-space-xl flex flex-col gap-24 lg:gap-32">
+<!-- 1. ABOUT ME — PROFESSIONAL INTRODUCTION -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex items-center gap-space-xs font-code-inline text-code-inline text-primary tracking-wider">
+<span class="opacity-70">//</span>
+<span>PROFESSIONAL BACKGROUND</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Column: Copy & Pills -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Building Thoughtful Software, From <span class="text-primary-container bg-gradient-to-r from-primary to-primary-container bg-clip-text text-transparent">Interface to Infrastructure</span>.
+          </h1>
+<p class="font-headline-sm text-headline-sm text-primary font-medium tracking-tight">
+            Full-Stack Developer | JavaScript &amp; TypeScript
+          </p>
+<div class="flex flex-col gap-space-md text-on-surface-variant font-body-lg text-body-lg pt-space-xs">
+<p>
+              I'm a software developer with six years of professional IT experience spanning technical operations, application support, infrastructure reliability, and full-stack development.
+            </p>
+<p>
+              My career has given me the opportunity to approach technology from multiple perspectives — understanding how systems operate, how applications are maintained, and how software can be engineered to solve real-world problems.
+            </p>
+<p>
+              Today, my primary focus is building modern, scalable web applications using Angular, TypeScript, Node.js, and Express.
+            </p>
+</div>
+<!-- Quick stat / capability pills -->
+<div class="flex flex-wrap gap-space-xs pt-space-sm">
+<span class="px-space-md py-1 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm shadow-sm flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              Full-Stack Development
+            </span>
+<span class="px-space-md py-1 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm shadow-sm flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              TypeScript
+            </span>
+<span class="px-space-md py-1 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm shadow-sm flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              Angular
+            </span>
+<span class="px-space-md py-1 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm shadow-sm flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              Node.js &amp; Express
+            </span>
+<span class="px-space-md py-1 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm shadow-sm flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              System Reliability
+            </span>
+</div>
+</div>
+<!-- Right Column: Profile Diagnostic / System Terminal Card -->
+<div class="lg:col-span-5 w-full flex flex-col">
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-xl relative overflow-hidden flex flex-col gap-space-md" style="background: rgba(23, 28, 36, 0.75); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.07); box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 30px -10px, rgba(255, 255, 255, 0.05) 0px 1px 0px inset;">
+<div class="absolute -right-16 -top-16 w-48 h-48 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Terminal Header -->
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-lowest/50 -mx-space-lg -mt-space-lg px-space-lg pt-space-md">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error/70 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary/70 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-primary/70 inline-block"></span>
+<span class="ml-2 font-code-inline text-code-inline text-on-surface-variant text-xs">sys_inspector.ar</span>
+</div>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm text-tertiary">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+                ONLINE
+              </span>
+</div>
+<!-- Profile Overview Badge -->
+<div class="flex items-center gap-space-md pt-space-xs">
+<div class="relative w-16 h-16 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary font-headline-sm text-headline-sm shadow-inner shrink-0">
+<span class="material-symbols-outlined text-[32px]">terminal</span>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-on-tertiary font-bold">check</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface font-bold truncate">Alex Rivera</h3>
+<span class="font-code-inline text-xs px-2 py-0.5 rounded bg-surface-container-high text-primary">v6.2.0</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Full-Stack Application Engineer</p>
+<p class="font-label-sm text-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                  Austin, TX • Distributed
+                </p>
+</div>
+</div>
+<!-- System Metrics Grid -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col">
+<span class="font-code-inline text-xs text-on-surface-variant uppercase tracking-wider">Experience</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold text-primary">6+ Years</span>
+<span class="font-body-sm text-xs text-on-surface-variant">Production IT &amp; Dev</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col">
+<span class="font-code-inline text-xs text-on-surface-variant uppercase tracking-wider">Current Focus</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Modern Web</span>
+<span class="font-body-sm text-xs text-on-surface-variant">TypeScript &amp; Angular</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col">
+<span class="font-code-inline text-xs text-on-surface-variant uppercase tracking-wider">Stance</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Reliability</span>
+<span class="font-body-sm text-xs text-on-surface-variant">Architecture-First</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex flex-col">
+<span class="font-code-inline text-xs text-on-surface-variant uppercase tracking-wider">Availability</span>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">Active</span>
+<span class="font-body-sm text-xs text-on-surface-variant">Open to Opportunities</span>
+</div>
+</div>
+<!-- Diagnostic Stream Snippet -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg font-code-inline text-code-inline text-xs text-on-surface-variant flex flex-col gap-1">
+<div class="flex items-center justify-between text-outline">
+<span>[STACK_PROFILE]</span>
+<span>ACTIVE_THREADS: 4</span>
+</div>
+<div class="text-on-surface">
+                &gt; client: ["Angular", "TypeScript", "Tailwind"]<br/>
+                &gt; server: ["Node.js", "Express", "REST APIs"]<br/>
+                &gt; ops:    ["CI/CD", "Reliability", "Monitoring"]
+              </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. MY JOURNEY — CAREER TIMELINE -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-code-inline text-code-inline text-primary tracking-wider">
+<span class="opacity-70">//</span>
+<span>CAREER PATHWAY</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">My Journey</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+          A progression from foundational academic study and technical operations into modern full-stack application development.
+        </p>
+</div>
+<!-- Timeline Container -->
+<div class="relative pl-6 sm:pl-8 flex flex-col gap-space-lg">
+<!-- Connecting Vertical Rail -->
+<div class="absolute left-2.5 sm:left-3.5 top-3 bottom-6 w-0.5 bg-surface-container-highest"></div>
+<!-- Milestone 1: Education -->
+<div class="relative flex items-start group">
+<div class="absolute -left-6 sm:-left-8 top-5 w-3 h-3 rounded-full bg-primary shadow-[0_0_10px_rgba(56,170,255,0.7)] group-hover:scale-125 transition-transform"></div>
+<div class="w-full bg-surface-container-low hover:bg-surface-container p-space-lg rounded-xl transition-all duration-200 shadow-md" style="background: rgba(23, 28, 36, 0.65); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.06); box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 20px;">
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-xs">
+<div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Southern University A&amp;M</h3>
+<span class="hidden sm:inline text-on-surface-variant/50">•</span>
+<span class="font-title-md text-title-md text-primary font-medium">BA Computer Science and Information Systems</span>
+</div>
+<span class="font-code-inline text-xs text-on-surface-variant px-2 py-1 rounded bg-surface-container-high">EDUCATION</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Formative study in computer science fundamentals, data structures, algorithms, information systems architecture, and database management.
+            </p>
+</div>
+</div>
+<!-- Milestone 2: Configuration & Training -->
+<div class="relative flex items-start group">
+<div class="absolute -left-6 sm:-left-8 top-5 w-3 h-3 rounded-full bg-primary shadow-[0_0_10px_rgba(56,170,255,0.7)] group-hover:scale-125 transition-transform"></div>
+<div class="w-full bg-surface-container-low hover:bg-surface-container p-space-lg rounded-xl transition-all duration-200 shadow-md" style="background: rgba(23, 28, 36, 0.65); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.06); box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 20px;">
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-xs">
+<div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Configuration &amp; Training</h3>
+<span class="hidden sm:inline text-on-surface-variant/50">•</span>
+<span class="font-title-md text-title-md text-on-surface-variant font-medium">Foundation</span>
+</div>
+<span class="font-code-inline text-xs text-on-surface-variant px-2 py-1 rounded bg-surface-container-high">PHASE 01</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Developed a foundation in enterprise systems, configuration management, documentation, and technical communication.
+            </p>
+</div>
+</div>
+<!-- Milestone 3: Technical Operations & Reliability -->
+<div class="relative flex items-start group">
+<div class="absolute -left-6 sm:-left-8 top-5 w-3 h-3 rounded-full bg-primary shadow-[0_0_10px_rgba(56,170,255,0.7)] group-hover:scale-125 transition-transform"></div>
+<div class="w-full bg-surface-container-low hover:bg-surface-container p-space-lg rounded-xl transition-all duration-200 shadow-md" style="background: rgba(23, 28, 36, 0.65); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.06); box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 20px;">
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-xs">
+<div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Technical Operations &amp; Reliability</h3>
+<span class="hidden sm:inline text-on-surface-variant/50">•</span>
+<span class="font-title-md text-title-md text-on-surface-variant font-medium">Operations</span>
+</div>
+<span class="font-code-inline text-xs text-on-surface-variant px-2 py-1 rounded bg-surface-container-high">PHASE 02</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Expanded into application support, site reliability, data refresh operations, and enterprise troubleshooting.
+            </p>
+</div>
+</div>
+<!-- Milestone 4: Frontend & Full-Stack Engineering -->
+<div class="relative flex items-start group">
+<div class="absolute -left-6 sm:-left-8 top-5 w-3 h-3 rounded-full bg-primary shadow-[0_0_10px_rgba(56,170,255,0.7)] group-hover:scale-125 transition-transform"></div>
+<div class="w-full bg-surface-container-low hover:bg-surface-container p-space-lg rounded-xl transition-all duration-200 shadow-md" style="background: rgba(23, 28, 36, 0.65); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.06); box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 20px;">
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-xs">
+<div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Frontend &amp; Full-Stack Engineering</h3>
+<span class="hidden sm:inline text-on-surface-variant/50">•</span>
+<span class="font-title-md text-title-md text-on-surface-variant font-medium">Development</span>
+</div>
+<span class="font-code-inline text-xs text-on-surface-variant px-2 py-1 rounded bg-surface-container-high">PHASE 03</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Transitioned into application development using Angular, JavaScript, Node.js, and Express.
+            </p>
+</div>
+</div>
+<!-- Milestone 5: Present -->
+<div class="relative flex items-start group">
+<div class="absolute -left-6 sm:-left-8 top-5 w-3 h-3 rounded-full bg-primary-container shadow-[0_0_14px_rgba(56,170,255,0.9)] animate-pulse"></div>
+<div class="w-full bg-surface-container hover:bg-surface-container-high p-space-lg rounded-xl transition-all duration-200 shadow-xl relative overflow-hidden" style="background: rgba(27, 32, 40, 0.85); backdrop-filter: blur(16px); border: 1px solid rgba(56, 170, 255, 0.25); box-shadow: rgba(56, 170, 255, 0.12) 0px 0px 25px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold flex items-center gap-2">
+                2025–Present: Modern Full-Stack Development
+              </h3>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-semibold tracking-wide">
+                CURRENT FOCUS
+              </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Continued technical development through modern Angular, TypeScript, AI-assisted engineering workflows, and independent portfolio applications.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. TECHNICAL EXPERTISE -->
+<!-- 4. MY ENGINEERING PHILOSOPHY -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-code-inline text-code-inline text-primary tracking-wider">
+<span class="opacity-70">//</span>
+<span>METHODOLOGY &amp; MINDSET</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">How I Approach Engineering</h2>
+</div>
+<!-- Refined Distinctive Content Panel -->
+<div class="bg-gradient-to-br from-surface-container-low to-surface-container-lowest p-space-lg md:p-space-xl rounded-xl shadow-xl flex flex-col lg:flex-row gap-space-xl relative overflow-hidden" style="background: linear-gradient(135deg, rgba(23, 28, 36, 0.8) 0%, rgba(9, 14, 22, 0.9) 100%); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: rgba(0, 0, 0, 0.6) 0px 12px 36px -10px;">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<!-- Main Philosophy Copy -->
+<div class="flex-1 flex flex-col gap-space-md text-on-surface font-body-lg text-body-lg">
+<p class="font-headline-sm text-headline-sm text-on-surface font-medium leading-relaxed">
+            I believe great software is more than functional code. It should be maintainable, reliable, intuitive, and designed with the people using it in mind.
+          </p>
+<p class="text-on-surface-variant">
+            My experience across technical operations and software development has shaped how I approach engineering. I value understanding the broader system, identifying root causes, making thoughtful architectural decisions, and building solutions that can evolve over time.
+          </p>
+<p class="text-on-surface-variant">
+            I also embrace modern development tools, including AI coding assistants, to improve productivity while maintaining ownership of architecture, implementation decisions, and code quality.
+          </p>
+</div>
+<!-- Pull-Out Key Principles Block -->
+<div class="lg:w-80 flex flex-col justify-center gap-space-sm bg-surface-container/60 p-space-md rounded-lg self-start w-full" style="background: rgba(30, 37, 47, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.06);">
+<span class="font-code-inline text-xs text-primary uppercase tracking-wider font-semibold">Core Principles</span>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary shrink-0 mt-0.5">verified</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Maintainability &amp; Scalability</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Clear abstractions over clever tricks</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary shrink-0 mt-0.5">query_stats</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Systemic Root Cause Analysis</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Fixing underlying fault points</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-tertiary shrink-0 mt-0.5">auto_fix_high</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Pragmatic Tooling &amp; AI Adoption</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Accelerated velocity with full code ownership</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. WHAT I'M BUILDING TODAY — CURRENT FOCUS & CONTACT -->
+<!-- 4.5. BEYOND THE CODE — PERSONAL INTERESTS -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-code-inline text-code-inline text-primary tracking-wider">
+<span class="opacity-70">//</span>
+<span>BEYOND THE TERMINAL</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Beyond the Code</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+      While technology is a major part of my life, I believe some of the best ideas and perspectives come from experiences outside of it. Whether I'm challenging myself physically, exploring new ideas, or enjoying a little friendly competition, I value activities that encourage growth, creativity, and balance.
+    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Card 1: Fitness & Wellness -->
+<div class="bg-surface-container-low hover:bg-surface-container p-space-lg rounded-xl transition-all duration-200 shadow-md flex flex-col gap-space-md group" style="background: rgba(23, 28, 36, 0.65); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.06); box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 20px;">
+<div class="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[24px]">fitness_center</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<h3 class="font-headline-sm text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors">
+          Fitness &amp; Wellness
+        </h3>
+<p class="font-body-md text-body-sm text-on-surface-variant leading-relaxed">
+          I enjoy strength training, fitness, and continuously improving my physical and mental performance.
+        </p>
+</div>
+</div>
+<!-- Card 2: Reading & Continuous Learning -->
+<div class="bg-surface-container-low hover:bg-surface-container p-space-lg rounded-xl transition-all duration-200 shadow-md flex flex-col gap-space-md group" style="background: rgba(23, 28, 36, 0.65); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.06); box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 20px;">
+<div class="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[24px]">menu_book</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<h3 class="font-headline-sm text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors">
+          Reading &amp; Continuous Learning
+        </h3>
+<p class="font-body-md text-body-sm text-on-surface-variant leading-relaxed">
+          I'm passionate about exploring new ideas through books, learning, and personal development.
+        </p>
+</div>
+</div>
+<!-- Card 3: Gaming & Competition -->
+<div class="bg-surface-container-low hover:bg-surface-container p-space-lg rounded-xl transition-all duration-200 shadow-md flex flex-col gap-space-md group" style="background: rgba(23, 28, 36, 0.65); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.06); box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 20px;">
+<div class="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[24px]">sports_esports</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<h3 class="font-headline-sm text-title-md text-on-surface font-semibold group-hover:text-primary transition-colors">
+          Gaming &amp; Competition
+        </h3>
+<p class="font-body-md text-body-sm text-on-surface-variant leading-relaxed">
+          I enjoy competitive gaming, where strategy, adaptability, and quick decision-making are constantly put to the test.
+        </p>
+</div>
+</div>
+</div>
+</section><section class="flex flex-col gap-space-lg mb-space-lg">
+<div class="bg-surface-container-low rounded-xl p-space-lg md:p-space-xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-space-xl relative overflow-hidden" style="background: linear-gradient(135deg, rgba(23, 28, 36, 0.85) 0%, rgba(15, 20, 28, 0.95) 100%); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: rgba(0, 0, 0, 0.7) 0px 16px 40px -12px;">
+<div class="absolute right-0 bottom-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-sm max-w-2xl">
+<div class="flex items-center gap-space-xs font-code-inline text-code-inline text-primary tracking-wider">
+<span class="opacity-70">//</span>
+<span>FUTURE INITIATIVES</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">What I'm Building Today</h2>
+<div class="flex flex-col gap-space-xs text-on-surface-variant font-body-md text-body-md">
+<p>
+              I'm currently focused on developing full-stack applications that demonstrate modern engineering practices, thoughtful user experiences, and practical business functionality.
+            </p>
+<p>
+              My goal is to contribute to a team where I can apply my technical background, continue growing as an engineer, and help deliver meaningful software solutions.
+            </p>
+</div>
+<!-- Social Anchors -->
+<div class="flex items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>GitHub</span>
+</a>
+<span class="text-surface-container-highest">•</span>
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">share</span>
+<span>LinkedIn</span>
+</a>
+</div>
+</div>
+<!-- Call to Action Buttons -->
+<div class="flex flex-col sm:flex-row md:flex-col gap-space-sm w-full md:w-auto shrink-0">
+<a class="px-space-xl py-space-sm rounded-lg bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-headline-sm text-title-md font-bold text-center transition-all shadow-[0_0_20px_rgba(56,170,255,0.3)] hover:shadow-[0_0_25px_rgba(56,170,255,0.5)]" data-path="projects" href="#">
+            View My Projects
+          </a>
+<a class="px-space-xl py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-primary font-headline-sm text-title-md font-semibold text-center transition-all shadow-md flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download Résumé</span>
+</a>
+</div>
+</div>
+</section>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest mt-space-xl" style="background-color: rgb(7, 10, 15); border-top: 1px solid rgba(255, 255, 255, 0.04);"><div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex flex-col sm:flex-row items-center gap-space-xs sm:gap-space-sm text-center md:text-left"><span class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Alex Rivera.</span><span class="hidden sm:inline font-body-sm text-body-sm text-outline-variant">•</span><span class="font-label-sm text-label-sm text-primary tracking-wide uppercase">Built with architectural rigor</span></div><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">terminal</span><span>GitHub</span></a><a class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">share</span><span>LinkedIn</span></a><a class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">tag</span><span>Twitter / X</span></a></div></div></footer>
+</body></html>
