@@ -1,0 +1,34 @@
+{
+  "channels": [
+    {
+      "id": "email",
+      "title": "Email Me",
+      "description": "Reach out directly for hiring inquiries, technical advisory, or engineering proposals.",
+      "url": null,
+      "label": "Email address coming soon"
+    },
+    {
+      "id": "linkedin",
+      "title": "Connect on LinkedIn",
+      "description": "Expand our professional network, review my experience, and explore opportunities to work together.",
+      "url": null,
+      "label": "LinkedIn profile coming soon"
+    },
+    {
+      "id": "github",
+      "title": "Explore My GitHub",
+      "description": "Inspect public repositories, full-stack projects, and the engineering decisions behind my work.",
+      "url": null,
+      "label": "GitHub profile coming soon"
+    }
+  ],
+  "availability": {
+    "title": "Currently Open to Opportunities",
+    "badge": "Open to conversations",
+    "description": "Interested in full-stack and JavaScript/TypeScript engineering opportunities focused on maintainable applications, resilient backends, and thoughtful user experiences.",
+    "roles": "Full-Stack / TypeScript",
+    "technologies": "JavaScript, TypeScript, Node.js, Express",
+    "workplace": "Let's discuss your team",
+    "workplaceDetail": "Location and working arrangements on request"
+  }
+}

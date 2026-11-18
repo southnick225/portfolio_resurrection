@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Contact — Alex Rivera Portfolio</title>
+<!-- Google Fonts: Inter & Sora -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Sora:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- BEGIN: Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#090d14',
+            surface: {
+              card: 'rgba(16, 24, 39, 0.75)',
+              nested: 'rgba(21, 31, 50, 0.85)',
+              pill: 'rgba(23, 37, 62, 0.7)'
+            },
+            accent: {
+              blue: '#38bdf8',
+              glow: '#2563eb',
+              emerald: '#10b981'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['Sora', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+<!-- END: Tailwind Configuration -->
+<!-- BEGIN: Custom Layout & Aesthetic Styles -->
+<style data-purpose="custom-styling">
+    body {
+      background-color: #070a0f;
+      color: #cbd5e1;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-sora {
+      font-family: 'Sora', sans-serif;
+    }
+
+    /* Ambient radial backdrop glow */
+    .bg-ambient-radial {
+      background: radial-gradient(circle at 50% 12%, rgba(37, 99, 235, 0.12) 0%, rgba(7, 10, 15, 0) 70%);
+    }
+
+    /* Subtle top corner gradient highlight for contact cards */
+    .card-corner-radial {
+      background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.08) 0%, transparent 60%);
+    }
+
+    /* Bottom tab bar glass backdrop filter */
+    .glass-nav {
+      background-color: rgba(9, 13, 20, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+  </style>
+<!-- END: Custom Layout & Aesthetic Styles -->
+</head>
+<body class="min-h-screen bg-[#070a0f] flex justify-center text-slate-300">
+<!-- Mobile Viewport Container (390px target width) -->
+<div class="w-full max-w-[390px] min-h-screen flex flex-col bg-[#070a0f] relative bg-ambient-radial selection:bg-sky-500/20 selection:text-sky-300">
+<!-- BEGIN: Top Navigation Header -->
+<header class="sticky top-0 z-40 px-4 py-3.5 flex items-center justify-between border-b border-slate-800/80 bg-[#070a0f]/90 backdrop-blur-md">
+<!-- Profile Branding -->
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700/70 flex items-center justify-center font-sora font-bold text-sm text-slate-200 shadow-inner">
+          AR
+        </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-sora font-semibold text-sm text-white tracking-tight">Alex Rivera</span>
+<span class="w-2 h-2 rounded-full bg-emerald-400 ring-2 ring-emerald-500/20"></span>
+</div>
+<span class="text-[11px] text-slate-400 font-medium">Full-Stack Engineer</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2">
+<a class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/90 hover:bg-slate-700/80 border border-slate-700/60 text-xs font-semibold text-slate-200 transition-colors" href="#resume">
+<svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>CV</span>
+</a>
+<button aria-label="User Profile" class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700/70 flex items-center justify-center text-slate-300" type="button">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+</header>
+<!-- END: Top Navigation Header -->
+<!-- Main Content Area -->
+<main class="flex-1 px-4 pt-7 pb-28">
+<!-- BEGIN: Hero Section -->
+<section class="mb-8" data-purpose="hero-section">
+<h1 class="font-sora text-3xl font-bold tracking-tight text-white leading-tight">
+          Let's Build <span class="text-[#38bdf8]">Something Great.</span>
+</h1>
+<p class="mt-3.5 text-[13.5px] leading-relaxed text-slate-400 font-normal">
+          Have an opportunity, architectural challenge, or visionary idea in mind? I'm always open to discussing how I can deliver scalable high-performance code to your engineering team.
+        </p>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: Contact Cards Section -->
+<section class="space-y-4 mb-8" data-purpose="contact-channels">
+<!-- Card 1: Email Me -->
+<article class="relative p-5 rounded-2xl bg-gradient-to-b from-[#111927]/90 to-[#0c121d]/90 border border-slate-800/80 shadow-lg backdrop-blur-sm overflow-hidden card-corner-radial">
+<div class="flex items-center justify-between mb-4">
+<!-- Icon -->
+<div class="w-11 h-11 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center justify-center text-sky-400">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="4" stroke-width="1.8"></circle>
+<path d="M16 12v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.206" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<!-- Arrow Link -->
+<div class="w-8 h-8 rounded-full flex items-center justify-center text-slate-500 hover:text-slate-200 transition-colors">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 17L17 7M17 7H9M17 7V15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<h2 class="font-sora text-lg font-bold text-white mb-1.5">Email Me</h2>
+<p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Reach out directly for primary hiring inquiries, technical advisory, or engineering proposals.
+          </p>
+<!-- Email Pill Button -->
+<a class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#141e2e] border border-slate-700/70 hover:border-sky-500/50 text-xs font-medium text-slate-300 transition-colors w-full justify-start overflow-hidden" href="mailto:alex.rivera.eng@gmail.com">
+<svg class="w-3.5 h-3.5 text-sky-400 shrink-0 rotate-45 -mt-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="truncate">alex.rivera.eng@gmail.com</span>
+</a>
+</article>
+<!-- Card 2: Connect on LinkedIn -->
+<article class="relative p-5 rounded-2xl bg-gradient-to-b from-[#111927]/90 to-[#0c121d]/90 border border-slate-800/80 shadow-lg backdrop-blur-sm overflow-hidden card-corner-radial">
+<div class="flex items-center justify-between mb-4">
+<!-- Icon -->
+<div class="w-11 h-11 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center justify-center text-sky-400">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<!-- Arrow Link -->
+<div class="w-8 h-8 rounded-full flex items-center justify-center text-slate-500 hover:text-slate-200 transition-colors">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 17L17 7M17 7H9M17 7V15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<h2 class="font-sora text-lg font-bold text-white mb-1.5">Connect on LinkedIn</h2>
+<p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Expand our professional network, review endorsements, and view real-time career trajectories.
+          </p>
+<!-- LinkedIn Pill Button -->
+<a class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#141e2e] border border-slate-700/70 hover:border-sky-500/50 text-xs font-medium text-slate-300 transition-colors w-full justify-start overflow-hidden" href="https://linkedin.com/in/alexrivera-dev" rel="noopener noreferrer" target="_blank">
+<svg class="w-3.5 h-3.5 text-sky-400 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="truncate">linkedin.com/in/alexrivera-dev</span>
+</a>
+</article>
+<!-- Card 3: Explore My GitHub -->
+<article class="relative p-5 rounded-2xl bg-gradient-to-b from-[#111927]/90 to-[#0c121d]/90 border border-slate-800/80 shadow-lg backdrop-blur-sm overflow-hidden card-corner-radial">
+<div class="flex items-center justify-between mb-4">
+<!-- Icon -->
+<div class="w-11 h-11 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center justify-center text-sky-400">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<!-- Arrow Link -->
+<div class="w-8 h-8 rounded-full flex items-center justify-center text-slate-500 hover:text-slate-200 transition-colors">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 17L17 7M17 7H9M17 7V15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<h2 class="font-sora text-lg font-bold text-white mb-1.5">Explore My GitHub</h2>
+<p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Inspect public repositories, open-source architectural contributions, and experimental toolsets.
+          </p>
+<!-- GitHub Pill Button -->
+<a class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#141e2e] border border-slate-700/70 hover:border-sky-500/50 text-xs font-medium text-slate-300 transition-colors w-full justify-start overflow-hidden" href="https://github.com/alexrivera-code" rel="noopener noreferrer" target="_blank">
+<svg class="w-3.5 h-3.5 text-sky-400 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="truncate">github.com/alexrivera-code</span>
+</a>
+</article>
+</section>
+<!-- END: Contact Cards Section -->
+<!-- BEGIN: Availability & Roles Section -->
+<section class="p-5 rounded-2xl bg-[#0e1624]/90 border border-slate-800/90 shadow-xl" data-purpose="availability-overview">
+<!-- Header with Status Badge -->
+<div class="flex flex-col gap-2.5 mb-3">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400"></span>
+</span>
+<span class="text-sm font-semibold text-white">Currently Open to Opportunities</span>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wider text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 uppercase">
+              Active • Immediate Start
+            </span>
+</div>
+<p class="text-xs text-slate-400 leading-relaxed">
+            Actively evaluating Lead Full-Stack, Senior Front-End, and Node.js/TypeScript engineering positions across early-stage high-growth products and modern cloud infrastructure teams.
+          </p>
+</div>
+<!-- 2 Stacked Criteria Cards -->
+<div class="mt-4 space-y-3">
+<!-- Role Preference -->
+<div class="p-3.5 rounded-xl bg-[#131d2e] border border-slate-800/80">
+<div class="flex items-center gap-1.5 text-[11px] font-bold text-slate-400 tracking-wider uppercase mb-1">
+<svg class="w-3.5 h-3.5 text-sky-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Preferred Roles</span>
+</div>
+<div class="text-sm font-bold text-white font-sora mb-0.5">Full-Stack / TypeScript</div>
+<div class="text-xs text-slate-400">React, Next.js, Node, Go, GraphQL</div>
+</div>
+<!-- Workplace Model -->
+<div class="p-3.5 rounded-xl bg-[#131d2e] border border-slate-800/80">
+<div class="flex items-center gap-1.5 text-[11px] font-bold text-slate-400 tracking-wider uppercase mb-1">
+<svg class="w-3.5 h-3.5 text-sky-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Workplace Model</span>
+</div>
+<div class="text-sm font-bold text-white font-sora mb-0.5">Austin, TX</div>
+<div class="text-xs text-slate-400">100% Remote / Hybrid Ready</div>
+</div>
+</div>
+</section>
+<!-- END: Availability & Roles Section -->
+<!-- Footer Branding & Copyright -->
+<footer class="mt-8 text-center" data-purpose="page-footer">
+<div class="inline-flex items-center gap-1.5 text-xs text-emerald-400 font-semibold mb-1">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="tracking-wide">BUILT WITH ARCHITECTURAL RIGOR</span>
+</div>
+<p class="text-[11px] text-slate-500">
+          © 2025 Alex Rivera. All rights reserved.
+        </p>
+</footer>
+</main>
+<!-- BEGIN: Mobile Bottom Tab Navigation -->
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[390px] h-16 glass-nav border-t border-slate-800/80 px-6 flex items-center justify-between z-50">
+<!-- Home Link -->
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-200 transition-colors" href="#home">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+<span class="text-[10px] font-medium tracking-tight">Home</span>
+</a>
+<!-- Skills Link -->
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-200 transition-colors" href="#skills">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+<span class="text-[10px] font-medium tracking-tight">Skills</span>
+</a>
+<!-- About Link -->
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-slate-200 transition-colors" href="#about">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+<span class="text-[10px] font-medium tracking-tight">About</span>
+</a>
+<!-- Contact Link (Active) -->
+<a class="flex flex-col items-center gap-1 text-[#38bdf8] font-semibold" href="#contact">
+<div class="relative">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="4" stroke-width="1.8"></circle>
+<path d="M16 12v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.206" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+<span class="absolute -top-0.5 -right-1 w-1.5 h-1.5 bg-[#38bdf8] rounded-full"></span>
+</div>
+<span class="text-[10px] tracking-tight">Contact</span>
+</a>
+</nav>
+<!-- END: Mobile Bottom Tab Navigation -->
+</div>
+</body></html>

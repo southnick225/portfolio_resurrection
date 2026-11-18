@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Get in touch with Nicholas C. Taylor about full-stack engineering opportunities and collaboration.">
+    <title>Contact | Nicholas C. Taylor</title>
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/contactPage.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <script src="/js/header.js" defer></script>
+</head>
+<body class="contact-page">
+    <%- include('../partials/header') %>
+    <main class="contact-main">
+        <section class="contact-hero" aria-labelledby="contact-heading">
+            <h1 id="contact-heading">Let's Build <span>Something Great.</span></h1>
+            <p>Have an opportunity, architectural challenge, or visionary idea in mind? I'm always open to discussing how I can deliver scalable high-performance code to your engineering team.</p>
+        </section>
+        <section class="contact-channels" aria-label="Contact channels">
+            <% for (const channel of contact.channels) { %>
+                <article class="contact-card" aria-labelledby="contact-<%= channel.id %>">
+                    <div class="contact-card-top">
+                        <span class="contact-icon"><%- include('../partials/contact-icon', { icon: channel.id }) %></span>
+                    </div>
+                    <h2 id="contact-<%= channel.id %>"><%= channel.title %></h2>
+                    <p><%= channel.description %></p>
+                    <a class="contact-channel-link" <% if (channel.url) { %>href="<%= channel.url %>"<% if (channel.id !== 'email') { %> target="_blank" rel="noopener noreferrer"<% } %><% } else { %>role="link" aria-disabled="true"<% } %>>
+                        <%- include('../partials/contact-icon', { icon: channel.id }) %>
+                        <span><%= channel.label %></span>
+                        <% if (channel.url && channel.id !== 'email') { %><span class="contact-sr-only"> (opens in a new tab)</span><% } %>
+                    </a>
+                </article>
+            <% } %>
+        </section>
+        <section class="contact-availability" aria-labelledby="availability-heading">
+            <div class="contact-availability-heading">
+                <h2 id="availability-heading"><span class="contact-status-dot" aria-hidden="true"></span><%= contact.availability.title %></h2>
+                <span class="contact-status-badge"><%= contact.availability.badge %></span>
+            </div>
+            <p class="contact-availability-description"><%= contact.availability.description %></p>
+            <dl class="contact-preferences">
+                <div>
+                    <dt><%- include('../partials/contact-icon', { icon: 'roles' }) %> Preferred Roles</dt>
+                    <dd><strong><%= contact.availability.roles %></strong><span><%= contact.availability.technologies %></span></dd>
+                </div>
+                <div>
+                    <dt><%- include('../partials/contact-icon', { icon: 'location' }) %> Workplace Model</dt>
+                    <dd><strong><%= contact.availability.workplace %></strong><span><%= contact.availability.workplaceDetail %></span></dd>
+                </div>
+            </dl>
+        </section>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

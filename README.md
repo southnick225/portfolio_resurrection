@@ -2,7 +2,7 @@
 
 A developer portfolio intended to showcase software engineering experience, technical skills, and full-stack projects. Built around an Express backend with EJS as the server-rendered presentation layer.
 
-**Status:** Early development. The homepage renders a responsive header, hero, Technical Expertise, and Featured Engineering Projects sections with Nick Taylor branding. Remaining page sections and navigation destinations are not implemented yet.
+**Status:** Early development. The homepage renders a responsive header, hero, Technical Expertise, and Featured Engineering Projects sections with Nick Taylor branding. Skills, About, and Contact pages are implemented; unconfigured external destinations remain unavailable.
 
 ## Tech stack
 
@@ -18,6 +18,8 @@ A developer portfolio intended to showcase software engineering experience, tech
 Design mockups use Tailwind CSS through a CDN. Tailwind is not an installed application dependency.
 
 ## Implemented functionality
+
+- `GET /contact` renders a responsive contact hero, Email/LinkedIn/GitHub cards, and an availability panel based on the desktop, tablet, and mobile contact designs. Shared navigation and the homepage Contact Me button link to the page. Configure channel URLs, labels, and availability copy in `data/contact.json`; null URLs render unavailable links. No contact form or message delivery service is implemented.
 
 - `GET /skills` renders the Technologies & Capabilities hero with a subtle blue-to-cyan glow and four Engineering Capabilities cards. Capability cards use two columns on desktop/tablet and stack on mobile. Modern Development Workflow presents five stages and an AI-assisted workflow callout. Experience Beyond the Code adds four background cards with skill tags. Skills in Action renders two project cards with technology tags, code/architecture previews, and Live Demo/GitHub Source buttons that remain unavailable until their URLs are configured.
 - `GET /about` renders the responsive professional-background hero with introductory copy and a terminal-style profile card. Desktop styling is shared across screen sizes; My Journey adds a five-milestone career timeline; How I Approach Engineering adds a philosophy panel and three core principles; Beyond the Code adds three personal-interest cards; What I’m Building Today presents current goals and project/résumé actions. The About page includes the shared responsive footer.

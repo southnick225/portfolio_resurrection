@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'node:path';
 import projects from '../data/featuredProjects.json' with { type: 'json' };
 import skillsProjects from '../data/skillsProjects.json' with { type: 'json' };
+import contact from '../data/contact.json' with { type: 'json' };
 import { navigationLinks } from '../data/navigation.js';
 
 const app = express();
@@ -30,6 +31,9 @@ app.get('/skills', (req, res) => {
 });
 app.get('/about', (req, res) => {
     res.render('pages/aboutPage', { activeNav: 'about' });
+});
+app.get('/contact', (req, res) => {
+    res.render('pages/contactPage', { activeNav: 'contact', contact });
 });
 //404 handler
 app.use((req, res) => {
