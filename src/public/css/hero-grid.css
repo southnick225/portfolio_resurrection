@@ -1,0 +1,64 @@
+.hero-grid {
+  /* Visual configuration; timing and density live in hero-grid.js. */
+  --tile-size: 44px;
+  --tile-surface: #141c28;
+  --tile-border: rgb(43 58 76 / 42%);
+  --tile-accent: #0f97ff;
+  --tile-highlight: #38aaff;
+  --accent-opacity: 0.18;
+  position: absolute;
+  z-index: 0;
+  inset: 0 auto 0 0;
+  width: 50%;
+  overflow: hidden;
+  pointer-events: none;
+  background: #0b1018;
+  mask-image:
+    linear-gradient(to bottom, transparent 0%, #000 14%, #000 60%, transparent 84%),
+    linear-gradient(to right, #000 0%, #000 55%, transparent 100%);
+  mask-composite: intersect;
+}
+.hero-grid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 35%, rgb(11 16 24 / 64%), rgb(11 16 24 / 16%));
+}
+.hero-grid-tiles {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), var(--tile-size));
+  grid-auto-rows: var(--tile-size);
+}
+.hero-grid-tile { perspective: 280px; background: #0b1018; }
+.hero-grid-flap {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--tile-border);
+  background: var(--tile-surface);
+  transform-style: preserve-3d;
+}
+.hero-grid-flap::before,
+.hero-grid-flap::after { content: ""; position: absolute; inset: 0; opacity: 0; }
+.hero-grid-flap::before { background: linear-gradient(var(--tile-highlight), var(--tile-accent)); }
+.hero-grid-flap::after { background: linear-gradient(to bottom, transparent, #000); }
+.hero-grid-flap.is-flipping { animation: hero-grid-flip var(--flip-duration) cubic-bezier(.45, 0, .55, 1) both; }
+.hero-grid-flap.is-flipping::after { animation: hero-grid-shade var(--flip-duration) ease-in-out both; }
+.hero-grid-flap.is-accent::before { animation: hero-grid-accent var(--flip-duration) ease-in-out both; }
+@keyframes hero-grid-flip {
+  0% { transform: rotateX(0deg); }
+  100% { transform: rotateX(-360deg); }
+}
+@keyframes hero-grid-shade { 0%, 50%, 100% { opacity: 0; } 33%, 67% { opacity: .4; } }
+@keyframes hero-grid-accent { 0%, 100% { opacity: 0; } 50% { opacity: var(--accent-opacity); } }
+@media (max-width: 767px) {
+  .hero-grid {
+    --tile-size: 36px;
+    width: 100%;
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 60%, transparent 84%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-grid-flap, .hero-grid-flap::before, .hero-grid-flap::after { animation: none !important; }
+}
