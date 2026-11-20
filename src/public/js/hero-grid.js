@@ -8,6 +8,11 @@ const CONFIG = Object.freeze({
   groupChance: 0.35,
   accentChance: 0.24,
   maxActive: 8,
+  borderChance: 0.65,
+  borderDurationMin: 900,
+  borderDurationMax: 1400,
+  borderCooldown: 5000,
+  maxBorderActive: 5,
 });
 const randomBetween = (min, max) => min + Math.random() * (max - min);
 
@@ -24,6 +29,7 @@ export function createHeroGrid(element) {
   let visible = true;
   let destroyed = false;
   const active = new Map();
+  const borderActive = new Map();
   const canAnimate = () => !destroyed && visible && !document.hidden && !motion.matches;
 
   function stop() {
@@ -33,6 +39,11 @@ export function createHeroGrid(element) {
       flap.classList.remove('is-flipping', 'is-accent');
     });
     active.clear();
+    borderActive.forEach((timeout, tile) => {
+      clearTimeout(timeout);
+      tile.classList.remove('is-border-flashing');
+    });
+    borderActive.clear();
   }
 
   function resize() {
@@ -53,7 +64,7 @@ export function createHeroGrid(element) {
       flap.className = 'hero-grid-flap';
       tile.append(flap);
       fragment.append(tile);
-      return { flap, lastFlip: -Infinity };
+      return { tile, flap, lastFlip: -Infinity, lastBorder: -Infinity };
     });
     grid.replaceChildren(fragment);
     schedule();
@@ -76,12 +87,30 @@ export function createHeroGrid(element) {
     }, duration + 50));
   }
 
+  function flashBorder(index) {
+    const entry = tiles[index];
+    const now = performance.now();
+    if (!entry || borderActive.size >= CONFIG.maxBorderActive ||
+        borderActive.has(entry.tile) || now - entry.lastBorder < CONFIG.borderCooldown) return;
+    entry.lastBorder = now;
+    const duration = randomBetween(CONFIG.borderDurationMin, CONFIG.borderDurationMax);
+    entry.tile.style.setProperty('--border-duration', `${duration}ms`);
+    entry.tile.classList.add('is-border-flashing');
+    borderActive.set(entry.tile, setTimeout(() => {
+      entry.tile.classList.remove('is-border-flashing');
+      borderActive.delete(entry.tile);
+    }, duration + 50));
+  }
+
   function schedule() {
     clearTimeout(timer);
     if (!canAnimate() || !tiles.length) return;
     timer = setTimeout(() => {
       const index = Math.floor(Math.random() * columns * Math.max(1, Math.floor(rows * 0.8)));
       flip(index);
+      if (Math.random() < CONFIG.borderChance) {
+        flashBorder(Math.floor(Math.random() * columns * Math.max(1, Math.floor(rows * 0.8))));
+      }
       if (Math.random() < CONFIG.groupChance) {
         const neighbors = [index - columns, index + columns];
         if (index % columns > 0) neighbors.push(index - 1);
