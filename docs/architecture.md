@@ -2,7 +2,7 @@
 
 ## Overview
 
-Portfolio Resurrection is an early-stage Node.js/Express portfolio using server-side EJS rendering. The root route renders a homepage with a responsive header, hero, Technical Expertise, and Featured Engineering Projects sections; the application also serves static assets and JSON error responses. It has no Angular application, database, authentication, external integrations, or separate frontend build pipeline.
+Portfolio Resurrection is an early-stage Node.js/Express portfolio using server-side EJS rendering. The root route renders a homepage with a responsive header and animated hero; the application also serves static assets and JSON error responses. It has no Angular application, database, authentication, external integrations, or separate frontend build pipeline.
 
 ## Verified technologies
 
@@ -23,15 +23,14 @@ server.js                         HTTP listener and server error event handling
 src/
   app.js                          Express initialization, inline route, middleware
   views/404.ejs                   Unused HTML error template
-  views/pages/homepage.ejs        Homepage document, hero, expertise, projects, and header include
+  views/pages/homepage.ejs        Homepage document, hero and header include
   views/partials/header.ejs       Shared responsive header
   views/partials/footer.ejs       Responsive footer and mobile bottom navigation
   public/css/theme.css            Static theme variables
   public/css/header.css           Header layout and responsive styling
   public/css/footer.css           Footer layout and mobile safe-area spacing
-  public/css/homepage.css         Responsive hero, expertise, and projects styling
+  public/css/homepage.css         Responsive hero styling
   public/js/header.js             Mobile dropdown behavior
-  public/js/homepage.js           Scroll-triggered expertise card animation
 docs/designs/
   luminescent_precision/DESIGN.md Design specification
   desktop_portfolio_homepage_1440px/  HTML and PNG design references
@@ -55,7 +54,7 @@ The app selects `ejs` as its view engine, then registers middleware in this orde
 5. Catch-all JSON 404 handler.
 6. Four-argument error middleware returning JSON 500.
 
-The `views` setting resolves `src/views` relative to the app module. The root handler calls `res.render('pages/homepage', { projects, activeNav: 'projects' })`, which includes `../partials/header`.
+The `views` setting resolves `src/views` relative to the app module. The root handler calls `res.render('pages/homepage', { activeNav: 'projects' })`, which includes `../partials/header`.
 
 ## Actual request lifecycle
 
@@ -87,15 +86,9 @@ The root request flow is request → middleware → route handler → EJS render
 
 Routing uses `app.get()` directly; there are no separate routers, controllers, or services. The root handler renders the homepage without consuming parameters or parsed bodies.
 
-`src/views/404.ejs` contains static HTML displaying “Page Not Found.” It has no dynamic EJS expressions, layouts, or partials, and the 404 handler does not render it. The homepage receives the imported projects array; the unused 404 template receives no data.
+`src/views/404.ejs` contains static HTML displaying “Page Not Found.” It has no dynamic EJS expressions, layouts, or partials, and the 404 handler does not render it. The homepage receives only its active navigation state; the unused 404 template receives no data.
 
 Static files are mounted at the URL root: `src/public/css/theme.css` is available at `/css/theme.css`. The theme defines reusable design variables. `/css/header.css` adds reference-specific header colors, Sora/Geist typography, and responsive layouts. The homepage loads these fonts from Google Fonts with sans-serif fallbacks. Design artifacts under `docs/designs` are outside the static root and are not served by this middleware.
-
-### Featured engineering projects
-
-`src/app.js` imports `data/projects.json` at startup using a JSON import attribute and supplies the array to the root EJS render. Restart the server after editing the data outside watch mode. The homepage loops over the two reference projects immediately after Technical Expertise. Each project stores desktop/tablet/mobile copy, technologies, metrics, image URLs, and optional demo/source URLs. EJS escapes rendered values. Null action URLs render unavailable links without `href`.
-
-Desktop cards alternate visual and detail columns; tablet and mobile stack the visual above the details. A `picture` source selects tablet imagery. Images use the external design-reference URLs and lazy loading; availability depends on that host. Project metrics and names are design content pending personalization. No project API or additional dependency is introduced.
 
 ### Hero tile background
 
@@ -105,13 +98,9 @@ The homepage loads `/css/hero-grid.css` and the native ES module `/js/hero-grid.
 
 Tune timing, duration, cooldown, group/accent probability, and concurrency in `CONFIG` in `hero-grid.js`. Tune tile sizes, surface/border/accent colors, accent opacity, perspective, and fade stops in `hero-grid.css`. No dependencies or API changes are required.
 
-### Technical Expertise
-
-The homepage includes a `#skills` section after the hero. Plain CSS displays four detailed skill lists at 1024px and above, a 2×2 grid with descriptions and tags from 768px to 1023px, and compact stacked cards below 768px. Each breakpoint preserves its reference copy through CSS-controlled template variants; hidden variants are excluded from the accessibility tree. Decorative inline SVGs require no icon dependency. A deferred `/js/homepage.js` script observes each responsive grid and triggers a one-time downward entrance with 75ms between cards. Reduced-motion preferences skip the animation; cards remain visible when JavaScript or IntersectionObserver is unavailable.
-
 ### Responsive footer
 
-The homepage, Skills page, and About page include `src/views/partials/footer.ejs` after `main` and load `/css/footer.css`. Desktop and tablet share branding with a tagline, social placeholders, and separate copyright text on a dark surface, wrapping as needed. Below 768px, a fixed bottom navigation bar replaces the desktop footer; body padding reserves its height and the device safe area. Overview links to `/`; Projects links to the current page’s `#projects` section on the homepage/Skills page and to `/#projects` on About. On the homepage, Stack links to `/#skills` and Overview is current. On the Skills page, the same item is labeled Skills, links to `/skills`, and is current. The route’s `activeNav` controls the footer highlight and `aria-current="page"`. Resume, Connect, and social profiles remain unavailable links until their destinations exist. Icons use decorative inline SVG; no JavaScript or dependencies are added.
+The homepage, Skills page, and About page include `src/views/partials/footer.ejs` after `main` and load `/css/footer.css`. Desktop and tablet share branding with a tagline, social placeholders, and separate copyright text on a dark surface, wrapping as needed. Below 768px, a fixed bottom navigation bar replaces the desktop footer; body padding reserves its height and the device safe area. Overview links to `/`; Projects links to Skills in Action at `/skills#projects`. On the homepage, Stack links to `/skills` and Overview is current. On the Skills page, the same item is labeled Skills, links to `/skills`, and is current. The route’s `activeNav` controls the footer highlight and `aria-current="page"`. Resume, Connect, and social profiles remain unavailable links until their destinations exist. Icons use decorative inline SVG; no JavaScript or dependencies are added.
 
 ### Responsive header behavior
 
@@ -145,7 +134,7 @@ Render is identified as the intended hosting target in project documentation. No
 - Inline handlers keep the current small application simple; controller and service layers have not been introduced.
 - Static asset and view directory paths are module-relative.
 - Generic JSON errors limit internal details in responses, but the fixed 500 status loses distinctions between client parsing errors and server errors.
-- The header implements the responsive references; the hero, Technical Expertise, and featured projects are implemented; remaining page sections, resume, and navigation destinations remain future work.
+- The header implements the responsive references; the animated homepage hero is implemented; remaining page sections, resume, and navigation destinations remain future work.
 
 `npm test` invokes Node's built-in test runner; the current repository contains no discovered tests or suites. No lint or build script is defined.
 
@@ -161,10 +150,10 @@ How I Approach Engineering follows the timeline using the desktop reference’s 
 
 Beyond the Code follows the philosophy section with the desktop reference introduction and three semantic personal-interest cards. The translucent dark surfaces, pale-blue icon tiles, copy, rounded corners, and hover treatment remain consistent across breakpoints. Three columns appear at 768px and above; mobile stacks cards with icons beside their text. Decorative inline SVGs avoid icon dependencies, and reduced motion disables hover transitions. No client-side logic or additional About sections are introduced.
 
-What I’m Building Today is the final implemented About section. It retains the desktop gradient surface, subtle glow, pale-blue primary project action, secondary résumé action, and social-link styling across sizes. Desktop places actions beside the copy; smaller screens stack the panel content, and mobile stacks full-width buttons. View My Projects navigates to the homepage’s existing `#projects` section. Résumé and professional-profile destinations remain unavailable links without href attributes until configured. The GitHub and LinkedIn placeholders show a pointer cursor and pale-blue hover feedback while remaining non-navigating; the unavailable résumé action has a lighter background and pale-blue text on hover while remaining non-navigating. Transitions respect reduced motion.
+What I’m Building Today is the final implemented About section. It retains the desktop gradient surface, subtle glow, pale-blue primary project action, secondary résumé action, and social-link styling across sizes. Desktop places actions beside the copy; smaller screens stack the panel content, and mobile stacks full-width buttons. View My Projects navigates to Skills in Action at `/skills#projects`. Résumé and professional-profile destinations remain unavailable links without href attributes until configured. The GitHub and LinkedIn placeholders show a pointer cursor and pale-blue hover feedback while remaining non-navigating; the unavailable résumé action has a lighter background and pale-blue text on hover while remaining non-navigating. Transitions respect reduced motion.
 
 ## Contact page
 
 `GET /contact` is a concise inline route in `src/app.js` that renders `src/views/pages/contactPage.ejs` with the trusted static content in `data/contact.json` and `activeNav: 'contact'`. The template reuses the shared header/footer and `partials/contact-icon.ejs` for inline SVG icons; `src/public/css/contactPage.css` contains scoped responsive styling. The desktop/tablet layout has three contact columns and two preference columns, which stack below 768px. Sora headings and Geist body text match the existing site.
 
-Contact URLs and visible labels are maintained together in `data/contact.json`; null URLs render unavailable anchors. Availability copy is maintained in the same file. No new dependencies, client scripts, services, forms, or persistence are required. The shared navigation, mobile footer Connect link, and homepage Contact Me action point to `/contact`. The mobile footer Projects link uses `/#projects` from Contact.
+Contact URLs and visible labels are maintained together in `data/contact.json`; null URLs render unavailable anchors. Availability copy is maintained in the same file. No new dependencies, client scripts, services, forms, or persistence are required. The shared navigation, mobile footer Connect link, and homepage Contact Me action point to `/contact`. The mobile footer Projects link uses `/skills#projects`.

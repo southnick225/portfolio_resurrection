@@ -1,6 +1,5 @@
 import express from 'express';
 import path from 'node:path';
-import projects from '../data/featuredProjects.json' with { type: 'json' };
 import skillsProjects from '../data/skillsProjects.json' with { type: 'json' };
 import contact from '../data/contact.json' with { type: 'json' };
 import { navigationLinks } from '../data/navigation.js';
@@ -24,7 +23,7 @@ app.use(express.static(path.join(import.meta.dirname, 'public')));
 
 //application routes
 app.get('/', (req, res) => {
-    res.render('pages/homepage', { projects, activeNav: 'projects' });
+    res.render('pages/homepage', { activeNav: 'projects' });
 });
 app.get('/skills', (req, res) => {
     res.render('pages/skillsPage', { activeNav: 'skills', skillsProjects });
