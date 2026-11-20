@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/theme.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/skillsPage.css">
+    <link rel="stylesheet" href="/css/skills-project-preview.css">
     <link rel="stylesheet" href="/css/footer.css">
     <script src="/js/header.js" defer></script>
 </head>
@@ -236,7 +237,7 @@
                     <p class="skills-projects-description">Selected applications demonstrating how I apply technologies and engineering practices to real-world projects.</p>
                 </div>
                 <div class="skills-projects-grid">
-                    <% for (const [index, project] of skillsProjects.entries()) { %>
+                    <% for (const [index, project] of skillsProjects.slice(0, 2).entries()) { %>
                         <article class="skills-project-card" aria-labelledby="project-<%= project.id %>">
                             <div class="skills-project-info">
                                 <div class="skills-project-meta">

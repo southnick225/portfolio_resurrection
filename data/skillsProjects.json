@@ -48,5 +48,30 @@
         "url": null
       }
     ]
+  },
+  {
+    "id": "full-stack-business",
+    "title": "Full-Stack Business Application",
+    "description": "A planned full-stack business application designed to demonstrate application architecture, authentication, data management, and practical business workflows.",
+    "status": "Planned / In Development",
+    "technologies": [
+      "Angular",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "actions": [
+      {
+        "type": "demo",
+        "label": "Live Demo",
+        "url": null
+      },
+      {
+        "type": "source",
+        "label": "GitHub Source",
+        "url": null
+      }
+    ]
   }
 ]
