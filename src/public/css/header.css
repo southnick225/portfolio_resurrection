@@ -47,7 +47,7 @@ body {
 .navigation-link[aria-current="page"] { background: var(--header-surface); color: var(--header-primary); font-family: "Sora", sans-serif; font-size: 16px; font-weight: 600; line-height: 24px; }
 .header-actions { display: flex; align-items: center; gap: 20px; flex-shrink: 0; }
 .resume-link { background: var(--color-primary-hover); cursor:pointer; color: #003c63; box-shadow: 0 0 16px rgb(56 170 255 / 25%); }
-.profile-avatar { display: block; object-fit: cover; width: 50px; height: 59px; border-radius: 50%; background: var(--header-surface); outline: 2px solid rgb(152 203 255 / 30%); }
+.profile-avatar { display: block; object-fit: cover; width: 50px; height: 50px; border-radius: 50%; background: var(--header-surface); outline: 2px solid rgb(152 203 255 / 30%); }
 .menu-toggle { display: none; }
 .menu-line { transform-origin: 12px 12px; transition: transform 180ms ease, opacity 180ms ease; }
 .menu-toggle[aria-expanded="true"] .menu-line-top { transform: rotate(45deg) translateY(6px); }
@@ -83,6 +83,20 @@ body {
 
 @media (max-width: 767px) {
   body { padding-top: calc(64px + env(safe-area-inset-top, 0px)); }
+  body:has(.menu-toggle[aria-expanded="true"])::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    background: rgb(11 16 24 / 35%);
+    -webkit-backdrop-filter: blur(8px) saturate(75%);
+    backdrop-filter: blur(8px) saturate(75%);
+  }
+  body:has(.menu-toggle[aria-expanded="true"]) main {
+    transform: scale(0.99, 0.985);
+    transform-origin: top center;
+  }
+  .site-header:has(.menu-toggle[aria-expanded="true"]) { z-index: 70; }
   .site-header { background: rgb(15 20 28 / 80%); }
   .header-inner { height: 64px; padding-inline: 16px; gap: 8px; }
   .header-brand { gap: 8px; flex: 1; }
