@@ -12,6 +12,18 @@
 .about-hero-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 32px; align-items: start; }
 .about-introduction { min-width: 0; }
 .about-role { margin: 0 0 20px; color: var(--about-primary); font: 500 20px/28px "Sora", sans-serif; letter-spacing: -0.015em; }
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .about-role {
+    width: fit-content;
+    background: linear-gradient(90deg, #0F97FF, var(--about-primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+@media (forced-colors: active) {
+  .about-role { background: none; color: CanvasText; }
+}
 .about-narrative { display: flex; flex-direction: column; gap: 16px; color: var(--about-muted); font-size: 18px; line-height: 28px; letter-spacing: -0.005em; }
 .about-narrative p { margin: 0; }
 .about-profile { position: relative; isolation: isolate; min-width: 0; overflow: hidden; border: 1px solid rgb(255 255 255 / 7%); border-radius: 12px; background: rgb(23 28 36 / 75%); backdrop-filter: blur(16px); box-shadow: 0 10px 30px -10px rgb(0 0 0 / 50%), inset 0 1px 0 rgb(255 255 255 / 5%); }

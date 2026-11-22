@@ -3,7 +3,19 @@
 .projects-inner { max-width: 1280px; margin-inline: auto; padding: 32px 32px 64px; }
 .projects-hero { margin-bottom: 64px; }
 .projects-hero h1 { max-width: 960px; margin: 0; font: 700 56px/1.15 "Sora", sans-serif; letter-spacing: -.03em; overflow-wrap: break-word; }
-#projects-heading { color: #fff; }
+#projects-heading { color: #0F97FF; }
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  #projects-heading {
+    width: fit-content;
+    background: linear-gradient(90deg, #0F97FF, #98CBFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+@media (forced-colors: active) {
+  #projects-heading { background: none; color: CanvasText; }
+}
 .projects-hero > p { max-width: 800px; margin: 20px 0 32px; font-size: 18px; line-height: 28px; color: var(--header-muted); }
 .project-filters { display: flex; flex-wrap: wrap; gap: 8px; }
 .project-filters[hidden], .project-card[hidden] { display: none; }
