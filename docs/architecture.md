@@ -174,3 +174,7 @@ Add new projects only in `data/skillsProjects.json`; `/projects` iterates every 
 Each project declares `id`, `title`, `description`, `status`, `technologies`, `actions`, `categories`, and `imageUrl`. Actions declare `type` (`demo` or `source`), `label`, and `url`. Categories use the filter keys documented above.
 
 `imageUrl` is a local public asset path (for example `/images/my-project.png`) or an image URL. Declare it on every project; use `""` when no image is available. The shared partial displays a centered image placeholder for empty values. Images have descriptive alt text, lazy loading, and responsive 16:9 sizing. Adding a project requires no template changes or project ID registration.
+
+### Shared project action buttons
+
+Skills in Action and Projects include `partials/skills-project-preview.ejs` once per card to render both the image/placeholder and action buttons as sibling elements. `/css/skills-project-preview.css` contains their shared styling, including icons, colors, button dimensions, mobile sizing, hover/focus states, and unavailable-link behavior. Page styles control grid placement: Projects keeps the image beside the information and actions on desktop and stacks them below 1024px; Skills retains its tablet grid.

@@ -12,3 +12,18 @@
         </div>
     <% } %>
 </div>
+
+<div class="skills-project-actions" role="group" aria-label="<%= project.title %> links">
+    <% for (const action of project.actions) { %>
+        <a class="skills-project-action skills-project-action-<%= action.type %>" <% if (action.url) { %>href="<%= action.url %>"<% } else { %>role="link" aria-disabled="true" title="<%= action.label %> coming soon"<% } %>>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <% if (action.type === 'demo') { %>
+                    <path d="M14 3h7v7m0-7L10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/>
+                <% } else { %>
+                    <path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 4l-4 16"/>
+                <% } %>
+            </svg>
+            <%= action.label %>
+        </a>
+    <% } %>
+</div>

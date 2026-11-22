@@ -23,7 +23,7 @@
     <main class="projects-main" id="main-content">
         <div class="projects-inner">
             <section class="projects-hero" aria-labelledby="projects-heading">
-                <h1 id="projects-heading">Architecting Scalable Systems with <span>TypeScript</span> &amp; Distributed Nodes.</h1>
+                <h1 id="projects-heading">Projects</h1>
                 <p>High-concurrency streaming pipelines, real-time developer tooling, zero-overhead API gateways, and fault-tolerant cloud infrastructures engineered for sub-10ms response envelopes and extreme uptime SLAs.</p>
                 <div class="project-filters" role="group" aria-label="Filter projects" hidden>
                     <% const filters = [
@@ -56,11 +56,6 @@
                                     <li><%= technology %></li>
                                 <% } %>
                             </ul>
-                            <div class="project-actions" role="group" aria-label="<%= project.title %> links">
-                                <% for (const action of project.actions) { %>
-                                    <a <% if (action.url) { %>href="<%= action.url %>"<% } else { %>role="link" aria-disabled="true" title="<%= action.label %> coming soon"<% } %>><%= action.label %></a>
-                                <% } %>
-                            </div>
                         </div>
                         <%- include('../partials/skills-project-preview', { project }) %>
                     </article>
