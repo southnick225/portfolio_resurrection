@@ -19,11 +19,12 @@ Design mockups use Tailwind CSS through a CDN. Tailwind is not an installed appl
 
 ## Implemented functionality
 
+- `GET /projects` renders the responsive projects showcase with projects from `data/skillsProjects.json`, shared code/topology previews, category filters, and engineering principles. Desktop content is shared across tablet and mobile; project destinations and production metrics remain design placeholders. The shared header marks Projects current.
 - `GET /contact` renders a responsive contact hero, Email/LinkedIn/GitHub cards, and an availability panel based on the desktop, tablet, and mobile contact designs. Shared navigation and the homepage Contact Me button link to the page. Configure channel URLs, labels, and availability copy in `data/contact.json`; null URLs render unavailable links. No contact form or message delivery service is implemented.
 
 - `GET /skills` renders the Technologies & Capabilities hero with a subtle blue-to-cyan glow and four Engineering Capabilities cards. Capability cards use two columns on desktop/tablet and stack on mobile. Modern Development Workflow presents five stages and an AI-assisted workflow callout. Experience Beyond the Code adds four background cards with skill tags. Skills in Action renders two project cards with technology tags, code/architecture previews, and Live Demo/GitHub Source buttons that remain unavailable until their URLs are configured.
 - `GET /about` renders the responsive professional-background hero with introductory copy and a terminal-style profile card. Desktop styling is shared across screen sizes; My Journey adds a five-milestone career timeline; How I Approach Engineering adds a philosophy panel and three core principles; Beyond the Code adds three personal-interest cards; What I’m Building Today presents current goals and project/résumé actions. The About page includes the shared responsive footer.
-- `data/skillsProjects.json` supplies the two rendered Skills in Action project records; statuses are reference copy, not verified deployment state.
+- `data/skillsProjects.json` supplies all Projects page records and the first two Skills in Action records. Each record has a `categories` array for Projects filters; statuses are reference copy, not verified deployment state.
 
 - `GET /` returns HTTP 200 with an EJS-rendered homepage with a responsive hero.
 - Desktop and tablet share an 80px header; mobile uses a 64px header below 768px with an accessible dropdown.

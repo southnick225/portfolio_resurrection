@@ -9,6 +9,7 @@ Local base URL: `http://localhost:3000` (adjust for `PORT`). No deployed base UR
 | Method | Path | Handler | Response |
 | --- | --- | --- | --- |
 | GET | `/` | Explicit inline application route | 200 HTML |
+| GET | `/projects` | Inline route rendering `pages/projects` | 200 HTML |
 | GET / HEAD | `/css/theme.css` | Static middleware | CSS, or headers only for HEAD |
 | GET / HEAD | `/css/header.css`, `/css/homepage.css`, `/css/footer.css`, `/js/header.js` | Static middleware | CSS or JavaScript, or headers only for HEAD |
 | Any unmatched request | Any unmatched path | Catch-all middleware | 404 JSON |
@@ -24,6 +25,10 @@ curl -i http://localhost:3000/
 ```
 
 The page displays Nick Taylor branding with an initials logo and local profile photo, desktop/tablet navigation, and a mobile dropdown below 768px. The hero displays availability, a headline, supporting text, two unavailable action links, and four engineering metrics with desktop, tablet, and mobile layouts. Section and Resume links are marked unavailable and have no destinations. Two featured projects render from `data/projects.json` below Technical Expertise, with responsive cards and unavailable demo/source actions until their URLs are configured. This replaces the previous JSON backend placeholder.
+
+## Projects page: `GET /projects`
+
+Returns **200 OK — `text/html`** using `pages/projects` with the shared header/footer, projects hero, data-driven project showcases, shared code/topology previews, and engineering principles. No inputs or authentication are required; query parameters are ignored. The route passes `activeNav: 'projects'`, marking the header Projects link current. HEAD returns response headers without a body. Responsive styles are served by `/css/projectsPage.css`; `/js/projects.js` filters the rendered cards locally with counts matching the displayed projects and an accessible result announcement. The route supplies `skillsProjects` from `data/skillsProjects.json`; the shared `skills-project-preview.ejs` partial renders each preview and `/css/skills-project-preview.css` supplies its styles. Filters are All Projects, Full-Stack, Frontend, Backend & APIs, SaaS, and AI Powered, matched against each record’s `categories` array. Empty categories display an explanatory message. Filtering sends no API requests. All projects remain visible without JavaScript. Project/source links are unavailable placeholders; statuses, code, metrics, and reference copy are illustrative rather than verified production integrations.
 
 ## Static asset: `GET /css/theme.css`
 

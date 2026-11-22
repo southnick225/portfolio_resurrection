@@ -25,6 +25,9 @@ app.use(express.static(path.join(import.meta.dirname, 'public')));
 app.get('/', (req, res) => {
     res.render('pages/homepage');
 });
+app.get('/projects', (req, res) => {
+    res.render('pages/projects', { activeNav: 'projects', skillsProjects });
+});
 app.get('/skills', (req, res) => {
     res.render('pages/skillsPage', { activeNav: 'skills', skillsProjects });
 });

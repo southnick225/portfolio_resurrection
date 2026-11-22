@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Software engineering projects by Nicholas C. Taylor.">
+    <title>Projects | Nicholas C. Taylor</title>
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/skills-project-preview.css">
+    <link rel="stylesheet" href="/css/projectsPage.css">
+    <script src="/js/header.js" defer></script>
+    <script src="/js/projects.js" defer></script>
+</head>
+<body class="projects-page">
+    <%- include('../partials/header') %>
+
+    <main class="projects-main" id="main-content">
+        <div class="projects-inner">
+            <section class="projects-hero" aria-labelledby="projects-heading">
+                <h1 id="projects-heading">Architecting Scalable Systems with <span>TypeScript</span> &amp; Distributed Nodes.</h1>
+                <p>High-concurrency streaming pipelines, real-time developer tooling, zero-overhead API gateways, and fault-tolerant cloud infrastructures engineered for sub-10ms response envelopes and extreme uptime SLAs.</p>
+                <div class="project-filters" role="group" aria-label="Filter projects" hidden>
+                    <% const filters = [
+                        ['all', 'All Projects'],
+                        ['full-stack', 'Full-Stack'],
+                        ['frontend', 'Frontend'],
+                        ['backend-apis', 'Backend & APIs'],
+                        ['saas', 'SaaS'],
+                        ['ai-powered', 'AI Powered']
+                    ]; %>
+                    <% for (const [category, label] of filters) { %>
+                        <% const count = category === 'all' ? skillsProjects.length : skillsProjects.filter(project => project.categories.includes(category)).length; %>
+                        <button type="button" data-filter="<%= category %>" aria-pressed="<%= category === 'all' %>"><%= label %> (<%= count %>)</button>
+                    <% } %>
+                </div>
+            </section>
+            <section class="project-showcases" aria-label="Project showcases">
+                <p class="project-filter-status visually-hidden" role="status" aria-live="polite"></p>
+                <% for (const [index, project] of skillsProjects.entries()) { %>
+                    <article class="project-card" data-categories="<%= project.categories.join(' ') %>" aria-labelledby="project-<%= index + 1 %>">
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-status<%= project.status === 'Live Production' ? ' project-status-live' : '' %>"><%= project.status %></span>
+                                <span>PROJECT_<%= String(index + 1).padStart(2, '0') %></span>
+                            </div>
+                            <h2 id="project-<%= index + 1 %>"><%= project.title %></h2>
+                            <p><%= project.description %></p>
+                            <ul class="project-technologies" aria-label="<%= project.title %> technologies" role="list">
+                                <% for (const technology of project.technologies) { %>
+                                    <li><%= technology %></li>
+                                <% } %>
+                            </ul>
+                            <div class="project-actions" role="group" aria-label="<%= project.title %> links">
+                                <% for (const action of project.actions) { %>
+                                    <a <% if (action.url) { %>href="<%= action.url %>"<% } else { %>role="link" aria-disabled="true" title="<%= action.label %> coming soon"<% } %>><%= action.label %></a>
+                                <% } %>
+                            </div>
+                        </div>
+                        <%- include('../partials/skills-project-preview', { project }) %>
+                    </article>
+                <% } %>
+                <p class="project-empty" hidden>No projects in this category yet. Choose another filter to explore more projects.</p>
+            </section>
+            <section class="projects-philosophy" aria-labelledby="philosophy-heading">
+                <p class="projects-section-label">Technical Rigor &amp; Principles</p>
+                <h2 id="philosophy-heading">Architectural Philosophy: Deterministic Systems, Zero Magic.</h2>
+                <p class="philosophy-intro">I design software architectures around strict operational predictability. High throughput isn’t achieved with brute-force scaling — it comes from eliminating memory bloat, tuning non-blocking thread cycles, using strict type systems across service boundaries, and architecting systems with native failover idempotency.</p>
+                <div class="project-principles">
+<article><span class="principle-icon" aria-hidden="true">✓</span><h3>Strict TypeScript Invariants</h3><p>Zero `any` policies with end-to-end Zod parsing at IO boundaries. Compile-time verification enforced as a primary defense line.</p></article>
+<article><span class="principle-icon" aria-hidden="true">◷</span><h3>Microsecond Profiled</h3><p>Flamegraph profiling on event loops to avoid Garbage Collector thrashing, micro-optimizing memory buffers and serialization costs.</p></article>
+<article><span class="principle-icon" aria-hidden="true">◇</span><h3>Resilient Fail-Safes</h3><p>Graceful degradation with circuit breakers, exponential backoff jitter, and self-healing distributed consensus fallback states.</p></article>
+                </div>
+            </section>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>
