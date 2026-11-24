@@ -63,7 +63,7 @@
 @keyframes hero-text-wipe {
   0% { clip-path: inset(0 100% 0 0); }
   50% { clip-path: inset(0 0 0 0); }
-  100% { clip-path: inset(0 0 0 100%); }
+  100% { clip-path: inset(0 100% 0 0); }
 }
 @media (forced-colors: active) {
   .hero-highlight { color: CanvasText; }

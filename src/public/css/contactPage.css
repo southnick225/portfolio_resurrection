@@ -18,7 +18,7 @@
 @keyframes contact-text-wipe {
   0% { clip-path: inset(0 100% 0 0); }
   50% { clip-path: inset(0 0 0 0); }
-  100% { clip-path: inset(0 0 0 100%); }
+  100% { clip-path: inset(0 100% 0 0); }
 }
 @media (forced-colors: active) {
   .contact-hero h1 .contact-highlight { color: CanvasText; }
