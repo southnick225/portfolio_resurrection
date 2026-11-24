@@ -25,7 +25,6 @@
 .projects-main :focus-visible { outline: 2px solid var(--header-primary); outline-offset: 4px; }
 .project-showcases { display: grid; gap: 24px; margin-bottom: 96px; }
 .project-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; padding: 32px; border: 1px solid var(--color-border); border-radius: 16px; background: var(--color-surface); box-shadow: 0 4px 10px rgb(0 0 0 / 10%); transition: border-color 200ms, box-shadow 200ms; }
-.project-card:hover { cursor: pointer; border-color: rgb(15 151 255 / 50%); box-shadow: 0 8px 32px -8px rgb(15 151 255 / 20%); }
 .project-info { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
 .project-meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; color: var(--color-text-secondary); font: 500 12px/20px ui-monospace, monospace; }
 .project-status { display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px; border: 1px solid rgb(15 151 255 / 30%); border-radius: 999px; color: var(--color-primary-hover); background: rgb(15 151 255 / 10%); }
@@ -80,11 +79,16 @@
 }
 
 @media (hover: hover) {
+  .project-card:hover { cursor: pointer; border-color: rgb(56 170 255 / 35%); box-shadow: 0 8px 24px -12px rgb(56 170 255 / 20%); }
   .project-card:hover .project-technologies li { color: var(--header-primary); }
   .project-principles article:hover { border-color: rgb(56 170 255 / 35%); box-shadow: 0 8px 24px -12px rgb(56 170 255 / 20%); }
   .project-principles article:hover .principle-icon { background: rgb(56 170 255 / 12%); border-color: rgb(56 170 255 / 30%); color: var(--color-primary-hover); }
 }
 @media (prefers-reduced-motion: no-preference) {
+  .project-card { transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
+  @media (hover: hover) {
+    .project-card:hover { transform: translateY(-2px); }
+  }
   .project-technologies li { transition: color 180ms ease; }
   .project-principles article { transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
   .principle-icon { transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease; }

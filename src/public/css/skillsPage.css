@@ -210,11 +210,14 @@
 .skills-project-technologies { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; padding: 0; list-style: none; }
 .skills-project-technologies li { padding: 4px 10px; border: 1px solid var(--color-border); border-radius: 4px; background: var(--color-surface-elevated); font-size: 12px; line-height: 16px; }
 @media (hover: hover) {
-  .skills-project-card:hover { cursor: pointer; border-color: var(--color-primary); box-shadow: 0 8px 30px rgb(15 151 255 / 12%); }
+  .skills-project-card:hover { cursor: pointer; border-color: rgb(56 170 255 / 35%); box-shadow: 0 8px 24px -12px rgb(56 170 255 / 20%); }
   .skills-project-card:hover .skills-project-technologies li { color: var(--header-primary); }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .skills-project-card { transition: border-color 180ms ease, box-shadow 180ms ease; }
+  .skills-project-card { transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
+  @media (hover: hover) {
+    .skills-project-card:hover { transform: translateY(-2px); }
+  }
   .skills-project-technologies li { transition: color 180ms ease; }
 }
 @media (min-width: 768px) and (max-width: 1023px) {

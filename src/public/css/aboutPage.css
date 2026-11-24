@@ -164,14 +164,15 @@
 .interest-card h3 { margin: 0 0 6px; font: 600 16px/24px "Sora", sans-serif; letter-spacing: -0.01em; }
 .interest-card p { margin: 0; color: var(--about-muted); font-size: 13px; line-height: 1.625; }
 @media (hover: hover) {
-  .interest-card:hover { background: #1b2028; }
-  .interest-card:hover .interest-icon { transform: scale(1.1); }
-  .interest-card:hover h3 { color: var(--about-primary); }
+  .interest-card:hover { border-color: rgb(56 170 255 / 35%); box-shadow: 0 8px 24px -12px rgb(56 170 255 / 20%); }
+  .interest-card:hover .interest-icon { background: rgb(56 170 255 / 15%); color: var(--about-primary); }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .interest-card { transition: background-color 200ms ease; }
-  .interest-icon { transition: transform 200ms ease; }
-  .interest-card h3 { transition: color 200ms ease; }
+  .interest-card { transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
+  .interest-icon { transition: background-color 180ms ease, color 180ms ease; }
+  @media (hover: hover) {
+    .interest-card:hover { transform: translateY(-2px); }
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .interest-card { padding: 20px; }
@@ -203,7 +204,6 @@
 .current-focus-socials a { cursor: pointer; }
 .current-focus-panel a:focus-visible { outline: 2px solid var(--about-accent); outline-offset: 4px; }
 @media (hover: hover) {
-  .current-focus-panel:hover { cursor: pointer; }
   .current-focus-primary:hover { background: var(--about-accent); color: #003c63; box-shadow: 0 0 25px rgb(56 170 255 / 50%); }
   .current-focus-secondary:hover { background: #252a33; color: var(--about-primary); cursor: pointer; }
   .current-focus-socials a:hover { color: var(--about-accent); }
