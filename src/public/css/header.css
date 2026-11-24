@@ -36,13 +36,17 @@ body {
   gap: var(--space-3);
 }
 .header-brand { display: flex; align-items: center; gap: 16px; color: inherit; text-decoration: none; min-width: 0; }
-.brand-logo { display: grid; place-items: center; flex-shrink: 0; width: 32px; height: 32px; border-radius: var(--radius-sm); background: var(--header-surface); color: var(--header-primary); font: 700 14px "Sora", sans-serif; }
+.brand-logo { display: grid; place-items: center; flex-shrink: 0; width: 40px; height: 40px; border: 1px solid #2b3a4c; border-radius: 12px; background: linear-gradient(135deg, #1d2938, #141c28); box-shadow: inset 0 2px 4px rgb(0 0 0 / 5%); transition: border-color 160ms ease; }
+.brand-monogram { background: linear-gradient(90deg, #0f97ff, #00f0ff); background-clip: text; color: transparent; font: 700 17px var(--font-heading); letter-spacing: -0.025em; }
+.header-brand:hover .brand-logo { border-color: rgb(15 151 255 / 60%); }
 .brand-copy { display: flex; flex-direction: column; min-width: 0; }
 .brand-name { font: 600 16px/20px "Sora", sans-serif; letter-spacing: -0.01em; }
 .brand-role, .brand-page { font-size: 12px; line-height: 16px; }
 .brand-role { color: var(--header-primary); }
 .brand-page { display: none; }
-.desktop-navigation { display: flex; align-items: center; gap: 30px; margin-right: 5rem; }
+.desktop-navigation { display: flex; align-items: center; flex-shrink: 0; gap: 4px; padding: 4px; border: 1px solid #2b3a4c; border-radius: 12px; background: rgb(20 28 40 / 90%); box-shadow: inset 0 2px 4px rgb(0 0 0 / 5%); }
+.desktop-navigation .navigation-link { padding: 6px 14px; border: 1px solid transparent; border-radius: 8px; color: #94a3b8; white-space: nowrap; }
+.desktop-navigation .navigation-link[aria-current="page"] { border-color: rgb(15 151 255 / 30%); background: rgb(15 151 255 / 15%); color: #0f97ff; box-shadow: 0 0 12px rgb(15 151 255 / 20%); font-family: inherit; font-size: 14px; font-weight: 600; line-height: 20px; }
 .navigation-link, .resume-link { padding: 8px 16px; border-radius: var(--radius-sm); font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0.01em; text-decoration: none; }
 .navigation-link { color: var(--header-muted); }
 .navigation-link[aria-current="page"] { background: var(--header-surface); color: var(--header-primary); font-family: "Sora", sans-serif; font-size: 16px; font-weight: 600; line-height: 24px; }
@@ -61,7 +65,9 @@ body {
   .desktop-navigation .navigation-link, .resume-link {
     transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
   }
-  .desktop-navigation .navigation-link:hover, .resume-link:hover {
+  .desktop-navigation .navigation-link:hover { background: rgb(29 41 56 / 60%); color: #f1f5f9; }
+  .desktop-navigation .navigation-link[aria-current="page"]:hover { background: rgb(15 151 255 / 22%); color: #0f97ff; }
+  .resume-link:hover {
     background: var(--header-surface);
     color: var(--header-primary);
     box-shadow: inset 0 0 0 1px rgb(152 203 255 / 30%);
@@ -70,7 +76,7 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .menu-line { transition: none; animation: none }
+  .brand-logo, .menu-line { transition: none; animation: none }
   .desktop-navigation .navigation-link, .resume-link { transition: none; animation: none }
 }
 
@@ -79,7 +85,10 @@ body {
   .header-brand { gap: 8px; }
   .navigation-link { padding-inline: 10px; }
   .header-actions { gap: 12px; }
-  .desktop-navigation { gap: 12px; }
+  .desktop-navigation .navigation-link { padding-inline: 10px; }
+  .brand-name { font-size: 15px; }
+  .brand-role { max-width: 170px; }
+  .profile-avatar { width: 32px; height: 32px; }
 }
 
 @media (max-width: 767px) {
@@ -101,6 +110,8 @@ body {
   .site-header { background: rgb(15 20 28 / 80%); }
   .header-inner { height: 64px; padding-inline: 16px; gap: 8px; }
   .header-brand { gap: 8px; flex: 1; }
+  .brand-logo { width: 32px; height: 32px; border-radius: 8px; }
+  .brand-monogram { font-size: 14px; }
   .brand-name { line-height: 24px; }
   .brand-name, .brand-page { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
   .brand-role, .desktop-navigation, .resume-link { display: none; }
