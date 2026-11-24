@@ -206,7 +206,7 @@
   .current-focus-panel:hover { cursor: pointer; }
   .current-focus-primary:hover { background: var(--about-accent); color: #003c63; box-shadow: 0 0 25px rgb(56 170 255 / 50%); }
   .current-focus-secondary:hover { background: #252a33; color: var(--about-primary); cursor: pointer; }
-  .current-focus-socials a:hover { color: var(--about-primary); }
+  .current-focus-socials a:hover { color: var(--about-accent); }
 }
 @media (prefers-reduced-motion: no-preference) {
   .current-focus-button { transition: background-color 200ms ease, color 200ms ease, box-shadow 200ms ease; }

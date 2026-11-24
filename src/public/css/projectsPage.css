@@ -80,8 +80,15 @@
 }
 
 @media (hover: hover) {
-  .project-card:hover .project-technologies li { color: var(--color-primary); }
+  .project-card:hover .project-technologies li { color: var(--header-primary); }
+  .project-principles article:hover { border-color: rgb(56 170 255 / 35%); box-shadow: 0 8px 24px -12px rgb(56 170 255 / 20%); }
+  .project-principles article:hover .principle-icon { background: rgb(56 170 255 / 12%); border-color: rgb(56 170 255 / 30%); color: var(--color-primary-hover); }
 }
 @media (prefers-reduced-motion: no-preference) {
   .project-technologies li { transition: color 180ms ease; }
+  .project-principles article { transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
+  .principle-icon { transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease; }
+  @media (hover: hover) {
+    .project-principles article:hover { transform: translateY(-2px); }
+  }
 }
