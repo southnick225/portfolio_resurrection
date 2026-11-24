@@ -3,6 +3,27 @@
 .contact-hero { max-width: 800px; margin: 0 auto 48px; text-align: center; }
 .contact-hero h1 { margin: 0 0 24px; font: 700 56px/64px "Sora", sans-serif; letter-spacing: -0.025em; }
 .contact-hero h1 span { color: var(--color-primary-hover); }
+.contact-hero h1 .contact-highlight { position: relative; display: inline-block; max-width: 100%; color: #0f97ff; }
+.contact-hero h1 .contact-text-wipe { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .contact-hero h1 .contact-text-wipe {
+    display: block;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    color: #fff;
+    animation: contact-text-wipe 3s linear infinite;
+  }
+}
+@keyframes contact-text-wipe {
+  0%, 5% { clip-path: inset(0 100% 0 0); }
+  45%, 55% { clip-path: inset(0 0 0 0); }
+  95%, 100% { clip-path: inset(0 0 0 100%); }
+}
+@media (forced-colors: active) {
+  .contact-hero h1 .contact-highlight { color: CanvasText; }
+  .contact-hero h1 .contact-text-wipe { display: none; }
+}
 .contact-hero p { max-width: 760px; margin: 0 auto; color: var(--header-muted); font-size: 18px; line-height: 1.625; }
 .contact-channels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-bottom: 56px; }
 .contact-card { position: relative; isolation: isolate; display: flex; flex-direction: column; min-width: 0; padding: 32px; border-radius: 12px; background: #171c24; box-shadow: 0 1px 2px rgb(0 0 0 / 5%); }
