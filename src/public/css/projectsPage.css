@@ -20,8 +20,8 @@
 .project-filters { display: flex; flex-wrap: wrap; gap: 8px; }
 .project-filters[hidden], .project-card[hidden] { display: none; }
 .project-filters button { min-height: 44px; padding: 10px 16px; border: 1px solid var(--color-border); border-radius: 4px; background: var(--header-surface); color: var(--header-muted); font: 600 14px/20px "Geist", sans-serif; cursor: pointer; transition: border-color 150ms, background 150ms; }
-.project-filters button:hover { border-color: var(--color-primary); }
-.project-filters button[aria-pressed="true"] { background: var(--color-primary); border-color: var(--color-primary); color: #002e54; box-shadow: 0 0 16px rgb(15 151 255 / 25%); }
+.project-filters button:hover { border-color: var(--header-primary); }
+.project-filters button[aria-pressed="true"] { background: var(--header-primary); border-color: var(--header-primary); color: #002e54; box-shadow: 0 0 16px rgb(152 203 255 / 25%); }
 .projects-main :focus-visible { outline: 2px solid var(--header-primary); outline-offset: 4px; }
 .project-showcases { display: grid; gap: 24px; margin-bottom: 96px; }
 .project-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; padding: 32px; border: 1px solid var(--color-border); border-radius: 16px; background: var(--color-surface); box-shadow: 0 4px 10px rgb(0 0 0 / 10%); transition: border-color 200ms, box-shadow 200ms; }
