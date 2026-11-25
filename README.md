@@ -30,7 +30,7 @@ Design mockups use Tailwind CSS through a CDN. Tailwind is not an installed appl
 - Desktop and tablet share an 80px header; mobile uses a 64px header below 768px with an accessible dropdown.
 - An initials logo and a local black-and-white profile photo appear in the header. Future navigation links are marked unavailable.
 - Hero with availability badge, headline, responsive action placeholders, and engineering metrics adapted from the design references.
-- Shared responsive footer on the homepage, Skills page, and About page with branding/social placeholders on desktop and tablet, plus fixed mobile navigation with the current page highlighted.
+- Shared responsive footer on all five pages, with branding, GitHub/LinkedIn placeholders, and a dynamic copyright year on desktop and tablet. Fixed mobile navigation links Overview (`/`), Projects (`/projects`), Stack (`/skills`), About (`/about`), and Connect (`/contact`), highlighting the current page.
 - JSON and URL-encoded request body parsing.
 - Static assets served from `src/public`, including theme/header CSS and `/js/header.js`.
 - Unmatched requests return a JSON 404 response; centralized error middleware returns a generic JSON 500 response.
